@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+<title>php和mysql开发笔记 - cjM00N&#39;s blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+
+
+
+
+    <meta name="description" content="学习php圣经&amp;lt;php和mysql Web开发&amp;gt;的笔记">
+<meta name="keywords" content="Web开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="php和mysql开发笔记">
+<meta property="og:url" content="https://cjm00n.top/2019/11/24/php和mysql开发笔记/index.html">
+<meta property="og:site_name" content="cjM00N&#39;s blog">
+<meta property="og:description" content="学习php圣经&amp;lt;php和mysql Web开发&amp;gt;的笔记">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-12-25T14:06:35.841Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="php和mysql开发笔记">
+<meta name="twitter:description" content="学习php圣经&amp;lt;php和mysql Web开发&amp;gt;的笔记">
+
+
+
+
+
+<link rel="icon" href="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191113175046.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+<link rel="stylesheet" href="/css/style.css">
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+
+
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    cjM00N
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item " href="/archives">Archives</a>
+            
+            <a class="navbar-item " href="/categories">Categories</a>
+            
+            <a class="navbar-item " href="/tags">Tags</a>
+            
+            <a class="navbar-item " href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
+                <a class="navbar-item" title="Table of Contents">
+                    <i class="fa fa-list"></i>
+                </a>
+                <div class="navbar-dropdown is-right">
+                    
+                    
+                    
+                    
+                    <a class="navbar-item" href="#第一章-快速入门">1&nbsp;&nbsp;<b>第一章 快速入门</b></a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#php两种标记">1.1&nbsp;&nbsp;php两种标记</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#双引号和单引号中的变量">1.2&nbsp;&nbsp;双引号和单引号中的变量</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#heredoc语法">1.3&nbsp;&nbsp;heredoc语法</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#php变量语法">1.4&nbsp;&nbsp;php变量语法</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#声明常量">1.5&nbsp;&nbsp;声明常量</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#引用">1.6&nbsp;&nbsp;引用</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#操作符优先级">1.7&nbsp;&nbsp;操作符优先级</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#类型判断">1.8&nbsp;&nbsp;类型判断</a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#第二章-数据存储和读取">2&nbsp;&nbsp;<b>第二章 数据存储和读取</b></a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#文件读写">2.1&nbsp;&nbsp;文件读写</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#读写模式">2.1.1&nbsp;&nbsp;读写模式</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#分隔符">2.1.2&nbsp;&nbsp;分隔符</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#写文件">2.1.3&nbsp;&nbsp;写文件</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#读文件">2.1.4&nbsp;&nbsp;读文件</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#其他文件操作">2.1.5&nbsp;&nbsp;其他文件操作</a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#第三章-数组">3&nbsp;&nbsp;<b>第三章 数组</b></a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#创建数组">3.1&nbsp;&nbsp;创建数组</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#访问数组">3.2&nbsp;&nbsp;访问数组</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#循环">3.3&nbsp;&nbsp;循环</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#数组排序">3.4&nbsp;&nbsp;数组排序</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#数组操作">3.5&nbsp;&nbsp;数组操作</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#进出数组">3.5.1&nbsp;&nbsp;进出数组</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#数组浏览">3.5.2&nbsp;&nbsp;数组浏览</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#统计数组">3.5.3&nbsp;&nbsp;统计数组</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#其他操作">3.5.4&nbsp;&nbsp;其他操作</a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#第四章-字符串">4&nbsp;&nbsp;<b>第四章 字符串</b></a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#字符串截断">4.1&nbsp;&nbsp;字符串截断</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#html转换">4.2&nbsp;&nbsp;html转换</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#大小写">4.3&nbsp;&nbsp;大小写</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#格式化输出">4.4&nbsp;&nbsp;格式化输出</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#字符串连接切分">4.5&nbsp;&nbsp;字符串连接切分</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#子串">4.6&nbsp;&nbsp;子串</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#比较">4.7&nbsp;&nbsp;比较</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#查找">4.8&nbsp;&nbsp;查找</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#替换">4.9&nbsp;&nbsp;替换</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#回溯引用">4.10&nbsp;&nbsp;回溯引用</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#正则分割">4.11&nbsp;&nbsp;正则分割</a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#第五章-代码重用和函数">5&nbsp;&nbsp;<b>第五章 代码重用和函数</b></a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#auto-prepend-file">5.1&nbsp;&nbsp;auto_prepend_file</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#闭包">5.2&nbsp;&nbsp;闭包</a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#第六章-面向对象">6&nbsp;&nbsp;<b>第六章 面向对象</b></a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#类属性修饰符">6.1&nbsp;&nbsp;类属性修饰符</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#final关键字">6.2&nbsp;&nbsp;final关键字</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#不支持多重继承">6.3&nbsp;&nbsp;不支持多重继承</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#灵活的使用标记">6.4&nbsp;&nbsp;灵活的使用标记</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#常量和静态方法">6.5&nbsp;&nbsp;常量和静态方法</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#魔术方法">6.6&nbsp;&nbsp;魔术方法</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#迭代器和生成器">6.7&nbsp;&nbsp;迭代器和生成器</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#名称空间">6.8&nbsp;&nbsp;名称空间</a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#第七章-错误和异常处理">7&nbsp;&nbsp;<b>第七章 错误和异常处理</b></a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#抛出异常">7.1&nbsp;&nbsp;抛出异常</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#异常类">7.2&nbsp;&nbsp;异常类</a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#第八章-web数据库设计">8&nbsp;&nbsp;<b>第八章 web数据库设计</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#第九章-Web数据库创建">9&nbsp;&nbsp;<b>第九章 Web数据库创建</b></a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#安装步骤">9.1&nbsp;&nbsp;安装步骤</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#大小写-1">9.2&nbsp;&nbsp;大小写</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#创建用户">9.3&nbsp;&nbsp;创建用户</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#权限">9.4&nbsp;&nbsp;权限</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#查看数据库">9.5&nbsp;&nbsp;查看数据库</a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#部分类型">9.6&nbsp;&nbsp;部分类型</a>
+                    
+                </div>
+            </div>
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/cjm00n/">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            php和mysql开发笔记
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2019-11-24T07:24:05.000Z" itemprop="datePublished">Nov 24 2019</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Web/">Web</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <p>学习php圣经&lt;php和mysql Web开发&gt;的笔记</p>
+<a id="more"></a>
+
+<h2 id="第一章-快速入门"><a href="#第一章-快速入门" class="headerlink" title="第一章 快速入门"></a>第一章 快速入门</h2><h3 id="php两种标记"><a href="#php两种标记" class="headerlink" title="php两种标记"></a>php两种标记</h3><p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?php</span> ... <span class="hljs-meta">?&gt;</span></span><br><span class="line"><span class="hljs-comment">// 取决于php.ini中'short_open_tag'选项, 默认不开启</span></span><br><span class="line"><span class="hljs-meta">&lt;?</span> ... <span class="hljs-meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="双引号和单引号中的变量"><a href="#双引号和单引号中的变量" class="headerlink" title="双引号和单引号中的变量"></a>双引号和单引号中的变量</h3><p>单引号不解析php变量, 双引号则会解析变量值</p>
+<p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$a = <span class="hljs-number">1</span>;</span><br><span class="line"><span class="hljs-keyword">echo</span> <span class="hljs-string">"a=$a"</span>;</span><br><span class="line"><span class="hljs-comment">//&gt; a=1;</span></span><br><span class="line"><span class="hljs-keyword">echo</span> <span class="hljs-string">'a=$a'</span>;</span><br><span class="line"><span class="hljs-comment">//&gt; a=$a</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="heredoc语法"><a href="#heredoc语法" class="headerlink" title="heredoc语法"></a>heredoc语法</h3><p>通过标志(theEnd)来作为关闭标记, 只需要保证不会出现在文本中</p>
+<p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">echo</span> <span class="hljs-string">&lt;&lt;&lt;theEnd</span></span><br><span class="line"><span class="hljs-string">	line 1</span></span><br><span class="line"><span class="hljs-string">	line 2</span></span><br><span class="line"><span class="hljs-string">	line 3</span></span><br><span class="line"><span class="hljs-string">theEnd;</span></span><br><span class="line"><span class="hljs-comment">//&gt; </span></span><br><span class="line">	line <span class="hljs-number">1</span></span><br><span class="line">	line <span class="hljs-number">2</span></span><br><span class="line">	line <span class="hljs-number">3</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="php变量语法"><a href="#php变量语法" class="headerlink" title="php变量语法"></a>php变量语法</h3><ol>
+<li>区分大小写, 不同于函数名</li>
+<li>可以与函数名相同 (函数则不可以与另一个函数名相同)</li>
+<li>不需要先声明</li>
+</ol>
+<h3 id="声明常量"><a href="#声明常量" class="headerlink" title="声明常量"></a>声明常量</h3><p>常量引用时不需要<code>$</code></p>
+<p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">define(<span class="hljs-string">"PI"</span>, <span class="hljs-number">3.14</span>)</span><br><span class="line"><span class="hljs-keyword">echo</span> PI;</span><br><span class="line"><span class="hljs-comment">//&gt; 3.14</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h3><p>引用不是指针, 而是别名, 此时<code>$a</code>和<code>$b</code>都指向了内存中的相同地址</p>
+<p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$a = <span class="hljs-number">5</span>;</span><br><span class="line">$b = &amp;$a;</span><br><span class="line">$a = <span class="hljs-number">7</span>;</span><br><span class="line"><span class="hljs-comment">// a = b = 7</span></span><br><span class="line"><span class="hljs-comment">//此时unset a不会改变$b的值</span></span><br><span class="line"><span class="hljs-keyword">unset</span>($a);</span><br><span class="line"><span class="hljs-comment">//b = 7;a = undefined</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="操作符优先级"><a href="#操作符优先级" class="headerlink" title="操作符优先级"></a>操作符优先级</h3><p><code>and</code> <code>or</code> <code>xor</code>优先级比<code>&amp;&amp;</code> <code>||</code>低</p>
+<h3 id="类型判断"><a href="#类型判断" class="headerlink" title="类型判断"></a>类型判断</h3><p>函数<code>gettype</code>可以用于返回类型的字符串形式, <code>settype</code>用于设置类型</p>
+<p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$a = <span class="hljs-number">1</span>;</span><br><span class="line"><span class="hljs-keyword">echo</span> gettype($a);</span><br><span class="line"><span class="hljs-comment">//&gt; int</span></span><br><span class="line">settype($a, <span class="hljs-string">'float'</span>);</span><br><span class="line"><span class="hljs-keyword">echo</span> gettype($a);</span><br><span class="line"><span class="hljs-comment">//&gt; float</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="第二章-数据存储和读取"><a href="#第二章-数据存储和读取" class="headerlink" title="第二章 数据存储和读取"></a>第二章 数据存储和读取</h2><h3 id="文件读写"><a href="#文件读写" class="headerlink" title="文件读写"></a>文件读写</h3><h4 id="读写模式"><a href="#读写模式" class="headerlink" title="读写模式"></a>读写模式</h4><table>
+<thead>
+<tr>
+<th>模式</th>
+<th>模式名称</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>r</td>
+<td>读</td>
+<td>从头开始读, 加上<code>+</code>表示读写</td>
+</tr>
+<tr>
+<td>w</td>
+<td>写</td>
+<td>不存在文件时会创建文件, 存在时则会清空并从头开始写, 加上<code>+</code>表示读写</td>
+</tr>
+<tr>
+<td>x</td>
+<td>谨慎写</td>
+<td>如果文件不存在则会返回<code>false</code>并抛出错误, 其他同w</td>
+</tr>
+<tr>
+<td>b</td>
+<td>二进制</td>
+<td>win会区分二进制文件和文本文件, linux则不会区分, 推荐使用</td>
+</tr>
+<tr>
+<td>a</td>
+<td>追加</td>
+<td>不存在文件时会创建文件, 存在时则从文件尾部开始写, 加上<code>+</code>表示读写</td>
+</tr>
+<tr>
+<td>t</td>
+<td>文本</td>
+<td>win下的一个选项, 不推荐使用</td>
+</tr>
+</tbody></table>
+<h4 id="分隔符"><a href="#分隔符" class="headerlink" title="分隔符"></a>分隔符</h4><p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//win</span></span><br><span class="line">fopen(<span class="hljs-string">"c:\\flag"</span>,<span class="hljs-string">"r"</span>);</span><br><span class="line"><span class="hljs-comment">//win and linux, 推荐</span></span><br><span class="line">fopen(<span class="hljs-string">"../flag"</span>,<span class="hljs-string">"r"</span>);</span><br></pre></td></tr></table></figure></p>
+<h4 id="写文件"><a href="#写文件" class="headerlink" title="写文件"></a>写文件</h4><p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$fp = fopen(<span class="hljs-string">"log.txt"</span>, <span class="hljs-string">"ab"</span>);</span><br><span class="line">fwrite($fp, <span class="hljs-string">"aaa"</span>);</span><br><span class="line">file_put_contents(<span class="hljs-string">"log.txt"</span>, <span class="hljs-string">"aaa"</span>);</span><br><span class="line">fputs($fp, <span class="hljs-string">"aaa"</span>);</span><br><span class="line">fclose($fp);</span><br></pre></td></tr></table></figure></p>
+<h4 id="读文件"><a href="#读文件" class="headerlink" title="读文件"></a>读文件</h4><p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 判断文件末尾, file end of file</span></span><br><span class="line"><span class="hljs-keyword">while</span>(!feof($fp))&#123;...&#125;;</span><br><span class="line"><span class="hljs-comment">// 读字符</span></span><br><span class="line"><span class="hljs-keyword">while</span>(!feof($fp))&#123;</span><br><span class="line">    $char = fgetc($fp);</span><br><span class="line">    <span class="hljs-keyword">if</span>(!feof($fp))&#123;</span><br><span class="line">		<span class="hljs-keyword">echo</span> ($char == <span class="hljs-string">"\n"</span> ? <span class="hljs-string">"&lt;br/&gt;"</span>:$char);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-comment">// 读一行</span></span><br><span class="line">fgets/fgetss/fgetcsv</span><br><span class="line"><span class="hljs-comment">// 读任意长</span></span><br><span class="line">fread()</span><br><span class="line"><span class="hljs-comment">// 读文件</span></span><br><span class="line">readfile($filename);</span><br><span class="line">fpassthru($fp);</span><br><span class="line">file($filename);<span class="hljs-comment">//返回数组, 按行分割</span></span><br><span class="line">file_get_contents($filename);<span class="hljs-comment">//返回文件内容, 不输出</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="其他文件操作"><a href="#其他文件操作" class="headerlink" title="其他文件操作"></a>其他文件操作</h4><p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 判断文件存在</span></span><br><span class="line">file_exists($filename);</span><br><span class="line"><span class="hljs-comment">// 获取文件大小</span></span><br><span class="line">filesize($filename);</span><br><span class="line"><span class="hljs-comment">// 删除文件</span></span><br><span class="line">unlink($filename);</span><br><span class="line"><span class="hljs-comment">// 文件指针定位</span></span><br><span class="line">rewind()/fseek()/ftell();</span><br><span class="line"><span class="hljs-comment">// 文件锁</span></span><br><span class="line">flock();</span><br></pre></td></tr></table></figure></p>
+<h2 id="第三章-数组"><a href="#第三章-数组" class="headerlink" title="第三章 数组"></a>第三章 数组</h2><h3 id="创建数组"><a href="#创建数组" class="headerlink" title="创建数组"></a>创建数组</h3><p>数组支持在结尾添加元素</p>
+<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// array</span><br><span class="line">$pro = array(&apos;Tires&apos;, &apos;Oil&apos;, &apos;Spark&apos;);</span><br><span class="line">$pro = array(&apos;Tires&apos; =&gt; 100, &apos;key&apos; =&gt; value);</span><br><span class="line">// since php5.4</span><br><span class="line">$pro = [&apos;Tires&apos;, &apos;Oil&apos;, &apos;Spark&apos;];</span><br><span class="line">$pro[3] = &apos;Plugs&apos;;</span><br><span class="line">// 多维数组</span><br><span class="line">$multi_pro = array(array(&apos;tires&apos;, 100),</span><br><span class="line">					array(&apos;Spark&apos;, 99)</span><br><span class="line">				);</span><br></pre></td></tr></table></figure></p>
+<h3 id="访问数组"><a href="#访问数组" class="headerlink" title="访问数组"></a>访问数组</h3><p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$pro[0];</span><br><span class="line">$pro&#123;1&#125;;</span><br></pre></td></tr></table></figure></p>
+<h3 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h3><p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">for($i = 0; $i &lt; 3; $i++)&#123;..&#125;</span><br><span class="line">foreach($pro =&gt; $value)&#123;...&#125; //</span><br><span class="line">foreach($pro as $key =&gt; $value)&#123;...&#125; //</span><br></pre></td></tr></table></figure></p>
+<h3 id="数组排序"><a href="#数组排序" class="headerlink" title="数组排序"></a>数组排序</h3><p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 字典序,区分大小写</span><br><span class="line">sort()</span><br><span class="line">asort() ksort()</span><br><span class="line">// 反序</span><br><span class="line">rsort()</span><br><span class="line">arsort() krsort()</span><br><span class="line">// 自定义序</span><br><span class="line">usort($array, $func)</span><br><span class="line">// 数组随机</span><br><span class="line">shuffle()</span><br><span class="line">// 数组逆序</span><br><span class="line">array_reverse()</span><br></pre></td></tr></table></figure></p>
+<h3 id="数组操作"><a href="#数组操作" class="headerlink" title="数组操作"></a>数组操作</h3><h4 id="进出数组"><a href="#进出数组" class="headerlink" title="进出数组"></a>进出数组</h4><p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">array_push($array, $item);</span><br><span class="line">array_pop($array);//删除末尾</span><br></pre></td></tr></table></figure></p>
+<h4 id="数组浏览"><a href="#数组浏览" class="headerlink" title="数组浏览"></a>数组浏览</h4><p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 返回当前元素并指向下一个元素</span><br><span class="line">each()</span><br><span class="line">// 指向下一个元素并返回新的元素</span><br><span class="line">next()</span><br><span class="line">// 返回当前元素</span><br><span class="line">current()</span><br><span class="line">// 返回指向第一个元素的指针</span><br><span class="line">reset</span><br><span class="line">// 返回指向最后一个元素的指针</span><br><span class="line">end()</span><br><span class="line">// 指向上一个元素并返回新的元素</span><br><span class="line">prev()</span><br></pre></td></tr></table></figure></p>
+<h4 id="统计数组"><a href="#统计数组" class="headerlink" title="统计数组"></a>统计数组</h4><p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 返回元素个数</span></span><br><span class="line">count()/sizeof()</span><br><span class="line"><span class="hljs-comment">// 返回每个特定值在数组中出现的次数, 返回值为数组</span></span><br><span class="line">array_count_values()</span><br></pre></td></tr></table></figure></p>
+<h4 id="其他操作"><a href="#其他操作" class="headerlink" title="其他操作"></a>其他操作</h4><p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// map</span></span><br><span class="line">array_walk($array, $func, [userdata]);</span><br><span class="line"><span class="hljs-comment">// 其中func定义为</span></span><br><span class="line">func($value, $key, $userdata);</span><br><span class="line">    </span><br><span class="line"><span class="hljs-comment">// 解析数组为变量, 不安全</span></span><br><span class="line">extract($array);</span><br></pre></td></tr></table></figure></p>
+<h2 id="第四章-字符串"><a href="#第四章-字符串" class="headerlink" title="第四章 字符串"></a>第四章 字符串</h2><h3 id="字符串截断"><a href="#字符串截断" class="headerlink" title="字符串截断"></a>字符串截断</h3><p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 除去开始和结束的空格</span></span><br><span class="line">trim()</span><br><span class="line"><span class="hljs-comment">// 除去开始的空格</span></span><br><span class="line">ltrim()</span><br><span class="line"><span class="hljs-comment">// 除去结束的空格</span></span><br><span class="line">rtrim()/chop()</span><br></pre></td></tr></table></figure></p>
+<h3 id="html转换"><a href="#html转换" class="headerlink" title="html转换"></a>html转换</h3><p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// html字符过滤</span></span><br><span class="line">htmlspecialchars();</span><br><span class="line"><span class="hljs-comment">// /n =&gt; &lt;br/&gt;</span></span><br><span class="line">n2br();</span><br></pre></td></tr></table></figure></p>
+<h3 id="大小写"><a href="#大小写" class="headerlink" title="大小写"></a>大小写</h3><p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">strtoupper()</span><br><span class="line">strtolower();</span><br><span class="line"><span class="hljs-comment">// 每个字符串首字母大写</span></span><br><span class="line">ucfirst();</span><br><span class="line"><span class="hljs-comment">// 每个单词首字母大写</span></span><br><span class="line">ucwords()</span><br></pre></td></tr></table></figure></p>
+<h3 id="格式化输出"><a href="#格式化输出" class="headerlink" title="格式化输出"></a>格式化输出</h3><p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%[+][&apos;padding_character][-][width][.precision]type</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li><code>+</code> 表示正数输出 +</li>
+<li><code>padding_character</code> 表示输出前缀, 除<code>0</code>和<code></code>外都需要添加`</li>
+<li><code>-</code>表示左对齐</li>
+<li><code>width</code>表示宽度</li>
+<li><code>.precision</code>表示小数点后位数</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>b</td>
+<td>解释为整数并作为二进制输出</td>
+</tr>
+<tr>
+<td>c</td>
+<td>解释为整数并作为字符输出</td>
+</tr>
+<tr>
+<td>d</td>
+<td>解释为整数并作为小数输出</td>
+</tr>
+<tr>
+<td>e</td>
+<td>解释为双精度并以科学计数法打印, 精度是小数点后的数字个数</td>
+</tr>
+<tr>
+<td>E</td>
+<td>同e, 打印为大写E</td>
+</tr>
+<tr>
+<td>f</td>
+<td>解释为双精度并作为浮点数输出</td>
+</tr>
+<tr>
+<td>F</td>
+<td>解释为浮点数并打印与locale无关的浮点数</td>
+</tr>
+<tr>
+<td>g</td>
+<td>转换规范类型e或f的简短输出</td>
+</tr>
+<tr>
+<td>G</td>
+<td>转换规范类型E或F的简短输出</td>
+</tr>
+<tr>
+<td>o</td>
+<td>解释为整数并作为8进制输出</td>
+</tr>
+<tr>
+<td>s</td>
+<td>解释为字符串输出</td>
+</tr>
+<tr>
+<td>u</td>
+<td>解释为整数并作为非指定小数输出</td>
+</tr>
+<tr>
+<td>x</td>
+<td>解释为整数并作为16进制小写输出</td>
+</tr>
+<tr>
+<td>X</td>
+<td>解释为整数并作为16进制大写输出</td>
+</tr>
+</tbody></table>
+<h3 id="字符串连接切分"><a href="#字符串连接切分" class="headerlink" title="字符串连接切分"></a>字符串连接切分</h3><p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 切分</span></span><br><span class="line">explode($separator, $string);</span><br><span class="line"><span class="hljs-comment">// 连接</span></span><br><span class="line">implode($separator, $array)/join();</span><br></pre></td></tr></table></figure></p>
+<h3 id="子串"><a href="#子串" class="headerlink" title="子串"></a>子串</h3><p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// strtok</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">// start和length都可以是负数, 当length为负数时表示结束位置(end)</span></span><br><span class="line">substr($strings, start, [length]);</span><br></pre></td></tr></table></figure></p>
+<h3 id="比较"><a href="#比较" class="headerlink" title="比较"></a>比较</h3><p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 区分大小写</span></span><br><span class="line">strcmp()</span><br><span class="line"><span class="hljs-comment">// 不区分大小写</span></span><br><span class="line">strcasecmp()</span><br><span class="line"><span class="hljs-comment">// 自然序, 2&lt;12</span></span><br><span class="line">strnatcmp()</span><br></pre></td></tr></table></figure></p>
+<h3 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h3><p>strpos函数如果不存在会返回<code>false</code>,  在弱类型比较中等同于<code>0</code>, 建议使用<code>===</code>作比较</p>
+<p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 查找子串, 返回从第一次子串出现到结束</span></span><br><span class="line">strstr($string, $substring)/strchr();</span><br><span class="line"><span class="hljs-comment">// 忽略大小写</span></span><br><span class="line">stristr($string, $substring);</span><br><span class="line"><span class="hljs-comment">// 返回最后一次匹配</span></span><br><span class="line">strrchr($string, $substring);</span><br><span class="line"><span class="hljs-comment">// 查找, 返回第一次匹配位置</span></span><br><span class="line">strpos($string, $substring, [$offset]);</span><br><span class="line"><span class="hljs-comment">// 返回最后一次匹配</span></span><br><span class="line">strrpos($string, $substring, [$offset]);</span><br></pre></td></tr></table></figure></p>
+<h3 id="替换"><a href="#替换" class="headerlink" title="替换"></a>替换</h3><p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">str_replace($old, $new, $string);</span><br><span class="line">substr_replace($string, $new, $start, [$length]);</span><br></pre></td></tr></table></figure></p>
+<h3 id="回溯引用"><a href="#回溯引用" class="headerlink" title="回溯引用"></a>回溯引用</h3><p>模式的回溯引用通过一个反斜杠<code>\</code>加一个数字或多个来表示, 用来匹配多次出现在一个字符串中的相同子表达式</p>
+<p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">/^([a-z]+) \<span class="hljs-number">1</span> black sheep/</span><br><span class="line">$a = <span class="hljs-string">"baa baa black sheep"</span>;</span><br><span class="line"><span class="hljs-comment">//&gt; 匹配</span></span><br><span class="line">$b = <span class="hljs-string">"blah baa black sheep"</span>;</span><br><span class="line"><span class="hljs-comment">//&gt; 不匹配</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="正则分割"><a href="#正则分割" class="headerlink" title="正则分割"></a>正则分割</h3><p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print_r(preg_split(<span class="hljs-string">"/\.|@/"</span>, <span class="hljs-string">"user@admin.cn"</span>));</span><br><span class="line"><span class="hljs-comment">//&gt; user</span></span><br><span class="line">    admin</span><br><span class="line">    cn</span><br></pre></td></tr></table></figure></p>
+<h2 id="第五章-代码重用和函数"><a href="#第五章-代码重用和函数" class="headerlink" title="第五章 代码重用和函数"></a>第五章 代码重用和函数</h2><h3 id="auto-prepend-file"><a href="#auto-prepend-file" class="headerlink" title="auto_prepend_file"></a>auto_prepend_file</h3><p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// php.ini</span><br><span class="line">auto_prepend_file = &quot;/path/to/header.php&quot;;</span><br><span class="line">auto_append_file = &quot;/path/to/footer.php&quot;;</span><br><span class="line">// .htaccess, 目录中每次每个文件都要进行处理, 性能较低</span><br><span class="line">php_value auto_prepend_file &quot;/path/to/header.php&quot;</span><br><span class="line">php_value auto_append_file &quot;/path/to/footer.php&quot;</span><br><span class="line">// 考虑安全问题可以使用readfile读入而不会自动解析代码</span><br></pre></td></tr></table></figure></p>
+<h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>闭包函数具有对全局作用域变量的访问, 但必须在闭包函数定义中使用<code>use</code>关键字显式定义</p>
+<h2 id="第六章-面向对象"><a href="#第六章-面向对象" class="headerlink" title="第六章 面向对象"></a>第六章 面向对象</h2><h3 id="类属性修饰符"><a href="#类属性修饰符" class="headerlink" title="类属性修饰符"></a>类属性修饰符</h3><p>默认为<code>public</code></p>
+<p><code>private</code>不可被继承, <code>protected</code>可以被继承</p>
+<h3 id="final关键字"><a href="#final关键字" class="headerlink" title="final关键字"></a>final关键字</h3><p>用于禁止类被继承或者函数被覆盖</p>
+<h3 id="不支持多重继承"><a href="#不支持多重继承" class="headerlink" title="不支持多重继承"></a>不支持多重继承</h3><p>单一继承, 但是可以支持类似java的<code>interface</code><br><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">interface</span> <span class="hljs-title">Displayable</span></span>&#123;</span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">display</span><span class="hljs-params">()</span></span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Displayable</span></span>&#123;</span><br><span class="line">	<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">display</span><span class="hljs-params">()</span></span>&#123;</span><br><span class="line">		...</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>或者使用<code>Trait</code>, 注意<code>Trait</code>会覆盖类继承的同名方法, 而类中自定义的方法可以覆盖<code>Trait</code>的方法<br><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">trait</span> logger&#123;</span><br><span class="line">	<span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">logmessage</span><span class="hljs-params">($message)</span></span>&#123;</span><br><span class="line">		...</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Test</span></span>&#123;</span><br><span class="line">	<span class="hljs-keyword">use</span> <span class="hljs-title">logger</span>;</span><br><span class="line">	<span class="hljs-comment">// this-&gt;logmessage();</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果使用了多个同名的<code>Trait</code>, 需要用<code>insteadof</code>声明所使用的函数</p>
+<h3 id="灵活的使用标记"><a href="#灵活的使用标记" class="headerlink" title="灵活的使用标记"></a>灵活的使用标记</h3><p>当程序中需要大段的打印html代码时, 可以使用如下的方法<br><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?php</span> <span class="hljs-keyword">if</span>()&#123;...&#125;</span><br><span class="line">	  <span class="hljs-keyword">else</span>&#123;</span><br><span class="line">	  	<span class="hljs-meta">?&gt;</span> html...</span><br><span class="line">	  	<span class="hljs-meta">&lt;?php</span></span><br><span class="line">	  &#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="常量和静态方法"><a href="#常量和静态方法" class="headerlink" title="常量和静态方法"></a>常量和静态方法</h3><p>常量用<code>const</code>定义, 静态方法用<code>static</code>修饰, 可以在未初始化前调用</p>
+<h3 id="魔术方法"><a href="#魔术方法" class="headerlink" title="魔术方法"></a>魔术方法</h3><p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 方法重载</span></span><br><span class="line">__call($method, $p)</span><br><span class="line"><span class="hljs-comment">// 访问不可访问方法时, since php5.3</span></span><br><span class="line">__callStatic()</span><br><span class="line"><span class="hljs-comment">// 实例化还没有被声明的类时可以调用</span></span><br><span class="line">__autoload()</span><br><span class="line"><span class="hljs-comment">// ex:</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__autoload</span><span class="hljs-params">($name)</span></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">include_once</span> $name.<span class="hljs-string">".php"</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h3 id="迭代器和生成器"><a href="#迭代器和生成器" class="headerlink" title="迭代器和生成器"></a>迭代器和生成器</h3><h3 id="名称空间"><a href="#名称空间" class="headerlink" title="名称空间"></a>名称空间</h3><p>如果在文件中声明名称空间, 文件的第一行代码必须是名称空间声明</p>
+<p>当没有指定完整的名称空间时, 都会认为在当前名称空间, 如果找不到则会在全局名称空间中寻找, 全局名称空间为<code>\</code></p>
+<p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">// 声明名称空间</span></span><br><span class="line"><span class="hljs-keyword">namespace</span> <span class="hljs-title">bob</span>\<span class="hljs-title">html</span>\<span class="hljs-title">page</span>;</span><br><span class="line"><span class="hljs-comment">//使用名称空间</span></span><br><span class="line"><span class="hljs-keyword">use</span> <span class="hljs-title">bob</span>\<span class="hljs-title">html</span>\<span class="hljs-title">page</span>;</span><br><span class="line"><span class="hljs-comment">// 别名</span></span><br><span class="line"><span class="hljs-keyword">use</span> <span class="hljs-title">bob</span>\<span class="hljs-title">html</span>\<span class="hljs-title">page</span> <span class="hljs-title">as</span> <span class="hljs-title">www</span>;</span><br></pre></td></tr></table></figure></p>
+<h2 id="第七章-错误和异常处理"><a href="#第七章-错误和异常处理" class="headerlink" title="第七章 错误和异常处理"></a>第七章 错误和异常处理</h2><h3 id="抛出异常"><a href="#抛出异常" class="headerlink" title="抛出异常"></a>抛出异常</h3><p>在php中, 异常必须手动抛出</p>
+<p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">Exception</span>($message, $code);</span><br></pre></td></tr></table></figure></p>
+<p>注意如果异常没有匹配到<code>catch</code>块将报Error</p>
+<h3 id="异常类"><a href="#异常类" class="headerlink" title="异常类"></a>异常类</h3><p>Exception</p>
+<ul>
+<li>getCode(): 返回错误代码</li>
+<li>getMessage(): 返回错误信息</li>
+<li>getFile(): 返回产生异常的文件完整路径</li>
+<li>getLine(): 返回错误代码行号</li>
+<li>getTrace(): 返回异常代码回溯路径的数组</li>
+<li>getTraceAsString(): 返回回溯路径数组的格式化形式</li>
+<li>__toString(): string输出异常</li>
+</ul>
+<p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?php</span></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">myException</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Exception</span></span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">__toString</span><span class="hljs-params">()</span></span>&#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-string">"&lt;strong&gt;"</span>.<span class="hljs-keyword">$this</span>-&gt;getMessage().<span class="hljs-string">"&lt;/strong&gt;"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-keyword">try</span>&#123;</span><br><span class="line">    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> myException(<span class="hljs-string">"error"</span>);</span><br><span class="line">&#125;<span class="hljs-keyword">catch</span>(myException $m)&#123;</span><br><span class="line">    <span class="hljs-keyword">echo</span> $m;</span><br><span class="line">&#125;<span class="hljs-keyword">catch</span>(<span class="hljs-keyword">Exception</span> $m)&#123;</span><br><span class="line">    <span class="hljs-keyword">echo</span> $m;</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-meta">?&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="第八章-web数据库设计"><a href="#第八章-web数据库设计" class="headerlink" title="第八章 web数据库设计"></a>第八章 web数据库设计</h2><p>避免保存冗余数据, 当冗余数据过多会出现修改, 插入和删除异常</p>
+<p>避免出现大量空值</p>
+<h2 id="第九章-Web数据库创建"><a href="#第九章-Web数据库创建" class="headerlink" title="第九章 Web数据库创建"></a>第九章 Web数据库创建</h2><h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><ol>
+<li>安装文件</li>
+<li>如果需要, 创建并设置MySQL的运行用户</li>
+<li>设置路径</li>
+<li>如果需要, 运行mysql_install_db</li>
+<li>设置root用户密码</li>
+<li>删除匿名用户和测试数据库</li>
+<li>启动MySQL并设置为自动运行</li>
+</ol>
+<h3 id="大小写-1"><a href="#大小写-1" class="headerlink" title="大小写"></a>大小写</h3><p>sql语句不区分大小写, 数据库名称和表名称区分大小写(linux下)</p>
+<h3 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a>创建用户</h3><p>创建用户可以使用</p>
+<p><figure class="highlight sql hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">create</span> <span class="hljs-keyword">user</span> user_info <span class="hljs-keyword">identified</span> <span class="hljs-keyword">by</span> <span class="hljs-keyword">password</span>;</span><br></pre></td></tr></table></figure></p>
+<p>或者使用grant自动创建用户</p>
+<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">-- since mysql 5.5.7</span><br><span class="line">grant privileges on item to user_info identified by password;</span><br></pre></td></tr></table></figure></p>
+<h3 id="权限"><a href="#权限" class="headerlink" title="权限"></a>权限</h3><p>大部分情况下, php脚本只需要<code>select</code>, <code>insert</code>, <code>update</code>, <code>delete</code>操作</p>
+<p>可以通过<code>grant</code>授予和<code>revoke</code>取回, 部分权限如<code>file</code>具有极大的安全问题</p>
+<p>如果所运行的grant语句已经执行, 但是尝试登陆时被拒绝, 通常是因为安装中的匿名用户没有被删除</p>
+<h3 id="查看数据库"><a href="#查看数据库" class="headerlink" title="查看数据库"></a>查看数据库</h3><p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">-- 查看所有数据库</span><br><span class="line">show databases;</span><br><span class="line">-- 显示数据库结构</span><br><span class="line">describe database_name;</span><br></pre></td></tr></table></figure></p>
+<h3 id="部分类型"><a href="#部分类型" class="headerlink" title="部分类型"></a>部分类型</h3><p>当读取char类型或者写入varchar数据时, mysql将过去结尾处多余的空格</p>
+<p>blob, 二进制大对象, 可以用来存储图像声音数据等</p>
+
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Web开发/">#Web开发</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2019/11/24/HTB-Hack之旅/">HTB-Hack之旅</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2019/10/26/BuuCTF刷题记录/">BuuCTF刷题记录</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<div id="valine-thread"></div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#valine-thread',
+        appId: 'v5c6tCkP9NLlhg0OyYuolmq9-MdYXbMMI',
+        appKey: 'R62EtJxTkLDM16nlaU8zJkSs',
+        notify: false,
+        verify: false,
+        avatar: '',
+        placeholder: 'why so serious?',
+        meta: ['nick', 'mail'],
+        visitor: true,
+        lang: ''
+    })
+</script>
+
+
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                &copy; 2020 cjM00N&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+            </div>
+            <div class="column is-hidden-mobile"></div>
+
+            
+            <div class="column is-narrow">
+                <div class="columns is-mobile is-multiline is-centered">
+                
+                    
+                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/cjm00n/">
+                    
+                    GitHub
+                    
+                </a>
+                
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    moment.locale("en-AU");
+</script>
+
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+</script>
+
+    
+    
+    
+    
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
+<script>
+    (function ($) {
+        $(document).ready(function () {
+            if (typeof($.fn.lightGallery) === 'function') {
+                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof($.fn.justifiedGallery) === 'function') {
+                $('.justified-gallery').justifiedGallery();
+            }
+        });
+    })(jQuery);
+</script>
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
+    
+
+    
+
+
+<script src="/js/script.js"></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js"></script>
+    
+</body>
+</html>
