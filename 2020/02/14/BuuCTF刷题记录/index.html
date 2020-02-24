@@ -75,7 +75,6 @@
 <meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200213230129.png">
 <meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200214000802.png">
 <meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200214001529.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200214001604.png">
 <meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200214002016.png">
 <meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200214002316.png">
 <meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200214004701.png">
@@ -84,7 +83,7 @@
 <meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200214123111.png">
 <meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200214123225.png">
 <meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200214135351.png">
-<meta property="og:updated_time" content="2020-02-16T05:37:32.323Z">
+<meta property="og:updated_time" content="2020-02-22T06:26:09.042Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BuuCTF刷题记录">
 <meta name="twitter:description" content="感谢glzjin师傅">
@@ -377,7 +376,7 @@
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20190826103310.png" alt>可以看到输出正常, 说明后端的实现应该是</p>
 <p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqli_multi_query($sql);</span><br></pre></td></tr></table></figure></p>
 <p>而平时的实现是<code>mysql_query</code>这样的语句可以支持多条sql语句同时执行, 那要绕过select的过滤的话可以使用</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set @t=0xaaaaa;prepare x from @t;execute x;</span><br></pre></td></tr></table></figure></p>
+<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set @t=0x68616861686168;prepare x from @t;execute x;</span><br></pre></td></tr></table></figure></p>
 <p>预编译语句来执行, 其中@t的部分是执行语句的hex编码, 例如我们要执行</p>
 <p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from `1919810931114514`;</span><br></pre></td></tr></table></figure></p>
 <p>hex编码后替换上面的<code>aaaaa</code>即可</p>
@@ -704,10 +703,13 @@
 <p> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&amp;#;`|*?~&lt;&gt;^()[]&#123;&#125;$\, \x0A, \xFF</span><br></pre></td></tr></table></figure></p>
 <p> <img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200214001529.png" alt></p>
  <center>linux</center>
+![](https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200214001604.png)
 
-<p> <img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200214001604.png" alt></p>
- <center>win</center>
 </li>
+</ol>
+<center>win</center>
+
+<ol start="2">
 <li><p>匹配单引号数量(包括被<code>\</code>转义的), 如果是奇数则转义最后一个单引号, 如果是偶数则不转义</p>
 <p> <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos;&apos;\&apos;&apos; &lt;?php phpinfo();?&gt; -oG shell.php &apos;</span><br></pre></td></tr></table></figure></p>
 <p> 则会变成</p>
