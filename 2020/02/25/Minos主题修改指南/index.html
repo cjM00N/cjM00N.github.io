@@ -151,6 +151,12 @@
                     
                     <a class="navbar-item" href="#RSS">6&nbsp;&nbsp;<b>RSS</b></a>
                     
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#时间格式更新">7&nbsp;&nbsp;<b>时间格式更新</b></a>
+                    
                 </div>
             </div>
             
@@ -181,9 +187,11 @@
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            <time datetime="2020-02-25T15:42:58.000Z" itemprop="datePublished">Feb 25 2020</time>
-        </span>
+            <span class="column is-narrow">
+        
+                  <b><time datetime="2020-02-25T16:28:19.486Z" itemprop="datePublished">Feb 26 2020</time></b> updated
+        
+            </span>
         
         <span class="column is-narrow article-category">
             <i class="far fa-folder"></i>
@@ -200,7 +208,7 @@
 
 <a id="more"></a>
 
-<h2 id="Tags页面修改"><a href="#Tags页面修改" class="headerlink" title="Tags页面修改"></a>Tags页面修改</h2><p>将 <code>#</code> 替换为 <i class="fas fa-tags"></i> </p>
+<h2 id="Tags页面修改"><a href="#Tags页面修改" class="headerlink" title="Tags页面修改"></a>Tags页面修改</h2><p>打开下面的文件</p>
 <p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme/minos/layout/tags.ejs</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>第4行修改为</p>
 <p></p><figure class="highlight javascript hljs"><figcaption><span>tags.ejs</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><h5><span class="hljs-xml"><span class="hljs-tag"><<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fas fa-tags"</span>></span><span class="hljs-tag"></<span class="hljs-name">i</span>></span></span><span class="hljs-xml"><span class="hljs-tag"><<span class="hljs-name">%=</span> <span class="hljs-attr">__</span>('<span class="hljs-attr">common.tags</span>') %></span><span class="hljs-tag"></<span class="hljs-name">h5</span>></span></span></span><br></pre></td></tr></tbody></table></figure><p></p>
@@ -260,6 +268,7 @@
 <p>效果如下</p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200226001324.png" alt></p>
 <p>就可以快乐的添加订阅了</p>
+<h2 id="时间格式更新"><a href="#时间格式更新" class="headerlink" title="时间格式更新"></a>时间格式更新</h2><p>将时间格式改为具体的日期</p>
 <p><br></p><blockquote class="colorquote info"><p>本文作者：cjm00n<br>本文地址： <a href="https://cjm00n.top/2020/02/25/Minos主题修改指南/">https://cjm00n.top/2020/02/25/Minos主题修改指南/</a> <br>版权声明：除特别说明外，所有文章均采用 CC BY 4.0 许可协议，转载请先取得同意。</p>
 </blockquote><p></p>
 </body></html>
@@ -365,7 +374,7 @@
         searchPseudoElements: true
     }
     // moment.locale("en-AU");
-    moment.locale("zh-cn");
+    moment.locale("en");
 </script>
 
 
