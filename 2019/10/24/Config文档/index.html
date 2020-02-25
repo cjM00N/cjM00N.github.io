@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="has-navbar-fixed-top">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
 <title>Config文档 - cjM00N&#39;s blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,28 +10,17 @@
 
 
 
-
-
-
-
-    <meta name="description" content="记录下常用的配置">
-<meta name="keywords" content="Config">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Config文档">
-<meta property="og:url" content="https://cjm00n.top/2019/10/24/Config文档/index.html">
-<meta property="og:site_name" content="cjM00N&#39;s blog">
-<meta property="og:description" content="记录下常用的配置">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-28T01:47:19.701Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Config文档">
-<meta name="twitter:description" content="记录下常用的配置">
+<meta name="description" content="web && ctf && code">
 
 
 
 
 
-<link rel="icon" href="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191113175046.png">
+
+
+
+
+<link rel="icon" href="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200225213644.png">
 
 
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
@@ -44,7 +33,9 @@
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
 
+
 <link rel="stylesheet" href="/css/style.css">
+
 
 <script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
@@ -55,14 +46,20 @@
     
     
     
-    
-    
-    
-    
+<script async src="https://www.googletagmanager.com/gtag/js?id=false"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'false');
+</script>
+
 
     
 
 
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/rss.xml" title="cjM00N's blog" type="application/atom+xml">
 </head>
 <body>
     
@@ -72,7 +69,7 @@
             <a class="navbar-item navbar-logo" href="/">
                 
                     
-                    cjM00N
+                    <img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200225213644.png" alt="" height="28">
                     
                 
             </a>
@@ -85,13 +82,20 @@
         
         <div class="navbar-menu navbar-start">
             
-            <a class="navbar-item " href="/archives">Archives</a>
+            <a class="navbar-item "
+               href="/archives">Archives</a>
             
-            <a class="navbar-item " href="/categories">Categories</a>
+            <a class="navbar-item "
+               href="/categories">Categories</a>
             
-            <a class="navbar-item " href="/tags">Tags</a>
+            <a class="navbar-item "
+               href="/tags">Tags</a>
             
-            <a class="navbar-item " href="/about">About</a>
+            <a class="navbar-item "
+               href="/friends">Friends</a>
+            
+            <a class="navbar-item "
+               href="/about">About</a>
             
         </div>
         
@@ -153,9 +157,15 @@
             </div>
             
             
-            <a class="navbar-item" title="GitHub" href="https://github.com/cjm00n/">
+            <a class="navbar-item" title="GitHub" href="https://github.com/cjm00n/" target="_blank" rel="noopener">
                 
                 <i class="fab fa-github"></i>
+                
+            </a>
+               
+            <a class="navbar-item" title="RSS" href="/rss.xml">
+                
+                <i class="fas fa-rss"></i>
                 
             </a>
                
@@ -186,24 +196,25 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <p>记录下常用的配置</p>
+        <html><head></head><body><p>记录下常用的配置</p>
 <a id="more"></a>
 
 <h2 id="git-proxy"><a href="#git-proxy" class="headerlink" title="git proxy"></a>git proxy</h2><p>让git走代理, 基本可以达到满速</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.https://github.com.proxy socks5h://127.0.0.1:10808</span><br></pre></td></tr></table></figure></p>
-<p>删除代理</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.https://github.com.proxy</span><br></pre></td></tr></table></figure></p>
-<h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install zsh</span><br><span class="line">sh -c &quot;$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)&quot;</span><br></pre></td></tr></table></figure></p>
-<h2 id="zshrc"><a href="#zshrc" class="headerlink" title="zshrc"></a>zshrc</h2><p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># theme</span><br><span class="line">ZSH_THEME=&quot;ys&quot;</span><br><span class="line"></span><br><span class="line"># alias</span><br><span class="line">alias ctf=&quot;cd /mnt/hgfs/ctf&quot;</span><br><span class="line">alias tools=&quot;cd /mnt/hgfs/tools&quot;</span><br><span class="line">alias clash=&quot;~/clash/clash -d ~/clash/&quot;</span><br><span class="line">alias htbvpn=&quot;openvpn ~/cjM00N.ovpn&quot;</span><br><span class="line">alias pc=&quot;proxychains&quot;</span><br><span class="line">alias tmuxa=&quot;tmux a -t&quot;</span><br><span class="line">alias tmuxn=&quot;tmux new -s&quot;</span><br><span class="line">alias vi=&quot;vim&quot;</span><br><span class="line">alias burp=&quot;/opt/Burpsuite/start.sh&quot;</span><br></pre></td></tr></table></figure></p>
-<h2 id="内外网切换"><a href="#内外网切换" class="headerlink" title="内外网切换"></a>内外网切换</h2><p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">netstat -nr 查看路由表</span><br><span class="line">sudo route delete 0.0.0.0 删除默认路由</span><br><span class="line">sudo route add -net 0.0.0.0 192.168.1.1 默认使用192.168.1.1网关</span><br><span class="line">sudo route add 10.200.0.0 10.200.22.254 有线网卡使用该网关</span><br><span class="line">sudo route add 10.0.1.0/24 10.200.22.254 其它网段指定网关</span><br></pre></td></tr></table></figure></p>
-<h2 id="切换java版本"><a href="#切换java版本" class="headerlink" title="切换java版本"></a>切换java版本</h2><p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update-alternatives  --config  java</span><br></pre></td></tr></table></figure></p>
-<h2 id="tmux配置"><a href="#tmux配置" class="headerlink" title="tmux配置"></a>tmux配置</h2><p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"># reload with Ctrl+r</span><br><span class="line">bind C-r source-file ~/.tmux.conf \; display &quot;Reloaded!&quot;</span><br><span class="line"></span><br><span class="line"># tmux attach</span><br><span class="line">new-session</span><br><span class="line"></span><br><span class="line"># vi keymap</span><br><span class="line">set-option -g status-keys vi</span><br><span class="line">set-window-option -g mode-keys vi</span><br><span class="line"></span><br><span class="line"># vi-type selection and copy</span><br><span class="line">bind -T copy-mode-vi v send-keys -X begin-selection</span><br><span class="line">bind -T copy-mode-vi y send-keys -X copy-selection-and-cancel</span><br><span class="line"></span><br><span class="line"># choose pane with vi-key</span><br><span class="line">bind -r ^k selectp -U</span><br><span class="line">bind -r ^j selectp -D</span><br><span class="line">bind -r ^h selectp -L</span><br><span class="line">bind -r ^l selectp -R</span><br><span class="line"></span><br><span class="line"># exec command man</span><br><span class="line">bind m command-prompt &quot;splitw -h &apos;exec man %%&apos;&quot;</span><br><span class="line"></span><br><span class="line"># add Ctrl+a to prefix key </span><br><span class="line">set -g prefix2 C-a</span><br><span class="line">bind C-a send-prefix -2</span><br><span class="line"></span><br><span class="line"># new pane - = </span><br><span class="line"># horizontal</span><br><span class="line">unbind &apos;&quot;&apos;</span><br><span class="line">bind - splitw -v -c &apos;#&#123;pane_current_path&#125;&apos; </span><br><span class="line"># vertical</span><br><span class="line">unbind %</span><br><span class="line">bind =  splitw -h -c &apos;#&#123;pane_current_path&#125;&apos; </span><br><span class="line"></span><br><span class="line"># color</span><br><span class="line">set -g default-terminal &quot;screen-256color&quot;</span><br><span class="line"></span><br><span class="line"># rename</span><br><span class="line">setw -g automatic-rename off</span><br><span class="line">setw -g allow-rename off</span><br><span class="line"></span><br><span class="line"># mouse </span><br><span class="line">set -g mouse on</span><br><span class="line"></span><br><span class="line"># ------ status theme -------------------------------</span><br><span class="line">set -g message-style &quot;bg=#00346e, fg=#ffffd7&quot;        # tomorrow night blue, base3</span><br><span class="line"></span><br><span class="line">set -g status-style &quot;bg=#00346e, fg=#ffffd7&quot;   # tomorrow night blue, base3</span><br><span class="line">set -g status-left &quot;#[bg=#0087ff] &gt; #S &quot;       # blue</span><br><span class="line">set -g status-left-length 400</span><br><span class="line">set -g status-right &quot;#[bg=#0087ff] #(whoami)@#h #[bg=red] %Y-%m-%d %H:%M &quot;</span><br><span class="line">set -g status-right-length 600</span><br><span class="line"></span><br><span class="line">set -g set-clipboard on</span><br><span class="line">set -g history-limit 8000</span><br><span class="line"></span><br><span class="line">set -wg window-status-format &quot; #I #W &quot;</span><br><span class="line">set -wg window-status-current-format &quot; #I #W &quot;</span><br><span class="line">set -wg window-status-separator &quot;&quot;</span><br><span class="line">set -wg window-status-current-style &quot;bg=red&quot; # red</span><br><span class="line">set -wg window-status-last-style &quot;fg=#dddddd&quot;</span><br><span class="line"></span><br><span class="line">set -wg pane-active-border-style &quot;fg=blue&quot;</span><br><span class="line">set -wg pane-border-style &quot;fg=#585858&quot;       # base01</span><br><span class="line">set -g status-justify left</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.https://github.com.proxy socks5h://127.0.0.1:10808</span><br></pre></td></tr></tbody></table></figure><br>删除代理<p></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.https://github.com.proxy</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install zsh</span><br><span class="line">sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="zshrc"><a href="#zshrc" class="headerlink" title="zshrc"></a>zshrc</h2><p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># theme</span><br><span class="line">ZSH_THEME="ys"</span><br><span class="line"></span><br><span class="line"># alias</span><br><span class="line">alias ctf="cd /mnt/hgfs/ctf"</span><br><span class="line">alias tools="cd /mnt/hgfs/tools"</span><br><span class="line">alias clash="~/clash/clash -d ~/clash/"</span><br><span class="line">alias htbvpn="openvpn ~/cjM00N.ovpn"</span><br><span class="line">alias pc="proxychains"</span><br><span class="line">alias tmuxa="tmux a -t"</span><br><span class="line">alias tmuxn="tmux new -s"</span><br><span class="line">alias vi="vim"</span><br><span class="line">alias burp="/opt/Burpsuite/start.sh"</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="内外网切换"><a href="#内外网切换" class="headerlink" title="内外网切换"></a>内外网切换</h2><p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">netstat -nr 查看路由表</span><br><span class="line">sudo route delete 0.0.0.0 删除默认路由</span><br><span class="line">sudo route add -net 0.0.0.0 192.168.1.1 默认使用192.168.1.1网关</span><br><span class="line">sudo route add 10.200.0.0 10.200.22.254 有线网卡使用该网关</span><br><span class="line">sudo route add 10.0.1.0/24 10.200.22.254 其它网段指定网关</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="切换java版本"><a href="#切换java版本" class="headerlink" title="切换java版本"></a>切换java版本</h2><p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update-alternatives  --config  java</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="tmux配置"><a href="#tmux配置" class="headerlink" title="tmux配置"></a>tmux配置</h2><p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"># reload with Ctrl+r</span><br><span class="line">bind C-r source-file ~/.tmux.conf \; display "Reloaded!"</span><br><span class="line"></span><br><span class="line"># tmux attach</span><br><span class="line">new-session</span><br><span class="line"></span><br><span class="line"># vi keymap</span><br><span class="line">set-option -g status-keys vi</span><br><span class="line">set-window-option -g mode-keys vi</span><br><span class="line"></span><br><span class="line"># vi-type selection and copy</span><br><span class="line">bind -T copy-mode-vi v send-keys -X begin-selection</span><br><span class="line">bind -T copy-mode-vi y send-keys -X copy-selection-and-cancel</span><br><span class="line"></span><br><span class="line"># choose pane with vi-key</span><br><span class="line">bind -r ^k selectp -U</span><br><span class="line">bind -r ^j selectp -D</span><br><span class="line">bind -r ^h selectp -L</span><br><span class="line">bind -r ^l selectp -R</span><br><span class="line"></span><br><span class="line"># exec command man</span><br><span class="line">bind m command-prompt "splitw -h 'exec man %%'"</span><br><span class="line"></span><br><span class="line"># add Ctrl+a to prefix key </span><br><span class="line">set -g prefix2 C-a</span><br><span class="line">bind C-a send-prefix -2</span><br><span class="line"></span><br><span class="line"># new pane - = </span><br><span class="line"># horizontal</span><br><span class="line">unbind '"'</span><br><span class="line">bind - splitw -v -c '#{pane_current_path}' </span><br><span class="line"># vertical</span><br><span class="line">unbind %</span><br><span class="line">bind =  splitw -h -c '#{pane_current_path}' </span><br><span class="line"></span><br><span class="line"># color</span><br><span class="line">set -g default-terminal "screen-256color"</span><br><span class="line"></span><br><span class="line"># rename</span><br><span class="line">setw -g automatic-rename off</span><br><span class="line">setw -g allow-rename off</span><br><span class="line"></span><br><span class="line"># mouse </span><br><span class="line">set -g mouse on</span><br><span class="line"></span><br><span class="line"># ------ status theme -------------------------------</span><br><span class="line">set -g message-style "bg=#00346e, fg=#ffffd7"        # tomorrow night blue, base3</span><br><span class="line"></span><br><span class="line">set -g status-style "bg=#00346e, fg=#ffffd7"   # tomorrow night blue, base3</span><br><span class="line">set -g status-left "#[bg=#0087ff] > #S "       # blue</span><br><span class="line">set -g status-left-length 400</span><br><span class="line">set -g status-right "#[bg=#0087ff] #(whoami)@#h #[bg=red] %Y-%m-%d %H:%M "</span><br><span class="line">set -g status-right-length 600</span><br><span class="line"></span><br><span class="line">set -g set-clipboard on</span><br><span class="line">set -g history-limit 8000</span><br><span class="line"></span><br><span class="line">set -wg window-status-format " #I #W "</span><br><span class="line">set -wg window-status-current-format " #I #W "</span><br><span class="line">set -wg window-status-separator ""</span><br><span class="line">set -wg window-status-current-style "bg=red" # red</span><br><span class="line">set -wg window-status-last-style "fg=#dddddd"</span><br><span class="line"></span><br><span class="line">set -wg pane-active-border-style "fg=blue"</span><br><span class="line">set -wg pane-border-style "fg=#585858"       # base01</span><br><span class="line">set -g status-justify left</span><br></pre></td></tr></tbody></table></figure><p></p>
 <h2 id="powershell-设置别名"><a href="#powershell-设置别名" class="headerlink" title="powershell 设置别名"></a>powershell 设置别名</h2><p>打开配置文件</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code $PROFILE</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code $PROFILE</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>设置别名样例如下</p>
-<p><figure class="highlight powershell hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">function</span> cdTools&#123;</span><br><span class="line">    <span class="hljs-built_in">Set-Location</span> D:\tools</span><br><span class="line">&#125;</span><br><span class="line"><span class="hljs-built_in">Set-Alias</span> tools cdTools</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight powershell hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">function</span> cdTools{</span><br><span class="line">    <span class="hljs-built_in">Set-Location</span> D:\tools</span><br><span class="line">}</span><br><span class="line"><span class="hljs-built_in">Set-Alias</span> tools cdTools</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>重启powershell即可</p>
-
+<p><br></p><blockquote class="colorquote info"><p>本文作者：cjm00n<br>本文地址： <a href="https://cjm00n.top/2019/10/24/Config文档/">https://cjm00n.top/2019/10/24/Config文档/</a> <br>版权声明：除特别说明外，所有文章均采用 CC BY 4.0 许可协议，转载请先取得同意。</p>
+</blockquote><p></p>
+</body></html>
     
     </div>
     
@@ -217,12 +228,12 @@
     <div class="columns is-mobile is-multiline article-nav">
         <span class="column is-12-mobile is-half-desktop  article-nav-prev">
             
-            <a href="/2019/11/24/php和mysql开发笔记/">php和mysql开发笔记</a>
+            <a href="/2019/11/24/php%E5%92%8Cmysql%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">php和mysql开发笔记</a>
             
         </span>
         <span class="column is-12-mobile is-half-desktop  article-nav-next">
             
-            <a href="/2019/08/22/Xman结营赛AWD总结/">Xman结营赛AWD总结</a>
+            <a href="/2019/08/22/Xman%E7%BB%93%E8%90%A5%E8%B5%9BAWD%E6%80%BB%E7%BB%93/">Xman结营赛AWD总结</a>
             
         </span>
     </div>
@@ -237,7 +248,7 @@
     
 <script>
     var disqus_config = function () {
-        this.page.url = 'https://cjm00n.top/2019/10/24/Config文档/';
+        this.page.url = 'https://cjm00n.top/2019/10/24/Config%E6%96%87%E6%A1%A3/';
         this.page.identifier = '2019/10/24/Config文档/';
         
         this.language = 'en';
@@ -253,7 +264,7 @@
 
 <div id="disqus_thread">
     
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
 </div>
 </div>
 
@@ -263,24 +274,20 @@
     <div class="container">
         <div class="columns content">
             <div class="column is-narrow has-text-centered">
-                &copy; 2020 cjM00N&nbsp;
-                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+                <i class="fas fa-moon"></i> 2020 cjM00N&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+                        
             </div>
             <div class="column is-hidden-mobile"></div>
-
-            
-            <div class="column is-narrow">
-                <div class="columns is-mobile is-multiline is-centered">
-                
-                    
-                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/cjm00n/">
-                    
-                    GitHub
-                    
-                </a>
-                
-                </div>
+            <div class="column is-narrow has-text-centered">
+                <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+                </script>
+            <span id="busuanzi_container_page_pv"> 
+                <i class="fas fa-eye"></i> clicked: <a href="#"><span id="busuanzi_value_page_pv"></span></a> times
+              </span>
             </div>
+            
             
             
         </div>
@@ -292,7 +299,7 @@
 <!-- test if the browser is outdated -->
 <div id="outdated">
     <h6>Your browser is out-of-date!</h6>
-    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update my browser now </a></p>
     <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
@@ -311,52 +318,13 @@
     window.FontAwesomeConfig = {
         searchPseudoElements: true
     }
-    moment.locale("en-AU");
+    // moment.locale("en-AU");
+    moment.locale("zh-cn");
 </script>
 
 
     
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<script>
-    MathJax.Hub.Config({
-        "HTML-CSS": {
-            matchFontHeight: false
-        },
-        SVG: {
-            matchFontHeight: false
-        },
-        CommonHTML: {
-            matchFontHeight: false
-        },
-        tex2jax: {
-            inlineMath: [
-                ['$','$'],
-                ['\\(','\\)']
-            ]
-        }
-    });
-</script>
-
-    
-    
-    
-    
-<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
-<script>
-    (function ($) {
-        $(document).ready(function () {
-            if (typeof($.fn.lightGallery) === 'function') {
-                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof($.fn.justifiedGallery) === 'function') {
-                $('.justified-gallery').justifiedGallery();
-            }
-        });
-    })(jQuery);
-</script>
-
     
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
@@ -428,14 +396,16 @@
     
 
 
+
 <script src="/js/script.js"></script>
+
 
     
     <div class="searchbox ins-search">
     <div class="searchbox-mask"></div>
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -458,7 +428,9 @@
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
     
 </body>
 </html>

