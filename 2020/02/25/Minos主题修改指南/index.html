@@ -118,10 +118,6 @@
                     <a class="navbar-item" href="#Tags页面修改">1&nbsp;&nbsp;<b>Tags页面修改</b></a>
                     
                     
-                    
-                    <a class="navbar-item" href="#">1.1&nbsp;&nbsp;&amp;lt;i class=&amp;quot;fas fa-tags&amp;quot;&amp;gt;i&amp;gt;&amp;lt;%= __(&amp;#39;common.tags&amp;#39;) %&amp;gt;h5&amp;gt;</a>
-                    
-                    
                     <hr class="navbar-divider">
                     
                     
@@ -189,7 +185,7 @@
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
             <span class="column is-narrow">
         
-                  <b><time datetime="2020-02-25T16:28:19.486Z" itemprop="datePublished">Feb 26 2020</time></b> updated
+                  <b><time datetime="2020-02-25T17:11:35.677Z" itemprop="datePublished">Feb 26 2020</time></b> updated
         
             </span>
         
@@ -211,7 +207,7 @@
 <h2 id="Tags页面修改"><a href="#Tags页面修改" class="headerlink" title="Tags页面修改"></a>Tags页面修改</h2><p>打开下面的文件</p>
 <p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme/minos/layout/tags.ejs</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>第4行修改为</p>
-<p></p><figure class="highlight javascript hljs"><figcaption><span>tags.ejs</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><h5><span class="hljs-xml"><span class="hljs-tag"><<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fas fa-tags"</span>></span><span class="hljs-tag"></<span class="hljs-name">i</span>></span></span><span class="hljs-xml"><span class="hljs-tag"><<span class="hljs-name">%=</span> <span class="hljs-attr">__</span>('<span class="hljs-attr">common.tags</span>') %></span><span class="hljs-tag"></<span class="hljs-name">h5</span>></span></span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p></p><figure class="highlight javascript hljs"><figcaption><span>tags.ejs</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><i <span class="hljs-class"><span class="hljs-keyword">class</span></span>=<span class="hljs-string">"fas fa-tags"</span>><span class="hljs-xml"><span class="hljs-tag"></<span class="hljs-name">i</span>></span></span><span class="hljs-xml"><span class="hljs-tag"><<span class="hljs-name">%=</span> <span class="hljs-attr">__</span>('<span class="hljs-attr">common.tags</span>') %></span></span></span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>第13行去掉<code>#</code></p>
 <p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><a class="tag is-light article-tag" href="<%= url_for(tag.path) %>"><%= tag.name %>&nbsp;(<%= tag.posts.length%>)</a></span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>效果如下</p>
