@@ -6,7 +6,7 @@
   <link href="/rss.xml" rel="self"/>
   
   <link href="https://cjm00n.top/"/>
-  <updated>2020-02-24T15:44:21.384Z</updated>
+  <updated>2020-02-25T16:13:52.757Z</updated>
   <id>https://cjm00n.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Minos主题修改指南</title>
+    <link href="https://cjm00n.top/2020/02/25/Minos%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E6%8C%87%E5%8D%97/"/>
+    <id>https://cjm00n.top/2020/02/25/Minos%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E6%8C%87%E5%8D%97/</id>
+    <published>2020-02-25T15:42:58.000Z</published>
+    <updated>2020-02-25T16:13:52.757Z</updated>
+    
+    <summary type="html">
+    
+      &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;对现在使用的Minos主题做了些修改, 做一下记录&lt;/p&gt;
+&lt;blockquote class=&quot;colorquote info&quot;&gt;&lt;p&gt;极缓慢更新&lt;/p&gt;
+&lt;/blockquote&gt;&lt;/body&gt;&lt;/html&gt;
+    
+    </summary>
+    
+    
+      <category term="Blog" scheme="https://cjm00n.top/categories/Blog/"/>
+    
+    
+      <category term="Config" scheme="https://cjm00n.top/tags/Config/"/>
+    
+  </entry>
   
   <entry>
     <title>新春公益赛2020wp</title>

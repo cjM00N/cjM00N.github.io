@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+<title>Minos主题修改指南 - cjM00N&#39;s blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+
+
+
+
+<meta name="description" content="web && ctf && code">
+
+
+
+
+
+
+
+
+
+<link rel="icon" href="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200225213644.png">
+
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
+
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
+
+    
+    
+    
+    
+    
+    
+<script async src="https://www.googletagmanager.com/gtag/js?id=false"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'false');
+</script>
+
+
+    
+
+
+<meta name="generator" content="Hexo 4.2.0"><link rel="alternate" href="/rss.xml" title="cjM00N's blog" type="application/atom+xml">
+</head>
+<body>
+    
+<nav class="navbar is-transparent is-fixed-top navbar-main" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item navbar-logo" href="/">
+                
+                    
+                    <img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200225213644.png" alt="" height="28">
+                    
+                
+            </a>
+            <div class="navbar-burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <div class="navbar-menu navbar-start">
+            
+            <a class="navbar-item "
+               href="/archives">Archives</a>
+            
+            <a class="navbar-item "
+               href="/categories">Categories</a>
+            
+            <a class="navbar-item "
+               href="/tags">Tags</a>
+            
+            <a class="navbar-item "
+               href="/friends">Friends</a>
+            
+            <a class="navbar-item "
+               href="/about">About</a>
+            
+        </div>
+        
+        <div class="navbar-menu navbar-end">
+            
+            <a class="navbar-item search" title="Search" href="javascript:;">
+                <i class="fas fa-search"></i>
+            </a>
+            
+            
+            <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
+                <a class="navbar-item" title="Table of Contents">
+                    <i class="fa fa-list"></i>
+                </a>
+                <div class="navbar-dropdown is-right">
+                    
+                    
+                    
+                    
+                    <a class="navbar-item" href="#Tags页面修改">1&nbsp;&nbsp;<b>Tags页面修改</b></a>
+                    
+                    
+                    
+                    <a class="navbar-item" href="#">1.1&nbsp;&nbsp;&amp;lt;i class=&amp;quot;fas fa-tags&amp;quot;&amp;gt;i&amp;gt;&amp;lt;%= __(&amp;#39;common.tags&amp;#39;) %&amp;gt;h5&amp;gt;</a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#版权声明">2&nbsp;&nbsp;<b>版权声明</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#hexo-tag">3&nbsp;&nbsp;<b>hexo-tag</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#固定导航栏">4&nbsp;&nbsp;<b>固定导航栏</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#文章访问计数">5&nbsp;&nbsp;<b>文章访问计数</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#RSS">6&nbsp;&nbsp;<b>RSS</b></a>
+                    
+                </div>
+            </div>
+            
+            
+            <a class="navbar-item" title="GitHub" href="https://github.com/cjm00n/" target="_blank" rel="noopener">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+               
+            <a class="navbar-item" title="RSS" href="/rss.xml">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+               
+            
+        </div>
+    </div>
+</nav>
+
+    <section class="section">
+    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+        
+            Minos主题修改指南
+        
+    </h1>
+    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
+        <span class="column is-narrow">
+            <time datetime="2020-02-25T15:42:58.000Z" itemprop="datePublished">Feb 25 2020</time>
+        </span>
+        
+        <span class="column is-narrow article-category">
+            <i class="far fa-folder"></i>
+            <a class="article-category-link" href="/categories/Blog/">Blog</a>
+        </span>
+        
+        
+    </div>
+    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
+    
+        <html><head></head><body><p>对现在使用的Minos主题做了些修改, 做一下记录</p>
+<blockquote class="colorquote info"><p>极缓慢更新</p>
+</blockquote>
+
+<a id="more"></a>
+
+<h2 id="Tags页面修改"><a href="#Tags页面修改" class="headerlink" title="Tags页面修改"></a>Tags页面修改</h2><p>将 <code>#</code> 替换为 <i class="fas fa-tags"></i> </p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme/minos/layout/tags.ejs</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>第4行修改为</p>
+<p></p><figure class="highlight javascript hljs"><figcaption><span>tags.ejs</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><h5><span class="hljs-xml"><span class="hljs-tag"><<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fas fa-tags"</span>></span><span class="hljs-tag"></<span class="hljs-name">i</span>></span></span><span class="hljs-xml"><span class="hljs-tag"><<span class="hljs-name">%=</span> <span class="hljs-attr">__</span>('<span class="hljs-attr">common.tags</span>') %></span><span class="hljs-tag"></<span class="hljs-name">h5</span>></span></span></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>第13行去掉<code>#</code></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><a class="tag is-light article-tag" href="<%= url_for(tag.path) %>"><%= tag.name %>&nbsp;(<%= tag.posts.length%>)</a></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>效果如下</p>
+<p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200225235114.png" alt></p>
+<h2 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h2><p>使用的是</p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo-addlink</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>插件, 安装后在根目录的 _config.xml 中加入</p>
+<p></p><figure class="highlight xml hljs"><figcaption><span>_config.xml</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">addlink:</span><br><span class="line">  before_text: "<span class="hljs-tag"><<span class="hljs-name">br</span>/></span>{% colorquote info %}本文作者：author<span class="hljs-tag"><<span class="hljs-name">br</span>/></span>本文地址："</span><br><span class="line">  after_text: "<span class="hljs-tag"><<span class="hljs-name">br</span>/></span>版权声明：除特别说明外，所有文章均采用 CC BY 4.0 许可协议，转载请先取得同意。{% endcolorquote %}"</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>效果如下</p>
+<p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200225235528.png" alt></p>
+<blockquote>
+<p>这里使用了 hexo-tag 插件优化引用效果, 不需要删除大括号内容即可</p>
+</blockquote>
+<h2 id="hexo-tag"><a href="#hexo-tag" class="headerlink" title="hexo-tag"></a>hexo-tag</h2><p>这里主要是展示一下效果, 方便要用的时候可以调用, 具体可以看主题作者的使用说明</p>
+<p><a href="https://blog.zhangruipeng.me/hexo-theme-minos/Using-Hexo-Tag-Plugins-in-Minos/" target="_blank" rel="noopener">https://blog.zhangruipeng.me/hexo-theme-minos/Using-Hexo-Tag-Plugins-in-Minos/</a></p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">{% colorquote [type] %}</span><br><span class="line">text </span><br><span class="line">{% endcolorquote %}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<blockquote class="colorquote info"><p>This is info text</p>
+</blockquote>
+
+<blockquote class="colorquote success"><p>This is success text</p>
+</blockquote>
+
+<blockquote class="colorquote warning"><p>This is warning text</p>
+</blockquote>
+
+<blockquote class="colorquote danger"><p>This is danger text</p>
+</blockquote>
+
+<h2 id="固定导航栏"><a href="#固定导航栏" class="headerlink" title="固定导航栏"></a>固定导航栏</h2><p>在多级界面的时候, 感觉还是固定导航栏更实用, 我的做法比较粗暴</p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme/minos/source/js/script.js</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>第18行, 注释定时器即可</p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">// setInterval(function() {</span><br><span class="line">    //     if (didScroll) {</span><br><span class="line">    //         hasScrolled();</span><br><span class="line">    //         didScroll = false;</span><br><span class="line">    //     }</span><br><span class="line">    // }, 250);</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>效果就是不会消失了hhhh</p>
+<h2 id="文章访问计数"><a href="#文章访问计数" class="headerlink" title="文章访问计数"></a>文章访问计数</h2><p>使用的是不蒜子的计数, 没有做什么效果, 直接引入</p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">theme/minos/layout/footer.ejs</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>第10行后插入</p>
+<p></p><figure class="highlight plain hljs"><figcaption><span>footer.ejs</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><div class="column is-narrow has-text-centered"></span><br><span class="line"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></span><br><span class="line"></script></span><br><span class="line"><span id="busuanzi_container_page_pv"> </span><br><span class="line"><i class="fas fa-eye"></i> clicked: <a href="#"><span id="busuanzi_value_page_pv"></span></a> times</span><br><span class="line"></span></span><br><span class="line"></div></span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>顺便改了前面的提示字符, 在第五行</p>
+<p></p><figure class="highlight plain hljs"><figcaption><span>footer.ejs</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><i class="fas fa-moon"></i> <%= date(new Date(), 'YYYY') %> <%= get_config('author') || get_config('title') %>&nbsp;</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>效果如下</p>
+<p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200226000612.png" alt></p>
+<h2 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h2><p>使用的是</p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo-generator-feed</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>同样安装后在根目录的</p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">_config.xml</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>添加下面的内容</p>
+<p></p><figure class="highlight xml hljs"><figcaption><span>_config.xml</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">feed:</span><br><span class="line">  type: atom</span><br><span class="line">  path: rss.xml</span><br><span class="line">  limit: 20</span><br><span class="line">  hub:</span><br><span class="line">  content:</span><br><span class="line">  content_limit:</span><br><span class="line">  content_limit_delim: ' '</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>再到</p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/theme/minos/_config.xml</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>添加图标</p>
+<p></p><figure class="highlight xml hljs"><figcaption><span>_config.xml</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">navbar_links:</span><br><span class="line">  RSS:</span><br><span class="line">    icon: fas fa-rss</span><br><span class="line">    url: /rss.xml</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>然后重新生成</p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean; hexo g;</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>效果如下</p>
+<p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200226001324.png" alt></p>
+<p>就可以快乐的添加订阅了</p>
+<p><br></p><blockquote class="colorquote info"><p>本文作者：cjm00n<br>本文地址： <a href="https://cjm00n.top/2020/02/25/Minos主题修改指南/">https://cjm00n.top/2020/02/25/Minos主题修改指南/</a> <br>版权声明：除特别说明外，所有文章均采用 CC BY 4.0 许可协议，转载请先取得同意。</p>
+</blockquote><p></p>
+</body></html>
+    
+    </div>
+    
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+    
+        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Config/">#Config</a></span>
+    
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2020/02/24/%E6%96%B0%E6%98%A5%E5%85%AC%E7%9B%8A%E8%B5%9B2020wp/">新春公益赛2020wp</a>
+            
+        </span>
+    </div>
+    
+</article>
+
+
+
+
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
+    
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://cjm00n.top/2020/02/25/Minos%E4%B8%BB%E9%A2%98%E4%BF%AE%E6%94%B9%E6%8C%87%E5%8D%97/';
+        this.page.identifier = '2020/02/25/Minos主题修改指南/';
+        
+        this.language = 'en';
+        
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'cjm00n' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+</div>
+</div>
+
+    </div>
+</section>
+    <footer class="footer">
+    <div class="container">
+        <div class="columns content">
+            <div class="column is-narrow has-text-centered">
+                <i class="fas fa-moon"></i> 2020 cjM00N&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-minos">Minos</a>
+                        
+            </div>
+            <div class="column is-hidden-mobile"></div>
+            <div class="column is-narrow has-text-centered">
+                <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+                </script>
+            <span id="busuanzi_container_page_pv"> 
+                <i class="fas fa-eye"></i> clicked: <a href="#"><span id="busuanzi_value_page_pv"></span></a> times
+              </span>
+            </div>
+            
+            
+            
+        </div>
+    </div>
+</footer>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+
+<!-- test if the browser is outdated -->
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // plugin function, place inside DOM ready function
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        })
+    });
+</script>
+
+<script>
+    window.FontAwesomeConfig = {
+        searchPseudoElements: true
+    }
+    // moment.locale("en-AU");
+    moment.locale("zh-cn");
+</script>
+
+
+    
+    
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <style>
+        .hljs {
+            position: relative;
+        }
+
+        .hljs .clipboard-btn {
+            float: right;
+            color: #9a9a9a;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .hljs .clipboard-btn:hover {
+          color: #8a8a8a;
+        }
+
+        .hljs > .clipboard-btn {
+            display: none;
+            position: absolute;
+            right: 4px;
+            top: 4px;
+        }
+
+        .hljs:hover > .clipboard-btn {
+            display: inline;
+        }
+
+        .hljs > figcaption > .clipboard-btn {
+            margin-right: 4px;
+        }
+    </style>
+    <script>
+      $(document).ready(function () {
+        $('figure.hljs').each(function(i, figure) {
+          var codeId = 'code-' + i;
+          var code = figure.querySelector('.code');
+          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          code.id = codeId;
+          copyButton.addClass('clipboard-btn');
+          copyButton.attr('data-clipboard-target-id', codeId);
+
+          var figcaption = figure.querySelector('figcaption');
+
+          if (figcaption) {
+            figcaption.append(copyButton[0]);
+          } else {
+            figure.prepend(copyButton[0]);
+          }
+        })
+
+        var clipboard = new ClipboardJS('.clipboard-btn', {
+          target: function(trigger) {
+            return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+          }
+        });
+        clipboard.on('success', function(e) {
+          e.clearSelection();
+        })
+      })
+    </script>
+
+    
+    
+
+    
+
+
+
+<script src="/js/script.js"></script>
+
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-mask"></div>
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+    
+</body>
+</html>
