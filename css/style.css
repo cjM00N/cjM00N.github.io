@@ -87,6 +87,8 @@ i.article-tag-num {
         padding-bottom: 0; } }
   .article .article-meta .article-category-link {
     margin: 0 0.3rem; }
+  .article .article-meta svg {
+    margin-right: 3px; }
 
 .article .article-entry {
   margin-bottom: 3rem; }
