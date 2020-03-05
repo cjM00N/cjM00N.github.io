@@ -2,9 +2,32 @@
 body, button, input, select, textarea {
   font-family: "Lato", "PingFang SC", "Microsoft YaHei", serif !important; }
 
+img {
+  margin: 5px;
+  border-radius: 2px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08); }
+
 a.tag.article-tag {
   font-size: 0.9rem;
-  text-decoration: none; }
+  text-decoration: none;
+  margin: 5px;
+  padding: 0 14px;
+  display: inline-block;
+  text-align: center;
+  background: transparent;
+  height: 38px;
+  min-width: 80px;
+  line-height: 38px;
+  font-weight: 500;
+  border-radius: 5px;
+  word-wrap: break-word;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e7e7eb; }
+
+i.article-tag-num {
+  color: #007cfc !important;
+  font-style: normal;
+  margin-left: 10px; }
 
 @media screen and (min-width: 1024px) {
   .container {
@@ -19,6 +42,8 @@ a.tag.article-tag {
   .navbar-main .navbar-logo {
     font-size: 1.5rem;
     font-weight: 600; }
+    .navbar-main .navbar-logo img {
+      box-shadow: none; }
   .navbar-main .navbar-item {
     text-align: center; }
   .navbar-main a.navbar-item.is-active {
@@ -224,9 +249,11 @@ a.tag.article-tag {
 
 .footer {
   font-size: .9rem;
-  background: transparent; }
+  background: transparent;
+  padding-bottom: 1.5rem;
+  padding-top: 1rem; }
   .footer .content {
-    padding-top: 2rem;
+    padding-top: 0.5rem;
     border-top: 1px solid #dbdbdb; }
 
 .searchbox {
