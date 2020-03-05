@@ -5,7 +5,7 @@
 <title>BuuCTF刷题记录2 - cjM00N&#39;s blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
 
 
 
@@ -21,21 +21,18 @@
 <link rel="icon" href="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200225213644.png">
 
 
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato|Source+Code+Pro">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/bulma/0.8.0/css/bulma.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/highlight.js/9.18.1/styles/atom-one-light.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
 
 
-<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script defer src="//cdnjs.loli.net/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
 
 
     
@@ -44,15 +41,10 @@
     
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=false"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'false');
-</script>
-
+    
+    
+    
+    
 
     
 
@@ -99,13 +91,13 @@
         
         <div class="navbar-menu navbar-end">
             
-            <a class="navbar-item search" title="Search" href="javascript:;">
+            <a class="navbar-item search" title="搜索" href="javascript:;">
                 <i class="fas fa-search"></i>
             </a>
             
             
             <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
-                <a class="navbar-item" title="Table of Contents">
+                <a class="navbar-item" title="目录">
                     <i class="fa fa-list"></i>
                 </a>
                 <div class="navbar-dropdown is-right">
@@ -292,7 +284,7 @@
             
             
             <time datetime="2020-03-01T03:43:37.901Z"
-                itemprop="datePublished">Mar 1 2020</time>更新&nbsp;
+                itemprop="datePublished">3月 1 2020</time>更新&nbsp;
             
 
             
@@ -305,7 +297,7 @@
         
         
         <span class="column is-narrow article-category">
-            <i class="fab fa-hotjar" style="color: #E74C3C;"></i>&nbsp;热度: <span class="leancloud-counter" data-leancloud-counter-url="/2020/02/14/BuuCTF刷题记录2/" data-leancloud-counter-inc></span><script>
+            <i class="fab fa-hotjar" style="color: #E74C3C;"></i>&nbsp;&nbsp;热度: <span class="leancloud-counter" data-leancloud-counter-url="/2020/02/14/BuuCTF刷题记录2/" data-leancloud-counter-inc></span><script>
 var LeanCounter=function(){"use strict";function t(t){void 0===t&&(t={});var e=t.appId,n=t.appKey,r=t.elementClass;void 0===r&&(r=".leancloud-counter");var i=t.addCountInterval;void 0===i&&(i=100);var a=t.base;void 0===a&&(a="/1.1/classes/Counter");var o=t.initOnLoaded;if(void 0===o&&(o=!0),!e||!n)throw new Error("Missing appId or appKey.");this._appId=e,this._appKey=n,this._idCache={},this._addCountUrlQueue=[],this.addCountInterval=i,this.base=a,this.elements=document.querySelectorAll(r),o&&("loading"!==document.readyState?this.init():document.addEventListener("DOMContentLoaded",this.init.bind(this)))}return t.prototype._request=function(t,e,n){if(!this.apiServer)return Promise.reject(new Error("This LeanCounter instance is not initialized."));if("get"===t){var r="https://"+this.apiServer+this.base+e;if(n){var i=[];Object.keys(n).forEach(function(t){i.push(t+"="+encodeURI(n[t]))}),r+="?"+i.join("&")}return fetch(r,{headers:{"Content-Type":"application/json","X-LC-Id":this._appId,"X-LC-Key":this._appKey}}).then(function(t){return t.json()})}return fetch("https://"+this.apiServer+this.base+e,{method:t,headers:{"Content-Type":"application/json","X-LC-Id":this._appId,"X-LC-Key":this._appKey},body:JSON.stringify(n)}).then(function(t){return t.json()})},t.prototype.getCount=function(t){var e,n,r=this,i=t;return Array.isArray(i)||(i=Array(i)),e=[],n={},i.forEach(function(t){n[t]||(e.push(t),n[t]=!0)}),i=e,this._request("get","",{where:JSON.stringify({url:{$in:i}})}).then(function(t){var e=t.results,n={};return e.forEach(function(t){var e=t.url,i=t.objectId,a=t.time;r._idCache[e]||(r._idCache[e]=i),n[e]=a}),n})},t.prototype.addCount=function(t){var e=this;this._addCountUrlQueue.push(t),this._addCountIntervalId||(this._addCountIntervalId=setInterval(function(){if(0!==e._addCountUrlQueue.length){var t=e._addCountUrlQueue.pop();e._idCache[t]||e.getCount(t),e._request("put","/"+e._idCache[t],{time:{__op:"Increment",amount:1}})}},this.addCountInterval))},t.prototype.init=function(){var t=this;fetch("https://app-router.leancloud.cn/2/route?appId="+this._appId).then(function(t){return t.json()}).then(function(e){var n=e.api_server;t.apiServer=n;var r=[];return t.elements.forEach(function(t){r.push(t.dataset.leancloudCounterUrl)}),t.getCount(r)}).then(function(e){t.elements.forEach(function(n){"leancloudCounterInc"in n.dataset?(n.textContent=String(e[n.dataset.leancloudCounterUrl]+1),t.addCount(n.dataset.leancloudCounterUrl)):n.textContent=String(e[n.dataset.leancloudCounterUrl])})})},t}();
 
 var leanCounter = new LeanCounter({
@@ -838,7 +830,7 @@ var leanCounter = new LeanCounter({
     <div class="columns is-variable is-1 is-multiline is-mobile">
         
         <span class="column is-narrow"><a class="tag is-light article-tag"
-                href="/tags/Writeup/">#Writeup</a></span>
+                href="/tags/Writeup/"><i class="far fa-bookmark"></i>&nbsp;&nbsp;Writeup</a></span>
         
     </div>
     
@@ -862,22 +854,54 @@ var leanCounter = new LeanCounter({
 
 
 <div class="comments">
-    <h3 class="title is-4">Comments</h3>
+    <h3 class="title is-4">评论</h3>
     
 <script>
+    function loadDisqus(){
     var disqus_config = function () {
         this.page.url = 'https://cjm00n.top/2020/02/14/BuuCTF%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%952/';
         this.page.identifier = '2020/02/14/BuuCTF刷题记录2/';
         
-        this.language = 'en';
+        this.language = 'zh';
         
     };
     (function() {
         var d = document, s = d.createElement('script');  
+        s.async = true;
         s.src = '//' + 'cjm00n' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
+}
+    // 通过检查 window 对象确认是否在浏览器中运行
+var runningOnBrowser = typeof window !== "undefined";
+// 通过检查 scroll 事件 API 和 User-Agent 来匹配爬虫
+var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+// 检查当前浏览器是否支持 IntersectionObserver API
+var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
+
+// 一个小 hack，将耗时任务包裹在 setTimeout(() => { }, 1) 中，可以推迟到 Event Loop 的任务队列中、等待主调用栈清空后才执行，在绝大部分浏览器中都有效
+// 其实这个 hack 本来是用于优化骨架屏显示的。一些浏览器总是等 JavaScript 执行完了才开始页面渲染，导致骨架屏起不到降低 FCP 的优化效果，所以通过 hack 将耗时函数放到骨架屏渲染完成后再进行。
+setTimeout(function () {
+  if (!isBot && supportsIntersectionObserver) {
+    // 当前环境不是爬虫、并且浏览器兼容 IntersectionObserver API
+    var disqus_observer = new IntersectionObserver(function(entries) {
+      // 当前视窗中已出现 Disqus 评论框所在位置
+      if (entries[0].isIntersecting) {
+        // 加载 Disqus
+        loadDisqus();
+        // 停止当前的 Observer
+        disqus_observer.disconnect();
+      }
+    }, { threshold: [0] });
+    // 设置让 Observer 观察 #disqus_thread 元素
+    disqus_observer.observe(document.getElementById('disqus_thread'));
+  } else {
+    // 当前环境是爬虫、或当前浏览器其不兼容 IntersectionObserver API
+    // 直接加载 Disqus
+    loadDisqus();
+  }
+}, 1);
 </script>
 
 <div id="disqus_thread">
@@ -892,9 +916,9 @@ var leanCounter = new LeanCounter({
     <div class="container">
         <div class="columns content">
             <div class="column is-narrow has-text-centered">
-                <i class="fas fa-moon" ></i> 2020 cjM00N&nbsp;
-                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
-                        href="https://github.com/ppoffice/hexo-theme-minos">Minos</a>
+                <i class="fas fa-copyright" ></i> 2020 cjM00N&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank"><i class="fab fa-github-alt" style="color:black"></i>&nbsp;Hexo</a>&nbsp;&&nbsp;<a
+                href="https://github.com/ppoffice/hexo-theme-minos"><i class="fas fa-blog" style="color: black;"></i>&nbsp;Minos</a>
                         
             </div>
             <div class="column is-hidden-mobile"></div>
@@ -904,8 +928,8 @@ var leanCounter = new LeanCounter({
         </div>
     </div>
 </footer>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+    <script src="//cdnjs.loli.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="//cdnjs.loli.net/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
 
 <!-- test if the browser is outdated -->
 <div id="outdated">
@@ -913,7 +937,7 @@ var leanCounter = new LeanCounter({
     <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update my browser now </a></p>
     <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script src="//cdnjs.loli.net/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
 <script>
     $(document).ready(function () {
         // plugin function, place inside DOM ready function
@@ -929,7 +953,7 @@ var leanCounter = new LeanCounter({
     window.FontAwesomeConfig = {
         searchPseudoElements: true
     }
-    // moment.locale("en-AU");
+    // moment.locale("zh-CN");
     moment.locale("zh-CN");
 </script>
 
@@ -938,7 +962,11 @@ var leanCounter = new LeanCounter({
     
     
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    
+    
+    
+    
+    <script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
     <style>
         .hljs {
             position: relative;
@@ -1016,7 +1044,7 @@ var leanCounter = new LeanCounter({
     <div class="searchbox-mask"></div>
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="站内搜索" />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -1028,11 +1056,11 @@ var leanCounter = new LeanCounter({
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
-                PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
             },
             CONTENT_URL: '/content.json',
         };

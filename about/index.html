@@ -5,7 +5,7 @@
 <title>About - cjM00N&#39;s blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
+<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
 
 
 
@@ -21,21 +21,18 @@
 <link rel="icon" href="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200225213644.png">
 
 
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato|Source+Code+Pro">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/bulma/0.8.0/css/bulma.min.css">
 
 
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css">
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/justifiedGallery/3.6.5/css/justifiedGallery.min.css">
 
-
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/atom-one-light.min.css">
+<link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/highlight.js/9.18.1/styles/atom-one-light.min.css">
 
 
 <link rel="stylesheet" href="/css/style.css">
 
 
-<script defer src="//use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<script defer src="//cdnjs.loli.net/ajax/libs/font-awesome/5.12.1/js/all.min.js"></script>
 
 
     
@@ -44,15 +41,10 @@
     
     
     
-<script async src="https://www.googletagmanager.com/gtag/js?id=false"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'false');
-</script>
-
+    
+    
+    
+    
 
     
 
@@ -99,7 +91,7 @@
         
         <div class="navbar-menu navbar-end">
             
-            <a class="navbar-item search" title="Search" href="javascript:;">
+            <a class="navbar-item search" title="搜索" href="javascript:;">
                 <i class="fas fa-search"></i>
             </a>
             
@@ -136,7 +128,7 @@
             
             
             <time datetime="2020-02-25T15:11:03.868Z"
-                itemprop="datePublished">Feb 25 2020</time>更新&nbsp;
+                itemprop="datePublished">2月 25 2020</time>更新&nbsp;
             
 
             
@@ -163,22 +155,54 @@
 
 
 <div class="comments">
-    <h3 class="title is-4">Comments</h3>
+    <h3 class="title is-4">评论</h3>
     
 <script>
+    function loadDisqus(){
     var disqus_config = function () {
         this.page.url = 'https://cjm00n.top/about/index.html';
         this.page.identifier = 'about/index.html';
         
-        this.language = 'en';
+        this.language = 'zh';
         
     };
     (function() {
         var d = document, s = d.createElement('script');  
+        s.async = true;
         s.src = '//' + 'cjm00n' + '.disqus.com/embed.js';
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
     })();
+}
+    // 通过检查 window 对象确认是否在浏览器中运行
+var runningOnBrowser = typeof window !== "undefined";
+// 通过检查 scroll 事件 API 和 User-Agent 来匹配爬虫
+var isBot = runningOnBrowser && !("onscroll" in window) || typeof navigator !== "undefined" && /(gle|ing|ro|msn)bot|crawl|spider|yand|duckgo/i.test(navigator.userAgent);
+// 检查当前浏览器是否支持 IntersectionObserver API
+var supportsIntersectionObserver = runningOnBrowser && "IntersectionObserver" in window;
+
+// 一个小 hack，将耗时任务包裹在 setTimeout(() => { }, 1) 中，可以推迟到 Event Loop 的任务队列中、等待主调用栈清空后才执行，在绝大部分浏览器中都有效
+// 其实这个 hack 本来是用于优化骨架屏显示的。一些浏览器总是等 JavaScript 执行完了才开始页面渲染，导致骨架屏起不到降低 FCP 的优化效果，所以通过 hack 将耗时函数放到骨架屏渲染完成后再进行。
+setTimeout(function () {
+  if (!isBot && supportsIntersectionObserver) {
+    // 当前环境不是爬虫、并且浏览器兼容 IntersectionObserver API
+    var disqus_observer = new IntersectionObserver(function(entries) {
+      // 当前视窗中已出现 Disqus 评论框所在位置
+      if (entries[0].isIntersecting) {
+        // 加载 Disqus
+        loadDisqus();
+        // 停止当前的 Observer
+        disqus_observer.disconnect();
+      }
+    }, { threshold: [0] });
+    // 设置让 Observer 观察 #disqus_thread 元素
+    disqus_observer.observe(document.getElementById('disqus_thread'));
+  } else {
+    // 当前环境是爬虫、或当前浏览器其不兼容 IntersectionObserver API
+    // 直接加载 Disqus
+    loadDisqus();
+  }
+}, 1);
 </script>
 
 <div id="disqus_thread">
@@ -193,9 +217,9 @@
     <div class="container">
         <div class="columns content">
             <div class="column is-narrow has-text-centered">
-                <i class="fas fa-moon" ></i> 2020 cjM00N&nbsp;
-                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
-                        href="https://github.com/ppoffice/hexo-theme-minos">Minos</a>
+                <i class="fas fa-copyright" ></i> 2020 cjM00N&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank"><i class="fab fa-github-alt" style="color:black"></i>&nbsp;Hexo</a>&nbsp;&&nbsp;<a
+                href="https://github.com/ppoffice/hexo-theme-minos"><i class="fas fa-blog" style="color: black;"></i>&nbsp;Minos</a>
                         
             </div>
             <div class="column is-hidden-mobile"></div>
@@ -205,8 +229,8 @@
         </div>
     </div>
 </footer>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script>
+    <script src="//cdnjs.loli.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="//cdnjs.loli.net/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
 
 <!-- test if the browser is outdated -->
 <div id="outdated">
@@ -214,7 +238,7 @@
     <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update my browser now </a></p>
     <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
-<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script src="//cdnjs.loli.net/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
 <script>
     $(document).ready(function () {
         // plugin function, place inside DOM ready function
@@ -230,7 +254,7 @@
     window.FontAwesomeConfig = {
         searchPseudoElements: true
     }
-    // moment.locale("en-AU");
+    // moment.locale("zh-CN");
     moment.locale("zh-CN");
 </script>
 
@@ -239,7 +263,11 @@
     
     
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    
+    
+    
+    
+    <script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
     <style>
         .hljs {
             position: relative;
@@ -317,7 +345,7 @@
     <div class="searchbox-mask"></div>
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <input type="text" class="searchbox-input ins-search-input" placeholder="站内搜索" />
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -329,11 +357,11 @@
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
-                PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
-                UNTITLED: '(Untitled)',
+                POSTS: '文章',
+                PAGES: '页面',
+                CATEGORIES: '分类',
+                TAGS: '标签',
+                UNTITLED: '(无标题)',
             },
             CONTENT_URL: '/content.json',
         };
