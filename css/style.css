@@ -2,6 +2,13 @@
 body, button, input, select, textarea {
   font-family: "Lato", "PingFang SC", "Microsoft YaHei", serif !important; }
 
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden; }
+
 img {
   margin: 5px;
   border-radius: 2px;

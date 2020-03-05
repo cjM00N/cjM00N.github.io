@@ -32,7 +32,8 @@
 <link rel="stylesheet" href="/css/style.css">
 
 
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+<script defer src="//at.alicdn.com/t/font_1674117_uuv2vgqmx5.js"></script>
+<!-- <link rel="stylesheet" href="//at.alicdn.com/t/font_1674117_1kydbij5gjf.css"> -->
 
 
     
@@ -92,20 +93,26 @@
         <div class="navbar-menu navbar-end">
             
             <a class="navbar-item search" title="搜索" href="javascript:;">
-                <i class="fas fa-search"></i>
+                <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-search1"></use>
+                </svg>
             </a>
             
             
             
             <a class="navbar-item" title="GitHub" href="https://github.com/cjm00n/" target="_blank" rel="noopener">
                 
-                <i class="fab fa-github"></i>
+                <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-Github"></use>
+                </svg>
                 
             </a>
                
             <a class="navbar-item" title="RSS" href="/rss.xml">
                 
-                <i class="fas fa-rss"></i>
+                <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-rss-feed"></use>
+                </svg>
                 
             </a>
                
@@ -117,7 +124,9 @@
     <section class="section section-heading">
     <div class="container">
         <div class="content">
-            <h5><i class="far fa-folder"></i>Categories</h5>
+            <h5><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-Defaultfolder"></use>
+            </svg>Categories</h5>
         </div>
     </div>
 </section>
@@ -127,27 +136,37 @@
             
             <span class="column is-narrow">
                 
-                <a class="tag is-light article-tag" href="/categories/CTF/"><i class="far fa-bookmark"></i>&nbsp;&nbsp;CTF<i class="article-tag-num">7</i></a>
+                <a class="tag is-light article-tag" href="/categories/Linux/"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-Bookmark"></use>
+                </svg>&nbsp;&nbsp;Linux<i class="article-tag-num">1</i></a>
             </span>
             
             <span class="column is-narrow">
                 
-                <a class="tag is-light article-tag" href="/categories/Linux/"><i class="far fa-bookmark"></i>&nbsp;&nbsp;Linux<i class="article-tag-num">1</i></a>
+                <a class="tag is-light article-tag" href="/categories/CTF/"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-Bookmark"></use>
+                </svg>&nbsp;&nbsp;CTF<i class="article-tag-num">7</i></a>
             </span>
             
             <span class="column is-narrow">
                 
-                <a class="tag is-light article-tag" href="/categories/Web/"><i class="far fa-bookmark"></i>&nbsp;&nbsp;Web<i class="article-tag-num">2</i></a>
+                <a class="tag is-light article-tag" href="/categories/Web/"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-Bookmark"></use>
+                </svg>&nbsp;&nbsp;Web<i class="article-tag-num">2</i></a>
             </span>
             
             <span class="column is-narrow">
                 
-                <a class="tag is-light article-tag" href="/categories/Pentest/"><i class="far fa-bookmark"></i>&nbsp;&nbsp;Pentest<i class="article-tag-num">1</i></a>
+                <a class="tag is-light article-tag" href="/categories/Pentest/"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-Bookmark"></use>
+                </svg>&nbsp;&nbsp;Pentest<i class="article-tag-num">1</i></a>
             </span>
             
             <span class="column is-narrow">
                 
-                <a class="tag is-light article-tag" href="/categories/Blog/"><i class="far fa-bookmark"></i>&nbsp;&nbsp;Blog<i class="article-tag-num">1</i></a>
+                <a class="tag is-light article-tag" href="/categories/Blog/"><svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-Bookmark"></use>
+                </svg>&nbsp;&nbsp;Blog<i class="article-tag-num">1</i></a>
             </span>
             
         </div>
@@ -157,9 +176,17 @@
     <div class="container">
         <div class="columns content">
             <div class="column is-narrow has-text-centered">
-                <i class="fas fa-copyright" ></i> 2020 cjM00N&nbsp;
-                Powered by <a href="https://hexo.io/" target="_blank"><i class="fab fa-github-alt" style="color:black"></i>&nbsp;Hexo</a>&nbsp;&&nbsp;<a
-                href="https://github.com/ppoffice/hexo-theme-minos"><i class="fas fa-blog" style="color: black;"></i>&nbsp;Minos</a>
+                <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-copyright"></use>
+                </svg> 2020 <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-moon"></use>
+                    </svg>cjM00N&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank"><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-github"></use>
+                </svg>&nbsp;Hexo</a>&nbsp;&&nbsp;<a
+                href="https://github.com/ppoffice/hexo-theme-minos"><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-websitelink"></use>
+                </svg>&nbsp;Minos</a>
                         
             </div>
             <div class="column is-hidden-mobile"></div>
@@ -245,7 +272,8 @@
         $('figure.hljs').each(function(i, figure) {
           var codeId = 'code-' + i;
           var code = figure.querySelector('.code');
-          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          
+          var copyButton = $('<button>Copy <svg class="icon" aria-hidden="true"><use xlink:href="#icon-clipboard"></use></svg></button>');
           code.id = codeId;
           copyButton.addClass('clipboard-btn');
           copyButton.attr('data-clipboard-target-id', codeId);
@@ -286,7 +314,9 @@
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
             <input type="text" class="searchbox-input ins-search-input" placeholder="站内搜索" />
-            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+            <span class="searchbox-close ins-close ins-selectable"><svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-process"></use>
+            </svg></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
             <div class="ins-section-container"></div>

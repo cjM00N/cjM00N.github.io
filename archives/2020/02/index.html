@@ -32,7 +32,8 @@
 <link rel="stylesheet" href="/css/style.css">
 
 
-<script defer src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js" integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0=" crossorigin="anonymous"></script>
+<script defer src="//at.alicdn.com/t/font_1674117_uuv2vgqmx5.js"></script>
+<!-- <link rel="stylesheet" href="//at.alicdn.com/t/font_1674117_1kydbij5gjf.css"> -->
 
 
     
@@ -92,20 +93,26 @@
         <div class="navbar-menu navbar-end">
             
             <a class="navbar-item search" title="搜索" href="javascript:;">
-                <i class="fas fa-search"></i>
+                <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-search1"></use>
+                </svg>
             </a>
             
             
             
             <a class="navbar-item" title="GitHub" href="https://github.com/cjm00n/" target="_blank" rel="noopener">
                 
-                <i class="fab fa-github"></i>
+                <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-Github"></use>
+                </svg>
                 
             </a>
                
             <a class="navbar-item" title="RSS" href="/rss.xml">
                 
-                <i class="fas fa-rss"></i>
+                <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-rss-feed"></use>
+                </svg>
                 
             </a>
                
@@ -174,9 +181,17 @@
     <div class="container">
         <div class="columns content">
             <div class="column is-narrow has-text-centered">
-                <i class="fas fa-copyright" ></i> 2020 cjM00N&nbsp;
-                Powered by <a href="https://hexo.io/" target="_blank"><i class="fab fa-github-alt" style="color:black"></i>&nbsp;Hexo</a>&nbsp;&&nbsp;<a
-                href="https://github.com/ppoffice/hexo-theme-minos"><i class="fas fa-blog" style="color: black;"></i>&nbsp;Minos</a>
+                <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-copyright"></use>
+                </svg> 2020 <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-moon"></use>
+                    </svg>cjM00N&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank"><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-github"></use>
+                </svg>&nbsp;Hexo</a>&nbsp;&&nbsp;<a
+                href="https://github.com/ppoffice/hexo-theme-minos"><svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-websitelink"></use>
+                </svg>&nbsp;Minos</a>
                         
             </div>
             <div class="column is-hidden-mobile"></div>
@@ -262,7 +277,8 @@
         $('figure.hljs').each(function(i, figure) {
           var codeId = 'code-' + i;
           var code = figure.querySelector('.code');
-          var copyButton = $('<button>Copy <i class="far fa-clipboard"></i></button>');
+          
+          var copyButton = $('<button>Copy <svg class="icon" aria-hidden="true"><use xlink:href="#icon-clipboard"></use></svg></button>');
           code.id = codeId;
           copyButton.addClass('clipboard-btn');
           copyButton.attr('data-clipboard-target-id', codeId);
@@ -303,7 +319,9 @@
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
             <input type="text" class="searchbox-input ins-search-input" placeholder="站内搜索" />
-            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+            <span class="searchbox-close ins-close ins-selectable"><svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-process"></use>
+            </svg></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
             <div class="ins-section-container"></div>
