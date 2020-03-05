@@ -10,8 +10,6 @@
 
 
 
-<meta name="description" content="web && ctf && code">
-
 
 
 
@@ -23,7 +21,7 @@
 <link rel="icon" href="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200225213644.png">
 
 
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato|Source+Code+Pro">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
 
 
@@ -165,18 +163,19 @@
     <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            V&amp;N公开赛2020 writeup
+        V&amp;N公开赛2020 writeup
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-            <span class="column is-narrow">
-        
-                    
-                  <time datetime="2020-03-01T03:29:17.673Z" itemprop="datePublished">Mar 1 2020</time> Updated
-                  
-                  
-        
-            </span>
+        <span class="column is-narrow">
+            
+            
+            <time datetime="2020-03-03T15:09:06.238Z"
+                itemprop="datePublished">Mar 3 2020</time> 更新
+            
+
+            
+        </span>
         
         <span class="column is-narrow article-category">
             <i class="far fa-folder"></i>
@@ -184,9 +183,16 @@
         </span>
         
         
+        <span id="busuanzi_container_page_pv" class="column is-narrow article-category">
+            <i class="fas fa-eye" sytle="color:red;"></i>  热度: <span id="busuanzi_value_page_pv"></span> ℃
+            
+            
+        </span>
+        
+        
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
+        
         <html><head></head><body><blockquote class="colorquote info"><p>给赵师傅递茶, AK是不可能AK的</p>
 </blockquote>
 
@@ -263,10 +269,16 @@
 <p>注册为全局变量, 类似于</p>
 <p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http_proxy=ip:port command</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>所以我们只需要劫持一下返回即可</p>
-<p>在<code>Linux labs</code>里面, 先建一个这样的php</p>
+<p>在<code>Linux labs</code>里面, 先建一个<code>index.php</code></p>
 <p></p><figure class="highlight php hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta"><?php</span></span><br><span class="line">        $arr = <span class="hljs-keyword">array</span>(<span class="hljs-string">"success"</span>=><span class="hljs-keyword">true</span>);</span><br><span class="line">        header(<span class="hljs-string">"Content-Type:application/json"</span>);</span><br><span class="line">        <span class="hljs-keyword">echo</span> json_encode($arr);</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>然后运行</p>
 <p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php -S 0:2333</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>有师傅后面问到, 这里提一下,  代理并不需要和原来的端口以及路径一致, 只需要给一个合适的返回就可以了, 而这个命令是启动php内置的一个web服务器, 如果文件名为<code>index.php</code></p>
+<p>我们可以通过</p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://ip:port/</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>来访问, 如果是其他的命名则需要</p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://ip:port/filename.php</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>这样来访问, 因此这里必须要设置为<code>index.php</code></p>
 <p>后面加上请求头访问即可</p>
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200229015306.png" alt></p>
 <h2 id="HappyCTFd"><a href="#HappyCTFd" class="headerlink" title="HappyCTFd"></a>HappyCTFd</h2><p>看到就猜是CTFd的漏洞了, 毕竟前段时间刚爆了一个</p>
@@ -343,21 +355,24 @@
 <p><img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200301005934.png" alt></p>
 <p>或者将输出写到<code>/tmp/</code>下, 然后通过任意文件读拿flag也可</p>
 <p>再次感谢两位师傅的帮助和赵师傅的题目</p>
-<p><br></p><blockquote class="colorquote info"><p>本文作者：cjm00n<br>本文地址： <a href="https://cjm00n.top/2020/02/29/V-N公开赛2020-writeup/">https://cjm00n.top/2020/02/29/V-N公开赛2020-writeup/</a> <br>版权声明：除特别说明外，所有文章均采用 CC BY 4.0 许可协议，转载请先取得同意。</p>
+<p><br></p><blockquote class="colorquote info"><p>本文作者: cjm00n<br>本文地址: <a href="https://cjm00n.top/2020/02/29/V-N公开赛2020-writeup/">https://cjm00n.top/2020/02/29/V-N公开赛2020-writeup/</a> <br>版权声明: 除特别说明外，所有文章均采用 CC BY 4.0 许可协议，转载请先取得同意。</p>
 </blockquote><p></p>
 </body></html>
-    
+        
     </div>
     
     <div class="columns is-variable is-1 is-multiline is-mobile">
-    
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Writeup/">#Writeup</a></span>
-    
+        
+        <span class="column is-narrow"><a class="tag is-light article-tag"
+                href="/tags/Writeup/">#Writeup</a></span>
+        
     </div>
     
     
     <div class="columns is-mobile is-multiline article-nav">
-        <span class="column is-12-mobile is-half-desktop is-hidden-mobile article-nav-prev">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2020/03/04/CSRF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/">CSRF学习之旅</a>
             
         </span>
         <span class="column is-12-mobile is-half-desktop  article-nav-next">
@@ -412,9 +427,6 @@
             <div class="column is-narrow has-text-centered">
                 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
                 </script>
-            <span id="busuanzi_container_page_pv"> 
-                <i class="fas fa-eye"></i> clicked: <a href="#"><span id="busuanzi_value_page_pv"></span></a> times
-              </span>
             </div>
             
             

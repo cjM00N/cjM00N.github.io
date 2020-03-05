@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body, button, input, select, textarea {
-  font-family: "Ovo", "Georgia", "STZhongsong", "Microsoft YaHei", serif; }
+  font-family: "Lato", "PingFang SC", "Microsoft YaHei", serif !important; }
 
 a.tag.article-tag {
   font-size: 0.9rem;
@@ -8,8 +8,8 @@ a.tag.article-tag {
 
 @media screen and (min-width: 1024px) {
   .container {
-    max-width: 800px;
-    width: 800px; }
+    max-width: 1000px;
+    width: 1000px; }
   .navbar.is-transparent .navbar-dropdown a.navbar-item:hover {
     color: #3273dc; } }
 
@@ -298,7 +298,7 @@ a.tag.article-tag {
 
 code, pre {
   font-size: 0.85rem;
-  font-family: "Source Code Pro", monospace, "Microsoft YaHei"; }
+  font-family: "JetBrains Mono", "consolas", monospace, "Microsoft YaHei"; }
 
 figure.highlight {
   padding: 0;
@@ -325,7 +325,7 @@ figure.highlight {
     font-size: .8rem; }
     figure.highlight figcaption span {
       font-weight: 500;
-      font-family: "Source Code Pro", monospace, "Microsoft YaHei"; }
+      font-family: "JetBrains Mono", "consolas", monospace, "Microsoft YaHei"; }
     figure.highlight figcaption a {
       float: right;
       color: #9a9a9a; }

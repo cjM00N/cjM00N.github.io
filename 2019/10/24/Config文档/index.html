@@ -10,8 +10,6 @@
 
 
 
-<meta name="description" content="web && ctf && code">
-
 
 
 
@@ -23,7 +21,7 @@
 <link rel="icon" href="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200225213644.png">
 
 
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ovo|Source+Code+Pro">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato|Source+Code+Pro">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
 
 
@@ -139,13 +137,13 @@
                     <hr class="navbar-divider">
                     
                     
-                    <a class="navbar-item" href="#切换java版本">5&nbsp;&nbsp;<b>切换java版本</b></a>
+                    <a class="navbar-item" href="#切换-java-版本">5&nbsp;&nbsp;<b>切换 java 版本</b></a>
                     
                     
                     <hr class="navbar-divider">
                     
                     
-                    <a class="navbar-item" href="#tmux配置">6&nbsp;&nbsp;<b>tmux配置</b></a>
+                    <a class="navbar-item" href="#tmux-配置">6&nbsp;&nbsp;<b>tmux 配置</b></a>
                     
                     
                     <hr class="navbar-divider">
@@ -179,18 +177,19 @@
     <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-            Config文档
+        Config文档
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-            <span class="column is-narrow">
-        
-                    
-                  <time datetime="2020-02-27T05:43:12.779Z" itemprop="datePublished">Feb 27 2020</time> Updated
-                  
-                  
-        
-            </span>
+        <span class="column is-narrow">
+            
+            
+            <time datetime="2020-03-04T15:29:38.490Z"
+                itemprop="datePublished">Mar 4 2020</time> 更新
+            
+
+            
+        </span>
         
         <span class="column is-narrow article-category">
             <i class="far fa-folder"></i>
@@ -198,36 +197,48 @@
         </span>
         
         
+        <span id="busuanzi_container_page_pv" class="column is-narrow article-category">
+            <i class="fas fa-eye" sytle="color:red;"></i>  热度: <span id="busuanzi_value_page_pv"></span> ℃
+            
+            
+        </span>
+        
+        
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-    
+        
         <html><head></head><body><p>记录下常用的配置</p>
 <a id="more"></a>
 
-<h2 id="git-proxy"><a href="#git-proxy" class="headerlink" title="git proxy"></a>git proxy</h2><p>让git走代理, 基本可以达到满速</p>
-<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.https://github.com.proxy socks5h://127.0.0.1:10808</span><br></pre></td></tr></tbody></table></figure><br>删除代理<p></p>
+<h2 id="git-proxy"><a href="#git-proxy" class="headerlink" title="git proxy"></a>git proxy</h2><p>让 git 走代理, 基本可以达到满速</p>
+<p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.https://github.com.proxy socks5h://127.0.0.1:10808</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>删除代理</p>
 <p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --unset http.https://github.com.proxy</span><br></pre></td></tr></tbody></table></figure><p></p>
 <h2 id="zsh"><a href="#zsh" class="headerlink" title="zsh"></a>zsh</h2><p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install zsh</span><br><span class="line">sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"</span><br></pre></td></tr></tbody></table></figure><p></p>
 <h2 id="zshrc"><a href="#zshrc" class="headerlink" title="zshrc"></a>zshrc</h2><p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"># theme</span><br><span class="line">ZSH_THEME="ys"</span><br><span class="line"></span><br><span class="line"># alias</span><br><span class="line">alias ctf="cd /mnt/hgfs/ctf"</span><br><span class="line">alias tools="cd /mnt/hgfs/tools"</span><br><span class="line">alias clash="~/clash/clash -d ~/clash/"</span><br><span class="line">alias htbvpn="openvpn ~/cjM00N.ovpn"</span><br><span class="line">alias pc="proxychains"</span><br><span class="line">alias tmuxa="tmux a -t"</span><br><span class="line">alias tmuxn="tmux new -s"</span><br><span class="line">alias vi="vim"</span><br><span class="line">alias burp="/opt/Burpsuite/start.sh"</span><br></pre></td></tr></tbody></table></figure><p></p>
 <h2 id="内外网切换"><a href="#内外网切换" class="headerlink" title="内外网切换"></a>内外网切换</h2><p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">netstat -nr 查看路由表</span><br><span class="line">sudo route delete 0.0.0.0 删除默认路由</span><br><span class="line">sudo route add -net 0.0.0.0 192.168.1.1 默认使用192.168.1.1网关</span><br><span class="line">sudo route add 10.200.0.0 10.200.22.254 有线网卡使用该网关</span><br><span class="line">sudo route add 10.0.1.0/24 10.200.22.254 其它网段指定网关</span><br></pre></td></tr></tbody></table></figure><p></p>
-<h2 id="切换java版本"><a href="#切换java版本" class="headerlink" title="切换java版本"></a>切换java版本</h2><p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update-alternatives  --config  java</span><br></pre></td></tr></tbody></table></figure><p></p>
-<h2 id="tmux配置"><a href="#tmux配置" class="headerlink" title="tmux配置"></a>tmux配置</h2><p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"># reload with Ctrl+r</span><br><span class="line">bind C-r source-file ~/.tmux.conf \; display "Reloaded!"</span><br><span class="line"></span><br><span class="line"># tmux attach</span><br><span class="line">new-session</span><br><span class="line"></span><br><span class="line"># vi keymap</span><br><span class="line">set-option -g status-keys vi</span><br><span class="line">set-window-option -g mode-keys vi</span><br><span class="line"></span><br><span class="line"># vi-type selection and copy</span><br><span class="line">bind -T copy-mode-vi v send-keys -X begin-selection</span><br><span class="line">bind -T copy-mode-vi y send-keys -X copy-selection-and-cancel</span><br><span class="line"></span><br><span class="line"># choose pane with vi-key</span><br><span class="line">bind -r ^k selectp -U</span><br><span class="line">bind -r ^j selectp -D</span><br><span class="line">bind -r ^h selectp -L</span><br><span class="line">bind -r ^l selectp -R</span><br><span class="line"></span><br><span class="line"># exec command man</span><br><span class="line">bind m command-prompt "splitw -h 'exec man %%'"</span><br><span class="line"></span><br><span class="line"># add Ctrl+a to prefix key </span><br><span class="line">set -g prefix2 C-a</span><br><span class="line">bind C-a send-prefix -2</span><br><span class="line"></span><br><span class="line"># new pane - = </span><br><span class="line"># horizontal</span><br><span class="line">unbind '"'</span><br><span class="line">bind - splitw -v -c '#{pane_current_path}' </span><br><span class="line"># vertical</span><br><span class="line">unbind %</span><br><span class="line">bind =  splitw -h -c '#{pane_current_path}' </span><br><span class="line"></span><br><span class="line"># color</span><br><span class="line">set -g default-terminal "screen-256color"</span><br><span class="line"></span><br><span class="line"># rename</span><br><span class="line">setw -g automatic-rename off</span><br><span class="line">setw -g allow-rename off</span><br><span class="line"></span><br><span class="line"># mouse </span><br><span class="line">set -g mouse on</span><br><span class="line"></span><br><span class="line"># ------ status theme -------------------------------</span><br><span class="line">set -g message-style "bg=#00346e, fg=#ffffd7"        # tomorrow night blue, base3</span><br><span class="line"></span><br><span class="line">set -g status-style "bg=#00346e, fg=#ffffd7"   # tomorrow night blue, base3</span><br><span class="line">set -g status-left "#[bg=#0087ff] > #S "       # blue</span><br><span class="line">set -g status-left-length 400</span><br><span class="line">set -g status-right "#[bg=#0087ff] #(whoami)@#h #[bg=red] %Y-%m-%d %H:%M "</span><br><span class="line">set -g status-right-length 600</span><br><span class="line"></span><br><span class="line">set -g set-clipboard on</span><br><span class="line">set -g history-limit 8000</span><br><span class="line"></span><br><span class="line">set -wg window-status-format " #I #W "</span><br><span class="line">set -wg window-status-current-format " #I #W "</span><br><span class="line">set -wg window-status-separator ""</span><br><span class="line">set -wg window-status-current-style "bg=red" # red</span><br><span class="line">set -wg window-status-last-style "fg=#dddddd"</span><br><span class="line"></span><br><span class="line">set -wg pane-active-border-style "fg=blue"</span><br><span class="line">set -wg pane-border-style "fg=#585858"       # base01</span><br><span class="line">set -g status-justify left</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="切换-java-版本"><a href="#切换-java-版本" class="headerlink" title="切换 java 版本"></a>切换 java 版本</h2><p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">update-alternatives  --config  java</span><br></pre></td></tr></tbody></table></figure><p></p>
+<h2 id="tmux-配置"><a href="#tmux-配置" class="headerlink" title="tmux 配置"></a>tmux 配置</h2><p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"># reload with Ctrl+r</span><br><span class="line">bind C-r source-file ~/.tmux.conf \; display "Reloaded!"</span><br><span class="line"></span><br><span class="line"># tmux attach</span><br><span class="line">new-session</span><br><span class="line"></span><br><span class="line"># vi keymap</span><br><span class="line">set-option -g status-keys vi</span><br><span class="line">set-window-option -g mode-keys vi</span><br><span class="line"></span><br><span class="line"># vi-type selection and copy</span><br><span class="line">bind -T copy-mode-vi v send-keys -X begin-selection</span><br><span class="line">bind -T copy-mode-vi y send-keys -X copy-selection-and-cancel</span><br><span class="line"></span><br><span class="line"># choose pane with vi-key</span><br><span class="line">bind -r ^k selectp -U</span><br><span class="line">bind -r ^j selectp -D</span><br><span class="line">bind -r ^h selectp -L</span><br><span class="line">bind -r ^l selectp -R</span><br><span class="line"></span><br><span class="line"># exec command man</span><br><span class="line">bind m command-prompt "splitw -h 'exec man %%'"</span><br><span class="line"></span><br><span class="line"># add Ctrl+a to prefix key</span><br><span class="line">set -g prefix2 C-a</span><br><span class="line">bind C-a send-prefix -2</span><br><span class="line"></span><br><span class="line"># new pane - =</span><br><span class="line"># horizontal</span><br><span class="line">unbind '"'</span><br><span class="line">bind - splitw -v -c '#{pane_current_path}'</span><br><span class="line"># vertical</span><br><span class="line">unbind %</span><br><span class="line">bind =  splitw -h -c '#{pane_current_path}'</span><br><span class="line"></span><br><span class="line"># color</span><br><span class="line">set -g default-terminal "screen-256color"</span><br><span class="line"></span><br><span class="line"># rename</span><br><span class="line">setw -g automatic-rename off</span><br><span class="line">setw -g allow-rename off</span><br><span class="line"></span><br><span class="line"># mouse</span><br><span class="line">set -g mouse on</span><br><span class="line"></span><br><span class="line"># ------ status theme -------------------------------</span><br><span class="line">set -g message-style "bg=#00346e, fg=#ffffd7"        # tomorrow night blue, base3</span><br><span class="line"></span><br><span class="line">set -g status-style "bg=#00346e, fg=#ffffd7"   # tomorrow night blue, base3</span><br><span class="line">set -g status-left "#[bg=#0087ff] > #S "       # blue</span><br><span class="line">set -g status-left-length 400</span><br><span class="line">set -g status-right "#[bg=#0087ff] #(whoami)@#h #[bg=red] %Y-%m-%d %H:%M "</span><br><span class="line">set -g status-right-length 600</span><br><span class="line"></span><br><span class="line">set -g set-clipboard on</span><br><span class="line">set -g history-limit 8000</span><br><span class="line"></span><br><span class="line">set -wg window-status-format " #I #W "</span><br><span class="line">set -wg window-status-current-format " #I #W "</span><br><span class="line">set -wg window-status-separator ""</span><br><span class="line">set -wg window-status-current-style "bg=red" # red</span><br><span class="line">set -wg window-status-last-style "fg=#dddddd"</span><br><span class="line"></span><br><span class="line">set -wg pane-active-border-style "fg=blue"</span><br><span class="line">set -wg pane-border-style "fg=#585858"       # base01</span><br><span class="line">set -g status-justify left</span><br></pre></td></tr></tbody></table></figure><p></p>
 <h2 id="powershell-设置别名"><a href="#powershell-设置别名" class="headerlink" title="powershell 设置别名"></a>powershell 设置别名</h2><p>打开配置文件</p>
 <p></p><figure class="highlight plain hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code $PROFILE</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p>设置别名样例如下</p>
 <p></p><figure class="highlight powershell hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">function</span> cdTools{</span><br><span class="line">    <span class="hljs-built_in">Set-Location</span> D:\tools</span><br><span class="line">}</span><br><span class="line"><span class="hljs-built_in">Set-Alias</span> tools cdTools</span><br></pre></td></tr></tbody></table></figure><p></p>
-<p>重启powershell即可</p>
+<p>重启 powershell 即可<br>如果是带参数的命令, 则可以通过<code>$args</code>来获取, 例如自动新建并打开 md</p>
+<p></p><figure class="highlight powershell hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">function</span> newPost{</span><br><span class="line">    cdBlog</span><br><span class="line">    hexo new <span class="hljs-string">"<span class="hljs-variable">$args</span>"</span></span><br><span class="line">    code D:\CTF\blog\source\_post\<span class="hljs-variable">$args</span>.md</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p></p>
+<p>这里没有处理对于文件名的转换问题, 比如空格, 特殊符号等</p>
+<p>整理如下</p>
 <p></p><figure class="highlight powershell hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">function</span> cdBlog{</span><br><span class="line">    <span class="hljs-built_in">Set-Location</span> D:\CTF\blog</span><br><span class="line">}</span><br><span class="line"><span class="hljs-keyword">function</span> cdTools{</span><br><span class="line">    <span class="hljs-built_in">Set-Location</span> D:\tools</span><br><span class="line">}</span><br><span class="line"><span class="hljs-keyword">function</span> cdCTF {</span><br><span class="line">    <span class="hljs-built_in">Set-Location</span> D:\CTF</span><br><span class="line">}</span><br><span class="line"><span class="hljs-keyword">function</span> cdDownload {</span><br><span class="line">    <span class="hljs-built_in">Set-Location</span> D:\xxx\Downloads</span><br><span class="line">}</span><br><span class="line"><span class="hljs-keyword">function</span> exThere {</span><br><span class="line">    explorer.exe .</span><br><span class="line">}</span><br><span class="line"><span class="hljs-keyword">function</span> pushBlog {</span><br><span class="line">    cdBlog</span><br><span class="line">    hexo clean;</span><br><span class="line">    hexo d -g;</span><br><span class="line">}</span><br><span class="line"><span class="hljs-built_in">Set-Alias</span> blog cdBlog</span><br><span class="line"><span class="hljs-built_in">Set-Alias</span> tools cdTools</span><br><span class="line"><span class="hljs-built_in">Set-Alias</span> ctf cdCTF</span><br><span class="line"><span class="hljs-built_in">Set-Alias</span> down cdDownload</span><br><span class="line"><span class="hljs-built_in">Set-Alias</span> ex exThere</span><br><span class="line"><span class="hljs-built_in">Set-Alias</span> hexod pushBlog</span><br></pre></td></tr></tbody></table></figure><p></p>
-<p><br></p><blockquote class="colorquote info"><p>本文作者：cjm00n<br>本文地址： <a href="https://cjm00n.top/2019/10/24/Config文档/">https://cjm00n.top/2019/10/24/Config文档/</a> <br>版权声明：除特别说明外，所有文章均采用 CC BY 4.0 许可协议，转载请先取得同意。</p>
+<p><br></p><blockquote class="colorquote info"><p>本文作者: cjm00n<br>本文地址: <a href="https://cjm00n.top/2019/10/24/Config文档/">https://cjm00n.top/2019/10/24/Config文档/</a> <br>版权声明: 除特别说明外，所有文章均采用 CC BY 4.0 许可协议，转载请先取得同意。</p>
 </blockquote><p></p>
 </body></html>
-    
+        
     </div>
     
     <div class="columns is-variable is-1 is-multiline is-mobile">
-    
-        <span class="column is-narrow"><a class="tag is-light article-tag" href="/tags/Config/">#Config</a></span>
-    
+        
+        <span class="column is-narrow"><a class="tag is-light article-tag"
+                href="/tags/Config/">#Config</a></span>
+        
     </div>
     
     
@@ -289,9 +300,6 @@
             <div class="column is-narrow has-text-centered">
                 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
                 </script>
-            <span id="busuanzi_container_page_pv"> 
-                <i class="fas fa-eye"></i> clicked: <a href="#"><span id="busuanzi_value_page_pv"></span></a> times
-              </span>
             </div>
             
             

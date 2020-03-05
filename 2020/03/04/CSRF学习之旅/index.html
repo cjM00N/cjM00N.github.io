@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>Tag: Writeup - cjM00N&#39;s blog</title>
+<title>CSRF学习之旅 - cjM00N&#39;s blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.css">
@@ -104,6 +104,38 @@
             </a>
             
             
+            <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
+                <a class="navbar-item" title="Table of Contents">
+                    <i class="fa fa-list"></i>
+                </a>
+                <div class="navbar-dropdown is-right">
+                    
+                    
+                    
+                    
+                    <a class="navbar-item" href="#题目">1&nbsp;&nbsp;<b>题目</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#概念">2&nbsp;&nbsp;<b>概念</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#实战">3&nbsp;&nbsp;<b>实战</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#参考">4&nbsp;&nbsp;<b>参考</b></a>
+                    
+                </div>
+            </div>
+            
             
             <a class="navbar-item" title="GitHub" href="https://github.com/cjm00n/" target="_blank" rel="noopener">
                 
@@ -122,209 +154,108 @@
     </div>
 </nav>
 
-    <section class="section section-heading">
+    <section class="section">
     <div class="container">
-        <div class="content">
-            <h5># Writeup</h5>
-        </div>
-    </div>
-</section>
-<section class="section">
-    <div class="container">
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
+    <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-        <a href="/2020/02/29/V-N%E5%85%AC%E5%BC%80%E8%B5%9B2020-writeup/" itemprop="url">V&amp;N公开赛2020 writeup</a>
+        CSRF学习之旅
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
         <span class="column is-narrow">
             
-            <time datetime="2020-02-29T08:31:52.000Z"
-                itemprop="datePublished">Feb 29 2020</time>
+            
+            <time datetime="2020-03-04T17:44:47.628Z"
+                itemprop="datePublished">Mar 5 2020</time> 更新
+            
+
             
         </span>
         
         <span class="column is-narrow article-category">
             <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/CTF/">CTF</a>
+            <a class="article-category-link" href="/categories/Web/">Web</a>
         </span>
         
+        
+        <span id="busuanzi_container_page_pv" class="column is-narrow article-category">
+            <i class="fas fa-eye" sytle="color:red;"></i>  热度: <span id="busuanzi_value_page_pv"></span> ℃
+            
+            
+        </span>
         
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
         
-        <html><head></head><body><blockquote class="colorquote info"><p>给赵师傅递茶, AK是不可能AK的</p>
-</blockquote></body></html>
-        <p class="article-more-link">
-            <a href="/2020/02/29/V-N%E5%85%AC%E5%BC%80%E8%B5%9B2020-writeup/#more">Read More</a>
-        </p>
+        <html><head></head><body><p>看了 p 神知识星球最近关于校招知识点的整理, 于是想对 CSRF 做一些知识性的总结和学习<br><span class="github-emoji" style="background-image: none!important; background-image: url(https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8)" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span></p>
+<blockquote class="colorquote info"><p>:smile 更新中</p>
+</blockquote>
+
+<a id="more"></a>
+
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>CSRF 相关的内容, 域的概念, 跨域的方法, CSRF 防御的各种方法对比, Same_site Cookie</p>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="https://juejin.im/post/5bc009996fb9a05d0a055192" target="_blank" rel="noopener">前端安全系列之二：如何防止 CSRF 攻击</a></li>
+</ol>
+<p><br></p><blockquote class="colorquote info"><p>本文作者: cjm00n<br>本文地址: <a href="https://cjm00n.top/2020/03/04/CSRF学习之旅/">https://cjm00n.top/2020/03/04/CSRF学习之旅/</a> <br>版权声明: 除特别说明外，所有文章均采用 CC BY 4.0 许可协议，转载请先取得同意。</p>
+</blockquote><p></p>
+</body></html>
         
     </div>
     
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+        
+        <span class="column is-narrow"><a class="tag is-light article-tag"
+                href="/tags/CSRF/">#CSRF</a></span>
+        
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/2020/03/04/%E6%B5%8B%E8%AF%95/">测试</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/2020/02/29/V-N%E5%85%AC%E5%BC%80%E8%B5%9B2020-writeup/">V&amp;N公开赛2020 writeup</a>
+            
+        </span>
+    </div>
     
 </article>
 
 
 
 
+<div class="comments">
+    <h3 class="title is-4">Comments</h3>
     
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://cjm00n.top/2020/03/04/CSRF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85/';
+        this.page.identifier = '2020/03/04/CSRF学习之旅/';
         
-        <a href="/2020/02/24/%E6%96%B0%E6%98%A5%E5%85%AC%E7%9B%8A%E8%B5%9B2020wp/" itemprop="url">新春公益赛2020wp</a>
+        this.language = 'en';
         
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-            <time datetime="2020-02-24T10:29:07.000Z"
-                itemprop="datePublished">Feb 24 2020</time>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/CTF/">CTF</a>
-        </span>
-        
-        
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-        
-        <html><head></head><body><p>有一两道挺有意思的</p></body></html>
-        <p class="article-more-link">
-            <a href="/2020/02/24/%E6%96%B0%E6%98%A5%E5%85%AC%E7%9B%8A%E8%B5%9B2020wp/#more">Read More</a>
-        </p>
-        
-    </div>
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'cjm00n' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
     
-    
-</article>
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript" target="_blank" rel="noopener">comments powered by Disqus.</a></noscript>
+</div>
+</div>
 
-
-
-
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-        <a href="/2020/02/18/Buu%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%953/" itemprop="url">Buu刷题记录3</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-            <time datetime="2020-02-18T14:44:48.000Z"
-                itemprop="datePublished">Feb 18 2020</time>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/CTF/">CTF</a>
-        </span>
-        
-        
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-        
-        <html><head></head><body><blockquote class="colorquote info"><p>更新中</p>
-</blockquote></body></html>
-        <p class="article-more-link">
-            <a href="/2020/02/18/Buu%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%953/#more">Read More</a>
-        </p>
-        
-    </div>
-    
-    
-</article>
-
-
-
-
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-        <a href="/2020/02/14/BuuCTF%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%952/" itemprop="url">BuuCTF刷题记录2</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-            <time datetime="2020-02-14T09:05:24.000Z"
-                itemprop="datePublished">Feb 14 2020</time>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/CTF/">CTF</a>
-        </span>
-        
-        
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-        
-        <html><head></head><body><p>感谢glzjin师傅</p></body></html>
-        <p class="article-more-link">
-            <a href="/2020/02/14/BuuCTF%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%952/#more">Read More</a>
-        </p>
-        
-    </div>
-    
-    
-</article>
-
-
-
-
-    
-        <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-        <a href="/2020/02/14/BuuCTF%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/" itemprop="url">BuuCTF刷题记录</a>
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            
-            <time datetime="2020-02-14T02:23:28.000Z"
-                itemprop="datePublished">Feb 14 2020</time>
-            
-        </span>
-        
-        <span class="column is-narrow article-category">
-            <i class="far fa-folder"></i>
-            <a class="article-category-link" href="/categories/CTF/">CTF</a>
-        </span>
-        
-        
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-        
-        <html><head></head><body><p>感谢glzjin师傅</p></body></html>
-        <p class="article-more-link">
-            <a href="/2020/02/14/BuuCTF%E5%88%B7%E9%A2%98%E8%AE%B0%E5%BD%95/#more">Read More</a>
-        </p>
-        
-    </div>
-    
-    
-</article>
-
-
-
-
-    
-    
     </div>
 </section>
     <footer class="footer">
