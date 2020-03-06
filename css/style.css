@@ -14,6 +14,9 @@ img {
   border-radius: 2px;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.08); }
 
+svg {
+  margin-right: 5px; }
+
 a.tag.article-tag {
   font-size: 0.9rem;
   text-decoration: none;
@@ -227,6 +230,9 @@ i.article-tag-num {
 
 .archive .articles {
   border-left: 1px solid #dbdbdb; }
+
+.archive svg {
+  margin-right: 0.5rem; }
 
 .archive .article {
   border-top: none;
