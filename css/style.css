@@ -407,6 +407,9 @@ figure.highlight {
       content: '>';
       position: absolute; }
 
+.section {
+  padding-top: 0.5rem; }
+
 .section-heading {
   padding-bottom: 0; }
   .section-heading h5 {
