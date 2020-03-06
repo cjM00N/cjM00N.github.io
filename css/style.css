@@ -39,13 +39,10 @@ i.article-tag-num {
 .title {
   font-weight: 500 !important; }
 
-.content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
-  font-weight: 500 !important; }
-
 @media screen and (min-width: 1024px) {
   .container {
-    max-width: 1000px;
-    width: 1000px; }
+    max-width: 900px;
+    width: 900px; }
   .navbar.is-transparent .navbar-dropdown a.navbar-item:hover {
     color: #3273dc; } }
 
@@ -65,170 +62,155 @@ i.article-tag-num {
     max-height: 500px;
     overflow-y: auto; }
 
-.article + .article {
-  padding-top: 2rem;
-  border-top: 1px solid #dbdbdb; }
-
-.article .article-title a,
-.article .article-meta a {
-  color: inherit;
-  border-bottom: 1px dotted transparent; }
-  .article .article-title a:hover,
-  .article .article-meta a:hover {
-    border-bottom-color: black; }
-
-.article .article-meta {
-  font-size: .9rem; }
-  @media screen and (max-width: 768px) {
-    .article .article-meta {
-      margin-top: 0.75rem; }
-      .article .article-meta .column {
-        padding-top: 0;
-        padding-bottom: 0; } }
-  .article .article-meta .article-category-link {
-    margin: 0 0.3rem; }
-  .article .article-meta svg {
-    margin-right: 3px; }
-
-.article .article-entry {
-  margin-bottom: 3rem; }
-  .article .article-entry h1, .article .article-entry h2, .article .article-entry h3, .article .article-entry h4, .article .article-entry h5, .article .article-entry h6 {
-    cursor: pointer;
-    position: relative; }
-    .article .article-entry h1:hover:before, .article .article-entry h2:hover:before, .article .article-entry h3:hover:before, .article .article-entry h4:hover:before, .article .article-entry h5:hover:before, .article .article-entry h6:hover:before {
-      content: '#';
-      position: absolute;
-      right: 100%;
-      padding-right: 3px;
-      color: #2980B9; }
-  .article .article-entry a {
-    word-break: break-word; }
-
-.article .article-more-link a {
-  font-size: .9rem;
-  color: darkgray;
-  border-bottom: 1px dotted transparent; }
-  .article .article-more-link a:hover {
-    border-bottom-color: darkgray; }
-
-.article .article-nav a {
-  color: darkgray;
-  position: relative;
-  display: inline-block; }
-
-.article .article-nav .article-nav-prev a {
-  padding-left: 1rem; }
-  .article .article-nav .article-nav-prev a:before {
-    top: 0;
-    left: 0;
-    content: '<';
-    position: absolute; }
-
-.article .article-nav .article-nav-next {
-  text-align: right; }
-  .article .article-nav .article-nav-next a {
-    padding-right: 1rem; }
-    .article .article-nav .article-nav-next a:after {
+.article {
+  margin-top: 2rem; }
+  .article + .article {
+    padding-top: 2rem;
+    border-top: 1px solid #dbdbdb; }
+  .article .article-title a,
+  .article .article-meta a {
+    color: inherit;
+    border-bottom: 1px dotted transparent; }
+    .article .article-title a:hover,
+    .article .article-meta a:hover {
+      border-bottom-color: black; }
+  .article .article-meta {
+    font-size: .9rem; }
+    @media screen and (max-width: 768px) {
+      .article .article-meta {
+        margin-top: 0.75rem; }
+        .article .article-meta .column {
+          padding-top: 0;
+          padding-bottom: 0; } }
+    .article .article-meta .article-category-link {
+      margin: 0 0.3rem; }
+    .article .article-meta svg {
+      margin-right: 3px; }
+  .article .article-entry {
+    margin-bottom: 3rem; }
+    .article .article-entry h1, .article .article-entry h2, .article .article-entry h3, .article .article-entry h4, .article .article-entry h5, .article .article-entry h6 {
+      cursor: pointer;
+      position: relative; }
+      .article .article-entry h1:hover:before, .article .article-entry h2:hover:before, .article .article-entry h3:hover:before, .article .article-entry h4:hover:before, .article .article-entry h5:hover:before, .article .article-entry h6:hover:before {
+        content: '#';
+        position: absolute;
+        right: 100%;
+        padding-right: 3px;
+        color: #2980B9; }
+    .article .article-entry a {
+      word-break: break-word; }
+  .article .article-more-link a {
+    font-size: .9rem;
+    color: darkgray;
+    border-bottom: 1px dotted transparent; }
+    .article .article-more-link a:hover {
+      border-bottom-color: darkgray; }
+  .article .article-nav a {
+    color: darkgray;
+    position: relative;
+    display: inline-block; }
+  .article .article-nav .article-nav-prev a {
+    padding-left: 1rem; }
+    .article .article-nav .article-nav-prev a:before {
       top: 0;
-      right: 0;
-      content: '>';
+      left: 0;
+      content: '<';
       position: absolute; }
-
-@media screen and (max-width: 768px) {
-  .article .article-nav .article-nav-prev,
   .article .article-nav .article-nav-next {
-    text-align: center; } }
-
-.article .caption {
-  display: block;
-  color: darkgray;
-  font-size: .95rem;
-  text-align: center; }
-
-.article a[target="_blank"]:after {
-  display: none;
-  content: "\f35d";
-  font-size: .8rem;
-  font-family: "Font Awesome 5 Solid"; }
-
-.article a[target="_blank"] .fa-external-link-alt {
-  margin-left: .3rem;
-  width: .8rem; }
-
-.article blockquote.colorquote {
-  position: relative; }
-  .article blockquote.colorquote:before {
-    content: " ";
-    position: absolute;
-    top: 50%;
-    left: -14.5px;
-    margin-top: -12px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    text-align: center;
-    color: white;
-    background-size: 16px 16px;
-    background-position: 4px 4px;
-    background-repeat: no-repeat; }
-  .article blockquote.colorquote.info {
-    border-color: #209cee;
-    background-color: #def0fd; }
-    .article blockquote.colorquote.info:before {
-      background-color: #209cee;
-      background-image: url("../images/info.svg"); }
-  .article blockquote.colorquote.success {
-    border-color: #23d160;
-    background-color: #cbf6da; }
-    .article blockquote.colorquote.success:before {
-      background-color: #23d160;
-      background-image: url("../images/check.svg"); }
-  .article blockquote.colorquote.warning {
-    border-color: #ffdd57;
-    background-color: #fff6d1; }
-    .article blockquote.colorquote.warning:before {
-      background-color: #ffdd57;
-      background-image: url("../images/question.svg"); }
-  .article blockquote.colorquote.danger {
-    border-color: #ff3860;
-    background-color: #ffb3c2; }
-    .article blockquote.colorquote.danger:before {
-      background-color: #ff3860;
-      background-image: url("../images/exclamation.svg"); }
-
-.article blockquote.pullquote {
-  float: right;
-  max-width: 50%;
-  font-size: 1.15rem;
-  position: relative; }
+    text-align: right; }
+    .article .article-nav .article-nav-next a {
+      padding-right: 1rem; }
+      .article .article-nav .article-nav-next a:after {
+        top: 0;
+        right: 0;
+        content: '>';
+        position: absolute; }
   @media screen and (max-width: 768px) {
-    .article blockquote.pullquote {
-      float: none;
-      max-width: 100%; } }
-  .article blockquote.pullquote:before {
-    content: " ";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    width: 3rem;
-    height: 3rem;
-    opacity: 0.1;
-    background: url("../images/quote-left.svg") 0 0/3rem 3rem no-repeat; }
-
-.article blockquote footer cite {
-  font-style: normal; }
-  .article blockquote footer cite:before {
-    content: "—";
-    padding: 0 .3em; }
-
-.article .gist table tr:hover {
-  background: transparent; }
-
-.article .gist table td {
-  border: none; }
-
-.article .gist .file {
-  all: initial; }
+    .article .article-nav .article-nav-prev,
+    .article .article-nav .article-nav-next {
+      text-align: center; } }
+  .article .caption {
+    display: block;
+    color: darkgray;
+    font-size: .95rem;
+    text-align: center; }
+  .article a[target="_blank"]:after {
+    display: none;
+    content: "\f35d";
+    font-size: .8rem;
+    font-family: "Font Awesome 5 Solid"; }
+  .article a[target="_blank"] .fa-external-link-alt {
+    margin-left: .3rem;
+    width: .8rem; }
+  .article blockquote.colorquote {
+    position: relative; }
+    .article blockquote.colorquote:before {
+      content: " ";
+      position: absolute;
+      top: 50%;
+      left: -14.5px;
+      margin-top: -12px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      text-align: center;
+      color: white;
+      background-size: 16px 16px;
+      background-position: 4px 4px;
+      background-repeat: no-repeat; }
+    .article blockquote.colorquote.info {
+      border-color: #209cee;
+      background-color: #def0fd; }
+      .article blockquote.colorquote.info:before {
+        background-color: #209cee;
+        background-image: url("../images/info.svg"); }
+    .article blockquote.colorquote.success {
+      border-color: #23d160;
+      background-color: #cbf6da; }
+      .article blockquote.colorquote.success:before {
+        background-color: #23d160;
+        background-image: url("../images/check.svg"); }
+    .article blockquote.colorquote.warning {
+      border-color: #ffdd57;
+      background-color: #fff6d1; }
+      .article blockquote.colorquote.warning:before {
+        background-color: #ffdd57;
+        background-image: url("../images/question.svg"); }
+    .article blockquote.colorquote.danger {
+      border-color: #ff3860;
+      background-color: #ffb3c2; }
+      .article blockquote.colorquote.danger:before {
+        background-color: #ff3860;
+        background-image: url("../images/exclamation.svg"); }
+  .article blockquote.pullquote {
+    float: right;
+    max-width: 50%;
+    font-size: 1.15rem;
+    position: relative; }
+    @media screen and (max-width: 768px) {
+      .article blockquote.pullquote {
+        float: none;
+        max-width: 100%; } }
+    .article blockquote.pullquote:before {
+      content: " ";
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      width: 3rem;
+      height: 3rem;
+      opacity: 0.1;
+      background: url("../images/quote-left.svg") 0 0/3rem 3rem no-repeat; }
+  .article blockquote footer cite {
+    font-style: normal; }
+    .article blockquote footer cite:before {
+      content: "—";
+      padding: 0 .3em; }
+  .article .gist table tr:hover {
+    background: transparent; }
+  .article .gist table td {
+    border: none; }
+  .article .gist .file {
+    all: initial; }
 
 .sharebox {
   margin-top: 3rem; }

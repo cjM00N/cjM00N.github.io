@@ -18,10 +18,10 @@
 
 
 
-<link rel="icon" href="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200225213644.png">
+<link rel="icon" href="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200306170533.png">
 
 
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato&display=swap">
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.8.0/css/bulma.min.css">
 
 
@@ -60,7 +60,7 @@
             <a class="navbar-item navbar-logo" href="/">
                 
                     
-                    <img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200225213644.png" alt="" height="28">
+                    <img src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200306170533.png" alt="" height="28">
                     
                 
             </a>
@@ -121,56 +121,185 @@
     </div>
 </nav>
 
-    <section class="section">
-    <div class="container">
-    <article class="article content gallery" itemscope itemprop="blogPost">
-    <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
-        
-        Friends
-        
-    </h1>
-    <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
-        <span class="column is-narrow">
-            <svg class="icon" aria-hidden="true">
-            <use xlink:href="#icon-clock"></use>
-            </svg>
-            
-            
-            <time datetime="2020-02-25T12:57:34.000Z"
-                itemprop="datePublished">2020年2月25日</time>
-            
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-            
-        </span>
-        
-        
-        
-    </div>
-    <div class="article-entry is-size-6-mobile" itemprop="articleBody">
-        
-        <html><head></head><body><p>给大哥们递茶.gif</p>
-<h3 id="Ver"><a href="#Ver" class="headerlink" title="Ver"></a>Ver</h3><p><a href="https://vergissmeinnichtz.github.io/" target="_blank" rel="noopener">https://vergissmeinnichtz.github.io/</a></p>
-<p>三线程霸主, 日常AK密码的五边形选手</p>
-<h3 id="C0mRaDe"><a href="#C0mRaDe" class="headerlink" title="C0mRaDe"></a>C0mRaDe</h3><p><a href="https://coomrade.github.io/" target="_blank" rel="noopener">https://coomrade.github.io/</a></p>
-<p>Web大哥, Kap0k灵魂支柱</p>
-<h3 id="Byzero"><a href="#Byzero" class="headerlink" title="Byzero"></a>Byzero</h3><p><a href="https://www.zerocre.com/" target="_blank" rel="noopener">https://www.zerocre.com/</a></p>
-<p>Pwn爷爷</p>
-<h3 id="Q4n"><a href="#Q4n" class="headerlink" title="Q4n"></a>Q4n</h3><p><a href="https://q4n.github.io/" target="_blank" rel="noopener">https://q4n.github.io/</a></p>
-<p>年轻的Pwn爷爷</p>
-<h3 id="Sjoshua"><a href="#Sjoshua" class="headerlink" title="Sjoshua"></a>Sjoshua</h3><p><a href="http://sforest.in/" target="_blank" rel="noopener">http://sforest.in/</a></p>
-<p>MISC霸主, ACM&CTF双修选手, 渗透Uppp</p>
-</body></html>
-        
-    </div>
+.friends-container {
+  margin: 0 auto;
+  padding: 30px 0;
+  width: 70%;
+  display: -ms-grid;
+  display: grid;
+  gap: 10px;
+  -ms-grid-columns: (1fr) [2];
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media screen and (max-width: 1000px) {
+  .friends-container {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+.friends-container .friend-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  -webkit-box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: -3px 3px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.friends-container .avatar {
+  width: 110px;
+  height: 110px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.friends-container .intro {
+  padding: 0 30px;
+  overflow:hidden;
+}
+
+.friends-container .intro h3,
+.friends-container .intro p {
+  color: #555;
+}
+
+.friends-container .intro a {
+  color: #3b8bd0;
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
+
+</style>
+<div class="friends-container">
     
     
-</article>
-
-
-
-
-    </div>
-</section>
+        
+        
+        <div class="friend-card">
+            <img
+              src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200306162235.png"
+              class="avatar"
+              alt="logo"
+            />
+            <div class="intro">
+              <h3 class="friend-name">Ver</h3>
+              <a href="https://vergissmeinnichtz.github.io/" target="_blank" rel="noopener">https://vergissmeinnichtz.github.io/</a>
+              <p class="desc">三线程霸主, 日常 AK 密码的五边形选手</p>
+            </div>
+          </div>
+        
+        
+        <div class="friend-card">
+            <img
+              src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200306162156.png"
+              class="avatar"
+              alt="logo"
+            />
+            <div class="intro">
+              <h3 class="friend-name">C0mRaDe</h3>
+              <a href="https://coomrade.github.io/" target="_blank" rel="noopener">https://coomrade.github.io/</a>
+              <p class="desc">Web 大哥, Kap0k 灵魂支柱</p>
+            </div>
+          </div>
+        
+        
+        <div class="friend-card">
+            <img
+              src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200306163107.jpg"
+              class="avatar"
+              alt="logo"
+            />
+            <div class="intro">
+              <h3 class="friend-name">Byzero</h3>
+              <a href="https://www.zerocre.com/" target="_blank" rel="noopener">https://www.zerocre.com/</a>
+              <p class="desc">Pwn 爷爷</p>
+            </div>
+          </div>
+        
+        
+        <div class="friend-card">
+            <img
+              src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200306163410.png"
+              class="avatar"
+              alt="logo"
+            />
+            <div class="intro">
+              <h3 class="friend-name">Q4n</h3>
+              <a href="https://q4n.github.io/" target="_blank" rel="noopener">https://q4n.github.io/</a>
+              <p class="desc">Pwn 爷爷</p>
+            </div>
+          </div>
+        
+        
+        <div class="friend-card">
+            <img
+              src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200306163552.jpg"
+              class="avatar"
+              alt="logo"
+            />
+            <div class="intro">
+              <h3 class="friend-name">Sjoshua</h3>
+              <a href="http://sforest.in/" target="_blank" rel="noopener">http://sforest.in/</a>
+              <p class="desc">MISC 霸主, ACM&CTF 双修选手, 渗透砖家</p>
+            </div>
+          </div>
+        
+        
+        <div class="friend-card">
+            <img
+              src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200306163632.jpg"
+              class="avatar"
+              alt="logo"
+            />
+            <div class="intro">
+              <h3 class="friend-name">hoon</h3>
+              <a href="https://hoon.cc/" target="_blank" rel="noopener">https://hoon.cc/</a>
+              <p class="desc">前端带师</p>
+            </div>
+          </div>
+        
+        
+        <div class="friend-card">
+            <img
+              src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200306165936.jpg"
+              class="avatar"
+              alt="logo"
+            />
+            <div class="intro">
+              <h3 class="friend-name">tyaoo</h3>
+              <a href="https://tyaoo.github.io/" target="_blank" rel="noopener">https://tyaoo.github.io/</a>
+              <p class="desc">Web手, 时常带我飞, Kap0k红色先锋</p>
+            </div>
+          </div>
+        
+        
+        <div class="friend-card">
+            <img
+              src="https://img-cjm00n.oss-cn-shenzhen.aliyuncs.com/20200306165913.png"
+              class="avatar"
+              alt="logo"
+            />
+            <div class="intro">
+              <h3 class="friend-name">DiaosSama</h3>
+              <a href="https://www.diaossama.work/" target="_blank" rel="noopener">https://www.diaossama.work/</a>
+              <p class="desc">Web手, 学习带师, 大乱斗Lv9玩家</p>
+            </div>
+          </div>
+        
+    
+</div>
     <footer class="footer">
     <div class="container">
         <div class="columns content">
@@ -196,7 +325,7 @@
     </div>
 </footer>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script defer src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
 
 <!-- test if the browser is outdated -->
 <div id="outdated">
@@ -204,7 +333,7 @@
     <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update my browser now </a></p>
     <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
-<script defer src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/outdated-browser/1.1.5/outdatedbrowser.min.js"></script>
 <script>
     $(document).ready(function () {
         // plugin function, place inside DOM ready function
@@ -220,8 +349,8 @@
     window.FontAwesomeConfig = {
         searchPseudoElements: true
     }
-    // moment.locale("zh-CN");
     moment.locale("zh-CN");
+    // moment.locale("zh-CN");
 </script>
 
 
