@@ -408,10 +408,11 @@ figure.highlight {
       position: absolute; }
 
 .section {
-  padding-top: 0.5rem; }
+  padding-top: 1rem; }
 
 .section-heading {
-  padding-bottom: 0; }
+  padding-bottom: 0;
+  padding-top: 3rem; }
   .section-heading h5 {
     margin-bottom: 0;
     text-transform: uppercase; }
