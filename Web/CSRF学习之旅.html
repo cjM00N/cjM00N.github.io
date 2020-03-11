@@ -2,7 +2,7 @@
 <html class="has-navbar-fixed-top">
 <head>
     <meta charset="utf-8">
-<title>About - cjM00N&#39;s blog</title>
+<title>CSRF学习之旅 - cjM00N&#39;s blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="google-site-verification" content="ez9pgLcUTp-XLC7Jt3m7YE1rjcs09hj5RUtpWQdgi7U" />
 
@@ -90,7 +90,7 @@
             <a class="navbar-item "
                href="/friends/index.html">Friends</a>
             
-            <a class="navbar-item is-active"
+            <a class="navbar-item "
                href="/about/index.html">About</a>
             
         </div>
@@ -103,6 +103,40 @@
                 </svg>
             </a>
             
+            
+            <div class="navbar-item is-hoverable has-dropdown is-hidden-tablet-only toc">
+                <a class="navbar-item" title="目录">
+                    <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-list"></use>
+                    </svg>
+                </a>
+                <div class="navbar-dropdown is-right">
+                    
+                    
+                    
+                    
+                    <a class="navbar-item" href="#题目">1&nbsp;&nbsp;<b>题目</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#概念">2&nbsp;&nbsp;<b>概念</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#实战">3&nbsp;&nbsp;<b>实战</b></a>
+                    
+                    
+                    <hr class="navbar-divider">
+                    
+                    
+                    <a class="navbar-item" href="#参考">4&nbsp;&nbsp;<b>参考</b></a>
+                    
+                </div>
+            </div>
             
             
             <a class="navbar-item" title="GitHub" href="https://github.com/cjm00n/" target="_blank" rel="noopener">
@@ -131,7 +165,7 @@
     <article class="article content gallery" itemscope itemprop="blogPost">
     <h1 class="article-title is-size-3 is-size-4-mobile" itemprop="name">
         
-        About
+        CSRF学习之旅
         
     </h1>
     <div class="article-meta columns is-variable is-1 is-multiline is-mobile is-size-7-mobile">
@@ -141,8 +175,8 @@
             </svg>
             
             
-            <time datetime="2020-03-11T10:16:25.972Z"
-                itemprop="datePublished">2020年3月11日</time><svg class="icon" aria-hidden="true" style="margin-left: 1px;">
+            <time datetime="2020-03-05T17:05:58.861Z"
+                itemprop="datePublished">2020年3月6日</time><svg class="icon" aria-hidden="true" style="margin-left: 1px;">
                 <use xlink:href="#icon-new3"></use>
                 </svg>
             
@@ -150,19 +184,43 @@
             
         </span>
         
+        <span class="column is-narrow article-category">
+            <svg class="icon" aria-hidden="true" style="margin-right: 0px;">
+            <use xlink:href="#icon-folder"></use>
+            </svg>
+            <a class="article-category-link" href="/categories/Web/index.html">Web</a>
+        </span>
+        
+        
+        <span class="column is-narrow article-category">
+            <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-hot"></use>
+            </svg>热度: <span class="leancloud-counter" data-leancloud-counter-url="/Web/CSRF学习之旅.html" data-leancloud-counter-inc></span><script>
+var LeanCounter=function(){"use strict";function t(t){void 0===t&&(t={});var e=t.appId,n=t.appKey,r=t.elementClass;void 0===r&&(r=".leancloud-counter");var i=t.addCountInterval;void 0===i&&(i=100);var a=t.base;void 0===a&&(a="/1.1/classes/Counter");var o=t.initOnLoaded;if(void 0===o&&(o=!0),!e||!n)throw new Error("Missing appId or appKey.");this._appId=e,this._appKey=n,this._idCache={},this._addCountUrlQueue=[],this.addCountInterval=i,this.base=a,this.elements=document.querySelectorAll(r),o&&("loading"!==document.readyState?this.init():document.addEventListener("DOMContentLoaded",this.init.bind(this)))}return t.prototype._request=function(t,e,n){if(!this.apiServer)return Promise.reject(new Error("This LeanCounter instance is not initialized."));if("get"===t){var r="https://"+this.apiServer+this.base+e;if(n){var i=[];Object.keys(n).forEach(function(t){i.push(t+"="+encodeURI(n[t]))}),r+="?"+i.join("&")}return fetch(r,{headers:{"Content-Type":"application/json","X-LC-Id":this._appId,"X-LC-Key":this._appKey}}).then(function(t){return t.json()})}return fetch("https://"+this.apiServer+this.base+e,{method:t,headers:{"Content-Type":"application/json","X-LC-Id":this._appId,"X-LC-Key":this._appKey},body:JSON.stringify(n)}).then(function(t){return t.json()})},t.prototype.getCount=function(t){var e,n,r=this,i=t;return Array.isArray(i)||(i=Array(i)),e=[],n={},i.forEach(function(t){n[t]||(e.push(t),n[t]=!0)}),i=e,this._request("get","",{where:JSON.stringify({url:{$in:i}})}).then(function(t){var e=t.results,n={};return e.forEach(function(t){var e=t.url,i=t.objectId,a=t.time;r._idCache[e]||(r._idCache[e]=i),n[e]=a}),n})},t.prototype.addCount=function(t){var e=this;this._addCountUrlQueue.push(t),this._addCountIntervalId||(this._addCountIntervalId=setInterval(function(){if(0!==e._addCountUrlQueue.length){var t=e._addCountUrlQueue.pop();e._idCache[t]||e.getCount(t),e._request("put","/"+e._idCache[t],{time:{__op:"Increment",amount:1}})}},this.addCountInterval))},t.prototype.init=function(){var t=this;fetch("https://app-router.leancloud.cn/2/route?appId="+this._appId).then(function(t){return t.json()}).then(function(e){var n=e.api_server;t.apiServer=n;var r=[];return t.elements.forEach(function(t){r.push(t.dataset.leancloudCounterUrl)}),t.getCount(r)}).then(function(e){t.elements.forEach(function(n){"leancloudCounterInc"in n.dataset?(n.textContent=String(e[n.dataset.leancloudCounterUrl]+1),t.addCount(n.dataset.leancloudCounterUrl)):n.textContent=String(e[n.dataset.leancloudCounterUrl])})})},t}();
+
+var leanCounter = new LeanCounter({
+  appId: 'KnWlaUsawT6Pf6rwNLVJpt08-gzGzoHsz',
+  appKey: 'HbSKKwFRuQ2jzyC1caWF8X5Y',
+});
+</script> ℃
+        </span>
         
         
     </div>
     <div class="article-entry is-size-6-mobile" itemprop="articleBody">
         
-        <html><head></head><body><h2 id="关于-Blog"><a href="#关于-Blog" class="headerlink" title="关于 Blog"></a>关于 Blog</h2><p>十分感谢 Minos 主题的作者和我的朋友 <a href="https://hoon.cc" target="_blank" rel="noopener">@hoon</a> 对于本站样式的帮助</p>
-<p>部分的修改情况可以参考以往的文章</p>
-<h2 id="关于我"><a href="#关于我" class="headerlink" title="关于我"></a>关于我</h2><p>华工大三信安专业在读, 熟练使用<code>C-c</code> <code>C-v</code>编程</p>
-<p>常用 ID <code>cjM00N</code> or <code>月亮</code></p>
-<p>目前为 Kap0k 战队 Web 手, NS 玩家 , 吉他初学者, 职业递茶玩家</p>
-<p>以及单身</p>
-<h2 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h2><p>Email: <code>Y2ptMDBuQHFxLmNvbQ==</code><br>or 评论均可</p>
-<center><img src="https://img.cjm00n.top/20200225230651.png" style="zoom:67%"></center>
+        <html><head></head><body><p>看了 p 神知识星球最近关于校招知识点的整理, 于是想对 CSRF 做一些知识性的总结和学习</p>
+<blockquote class="colorquote info"><p><span class="github-emoji" style="color: transparent;background:no-repeat url(https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8) center/contain" data-src="https://github.githubassets.com/images/icons/emoji/unicode/1f604.png?v8">😄</span> 更新中</p>
+</blockquote>
+
+<a id="more"></a>
+
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><p>CSRF 相关的内容, 域的概念, 跨域的方法, CSRF 防御的各种方法对比, Same_site Cookie</p>
+<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
+<li><a href="https://juejin.im/post/5bc009996fb9a05d0a055192" target="_blank" rel="noopener">前端安全系列之二：如何防止 CSRF 攻击</a></li>
+</ol>
+<p><br></p><blockquote class="colorquote info"><p>本文作者: cjm00n<br>本文地址: <a href="https://cjm00n.top/Web/CSRF学习之旅.html">https://cjm00n.top/Web/CSRF学习之旅.html</a> <br>版权声明: 除特别说明外，所有文章均采用 CC BY 4.0 许可协议，转载请先取得同意。</p>
+</blockquote><p></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -185,6 +243,28 @@
         
     </div>
     
+    <div class="columns is-variable is-1 is-multiline is-mobile">
+        
+        <span class="column is-narrow"><a class="tag is-light article-tag"
+                href="/tags/CSRF/index.html"><svg class="icon" aria-hidden="true" style="margin-right: 3px;">
+                <use xlink:href="#icon-Bookmark"></use>
+                </svg>CSRF</a></span>
+        
+    </div>
+    
+    
+    <div class="columns is-mobile is-multiline article-nav">
+        <span class="column is-12-mobile is-half-desktop  article-nav-prev">
+            
+            <a href="/CTF/%E9%AB%98%E6%A0%A1%E6%88%98%E7%96%AB%E5%88%86%E4%BA%AB%E8%B5%9BWriteup.html">高校战疫分享赛Writeup</a>
+            
+        </span>
+        <span class="column is-12-mobile is-half-desktop  article-nav-next">
+            
+            <a href="/CTF/V-N%E5%85%AC%E5%BC%80%E8%B5%9B2020-writeup.html">V&amp;N公开赛2020 writeup</a>
+            
+        </span>
+    </div>
     
 </article>
 
@@ -197,8 +277,8 @@
 <script>
     function loadDisqus(){
     var disqus_config = function () {
-        this.page.url = 'https://cjm00n.top/about/index.html';
-        this.page.identifier = 'about/index.html';
+        this.page.url = 'https://cjm00n.top/Web/CSRF%E5%AD%A6%E4%B9%A0%E4%B9%8B%E6%97%85.html';
+        this.page.identifier = 'Web/CSRF学习之旅.html';
         
         this.language = 'zh';
         
